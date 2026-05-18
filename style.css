@@ -309,6 +309,16 @@ button:hover{
     from{opacity:0; transform:translateY(40px);}
     to{opacity:1; transform:translateY(0);}
 }
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+}
+
+
 .space-glow{
     animation: float 4s ease-in-out infinite;
 }
