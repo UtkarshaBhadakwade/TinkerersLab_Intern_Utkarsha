@@ -1,6 +1,6 @@
 #  Tinkerers Lab Portfolio
 
-Hi, I am **Utkarsha Bhadakwade** 👩‍💻  
+Hi, I am **Utkarsha Bhadakwade**  
 
 This is my personal portfolio website created for my Tinkerers Lab project.
 

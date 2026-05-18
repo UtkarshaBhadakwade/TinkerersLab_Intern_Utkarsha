@@ -3,18 +3,22 @@ function toggleMenu(){
 
     if(sidebar.style.left === "0px"){
         sidebar.style.left = "-250px";
-    }else{
+    } else {
         sidebar.style.left = "0px";
     }
 }
 
 function scrollDown(){
-    window.scrollBy({
-        top: window.innerHeight,
-        behavior: "smooth"
-    });
-}
-function scrollDown(){
     document.getElementById("overview")
-        .scrollIntoView({ behavior: "smooth" });
+    .scrollIntoView({ behavior: "smooth" });
+}
+
+function toggleWeek(element){
+    let content = element.querySelector(".week-content");
+
+    if(content.style.display === "block"){
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
 }

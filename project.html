@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Projects | Tinkerers Lab</title>
+<title>Projects</title>
 
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-
 </head>
 
 <body>
-    <div class="stars"></div>
 
-<!-- MENU -->
+<div class="stars"></div>
+
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 <div id="sidebar" class="sidebar">
@@ -23,28 +22,55 @@
     <a href="contact.html">Contact</a>
 </div>
 
-<!-- PROJECT SECTION -->
 <section class="projects-section">
 
-<h1 class="page-title">My Projects</h1>
+<h1 class="page-title">Projects</h1>
 
-<div class="projects-container">
+<div class="week-box" onclick="toggleWeek(this)">
+    <h2>Week 1</h2>
+    <div class="week-content">
+        <h1>DAY 1:</h1>
+        <h2>1]Installation and setup of VS Code</h2>
+        <p>Installation and setup of VS code environment.</p><br>
+        <img src="image/VSCODE1.jpeg">
+        <img src="image/VSCODE 2.png">
+        <h2>2]Installation and setup of Github  </h2>
+        <p>Installation and setup of Github environment.</p>
+        <img src="images/week1.jpg">
 
-<!-- PROJECT CARD -->
-<div class="project-card">
-    <h2>Project Title</h2>
-    <p>Write short description of your project here.</p>
-    <span>Tools: Arduino • Sensors • HTML</span>
+    </div>
 </div>
 
-<div class="project-card">
-    <h2>Project Title</h2>
-    <p>Add future project documentation anytime.</p>
-    <span>Tools: Innovation • Electronics</span>
+<div class="week-box" onclick="toggleWeek(this)">
+    <h2>Week 2</h2>
+    <div class="week-content">
+        <p>CSS styling and UI design.</p>
+        <img src="images/week2.jpg">
+    </div>
 </div>
 
-<!-- COPY THIS CARD FOR NEW PROJECTS -->
+<div class="week-box" onclick="toggleWeek(this)">
+    <h2>Week 3</h2>
+    <div class="week-content">
+        <p>JavaScript fundamentals and DOM manipulation.</p>
+        <img src="images/week3.jpg">
+    </div>
+</div>
 
+<div class="week-box" onclick="toggleWeek(this)">
+    <h2>Week 4</h2>
+    <div class="week-content">
+        <p>CSS styling and UI design.</p>
+        <img src="images/week4.jpg">
+    </div>
+</div>
+
+<div class="week-box" onclick="toggleWeek(this)">
+    <h2>Week 5</h2>
+    <div class="week-content">
+        <p>Advanced JavaScript concepts and API integration.</p>
+        <img src="images/week5.jpg">
+    </div>
 </div>
 
 </section>
