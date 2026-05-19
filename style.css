@@ -1,25 +1,23 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
+/* ===============================
+   GLOBAL
+================================ */
 
 body{
     margin:0;
     font-family:Arial, sans-serif;
     color:white;
-    background: radial-gradient(circle at top, #0b0f2a, #02030a 70%);
+    background:radial-gradient(circle at top,#0b0f2a,#02030a 70%);
     overflow-x:hidden;
 }
 
-/* =========================
+/* ===============================
    STAR BACKGROUND
-========================= */
+================================ */
 
 .stars{
     position:fixed;
     width:100%;
     height:100%;
-    background:transparent;
-    overflow:hidden;
     z-index:-1;
 }
 
@@ -45,51 +43,9 @@ body{
     to{transform:translateY(-1000px);}
 }
 
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.title{
-    font-size:60px;
-    letter-spacing:2px;
-    text-shadow:0 0 15px rgba(125,249,255,0.6);
-}
-
-.subtitle{
-    font-size:20px;
-    opacity:0.7;
-    margin-bottom:20px;
-}
-
-/* BUTTON */
-button{
-    padding:12px 25px;
-    background:transparent;
-    border:1px solid #7df9ff;
-    color:#7df9ff;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.4s;
-}
-
-button:hover{
-    background:#7df9ff;
-    color:black;
-    transform:scale(1.1);
-}
-
-/* =========================
+/* ===============================
    SIDEBAR MENU
-========================= */
+================================ */
 
 .menu-icon{
     font-size:30px;
@@ -109,7 +65,7 @@ button:hover{
     height:100%;
     background:#111;
     padding-top:60px;
-    transition:0.4s;
+    transition:.4s;
     z-index:999;
 }
 
@@ -125,93 +81,199 @@ button:hover{
     color:black;
 }
 
-/* =========================
-   OVERVIEW SECTION
-========================= */
-
-.overview{
-    min-height:100vh;
+/* ===============================
+   HERO
+================================ */
+.hero{
+    height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px;
 }
 
-.overview h2{
-    font-size:40px;
-    margin-bottom:20px;
-    text-shadow:0 0 10px rgba(125,249,255,0.5);
+
+.title{
+    font-size:60px;
+    letter-spacing:2px;
+    text-shadow:0 0 15px rgba(125,249,255,0.6);
+
+    text-align:center;
+    margin:0;
 }
 
-.overview p{
-    max-width:600px;
-    opacity:0.8;
-    line-height:1.7;
+.subtitle{
+    font-size:20px;
+    opacity:.7;
 }
 
-/* =========================
+/* ===============================
    LOGO
-========================= */
+================================ */
 
 .logo{
     width:120px;
     height:auto;
-    margin-bottom:20px;
+    margin-bottom:20px;   /* space between logo and name */
     display:block;
-    margin-left:auto;
-    margin-right:auto;
-    filter:drop-shadow(0 0 10px rgba(255,255,255,0.5));
 }
 
-/* =========================
-   PROJECTS (WEEK SYSTEM)
-========================= */
+/* ===============================
+   ABOUT PAGE
+================================ */
 
-.projects-section{
+.about-section{
     padding:80px 20px;
-    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;   /* ⭐ THIS CENTERS HEADING & TEXT */
 }
+.about-container{
+    max-width:800px;
+    background:#111;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,255,213,.2);
+    text-align:center;   /* ⭐ centers About Me heading */
+}
+
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:20px auto;
+    display:block;
+}
+
+.space-glow{
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+/* ===============================
+   PAGE TITLE
+================================ */
 
 .page-title{
+    text-align:center;
     font-size:40px;
-    margin-bottom:40px;
+    margin-top:80px;
 }
 
-/* WEEK BOX */
+/* ===============================
+   WEEK + DAY GRID
+================================ */
+
+.weeks-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
 .week-box{
-    background:#111;
-    margin:15px auto;
-    padding:20px;
-    max-width:700px;
-    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
     cursor:pointer;
-    transition:0.3s;
-    box-shadow:0 0 10px rgba(0,255,213,0.2);
+    font-size:22px;
+    backdrop-filter:blur(10px);
+    transition:.3s;
 }
 
 .week-box:hover{
-    transform:scale(1.02);
+    transform:scale(1.05);
+    box-shadow:0 0 20px cyan;
 }
 
-/* WEEK CONTENT */
-.week-content{
+/* ===============================
+   FULL SCREEN WEEK
+================================ */
+
+.week-full{
     display:none;
-    margin-top:15px;
-    color:#d0d8ff;
-    line-height:1.6;
-}
-
-.week-content img{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    margin-top:10px;
-    border-radius:10px;
+    height:100%;
+    background:#0b0f2a;
+    overflow:auto;
+    padding:40px;
+    z-index:1000;
 }
 
-/* =========================
+/* ===============================
+   FULL SCREEN DAY
+================================ */
+
+.day-full{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#02030a;
+    overflow:auto;
+    padding:40px;
+    z-index:1100;
+}
+
+/* ===============================
+   BACK BUTTON
+================================ */
+
+.back-btn{
+    background:transparent;
+    border:1px solid #00ffd5;
+    color:#00ffd5;
+    padding:10px 20px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+/* ===============================
+   IMAGE GRID
+================================ */
+
+/* IMAGE GRID */
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:20px;
+    margin-top:20px;
+    justify-items:center;   /* centers images */
+    align-items:start;
+}
+
+/* IMAGES */
+
+.image-grid img{
+    width:100%;
+    max-width:260px;     /* larger size */
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.image-grid img:hover{
+    transform:scale(1.05);
+}
+/* ===============================
    GALLERY
-========================= */
+================================ */
 
 .gallery-section{
     padding:80px 20px;
@@ -228,11 +290,6 @@ button:hover{
 .gallery-grid img{
     width:100%;
     border-radius:10px;
-    transition:0.4s;
-}
-
-.gallery-grid img:hover{
-    transform:scale(1.05);
 }
 
 .video-grid{
@@ -247,9 +304,9 @@ button:hover{
     border-radius:10px;
 }
 
-/* =========================
+/* ===============================
    CONTACT
-========================= */
+================================ */
 
 .contact-section{
     padding:80px 20px;
@@ -257,12 +314,11 @@ button:hover{
 }
 
 .contact-box{
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,.05);
     padding:25px;
     width:300px;
     margin:auto;
     border-radius:10px;
-    border:1px solid rgba(125,249,255,0.2);
 }
 
 .contact-form{
@@ -281,283 +337,3 @@ button:hover{
     border:1px solid #00ffd5;
     color:white;
 }
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-section{
-    padding:80px 20px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.about-container{
-    max-width:800px;
-    background:#111;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 0 20px rgba(0,255,213,0.2);
-}
-
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
-}
-.profile-img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-    display:block;
-    margin:20px auto;
-}
-
-
-.space-glow{
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-.weeks-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-    gap:20px;
-    padding:20px;
-}
-
-.week-box{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(125,249,255,0.2);
-    padding:15px;
-    border-radius:12px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.week-content{
-    display:none;
-    margin-top:10px;
-}
-
-.week-box img{
-    width:100%;
-    max-width:250px;
-    display:block;
-    margin:10px auto;
-    border-radius:8px;
-}
-
-.weeks-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-    gap:20px;
-    padding:20px;
-}
-
-.week-box{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(125,249,255,0.2);
-    padding:30px;
-    border-radius:12px;
-    cursor:pointer;
-    text-align:center;
-    transition:0.3s;
-}
-
-.week-box:hover{
-    transform:scale(1.05);
-}
-
-/* FULL SCREEN MODE */
-.week-full{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#0b0f2a;
-    overflow:auto;
-    padding:40px;
-    z-index:1000;
-}
-
-.week-full img{
-    width:100%;
-    max-width:400px;
-    margin:10px;
-    border-radius:10px;
-}
-/* DAY BOX */
-.day-box{
-    margin-top:20px;
-    padding:20px;
-    background:rgba(255,255,255,0.05);
-    border-radius:10px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.day-box:hover{
-    transform:scale(1.01);
-}
-
-/* hidden content */
-.day-content{
-    display:none;
-    margin-top:15px;
-}
-
-/* images */
-.day-content img{
-    width:250px;
-    margin:10px;
-    border-radius:10px;
-}
-/* WEEK GRID */
-
-.weeks-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    margin-top:40px;
-}
-
-.week-box{
-    background:#111;
-    padding:40px;
-    border-radius:12px;
-    cursor:pointer;
-    transition:.4s;
-    text-align:center;
-    border:1px solid rgba(0,255,213,.3);
-}
-
-.week-box:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px #00ffd5;
-}
-
-/* FULL WEEK PAGE */
-
-.week-full{
-    display:none;
-    padding:40px;
-}
-
-/* BACK BUTTON */
-
-.back-btn{
-    background:transparent;
-    border:1px solid #00ffd5;
-    color:#00ffd5;
-    padding:10px 20px;
-    margin-bottom:20px;
-    cursor:pointer;
-}
-
-/* DAY BOX */
-
-.day-box{
-    background:#111;
-    padding:25px;
-    margin:30px auto;
-    border-radius:10px;
-    max-width:900px;
-}
-
-/* IMAGE GRID */
-
-.image-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-    margin-top:20px;
-}
-
-.image-grid img{
-    width:100%;
-    border-radius:10px;
-    transition:.4s;
-}
-
-.image-grid img:hover{
-    transform:scale(1.05);
-}
-/* WEEK GRID */
-.weeks-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-padding:40px;
-}
-
-.week-box{
-background:rgba(255,255,255,0.08);
-padding:40px;
-text-align:center;
-border-radius:15px;
-cursor:pointer;
-transition:0.3s;
-color:white;
-font-size:22px;
-backdrop-filter:blur(10px);
-}
-
-.week-box:hover{
-transform:scale(1.05);
-box-shadow:0 0 20px cyan;
-}
-
-/* FULL WEEK VIEW */
-.week-full{
-display:none;
-padding:40px;
-color:white;
-}
-
-/* BACK BUTTON */
-.back-btn{
-padding:10px 20px;
-margin-bottom:20px;
-cursor:pointer;
-}
-
-/* DAY BUTTONS */
-.day-buttons button{
-margin:10px;
-padding:10px 20px;
-cursor:pointer;
-border:none;
-border-radius:8px;
-background:cyan;
-}
-
-/* DAY CONTENT */
-.day-content{
-display:none;
-margin-top:25px;
-}
-
-/* IMAGE GRID */
-.image-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-.image-grid img{
-width:100%;
-border-radius:10px;
-} UPDATE THIS TOO
