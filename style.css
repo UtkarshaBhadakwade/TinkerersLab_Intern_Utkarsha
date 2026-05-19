@@ -328,3 +328,236 @@ button:hover{
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
+.weeks-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.week-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(125,249,255,0.2);
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.week-content{
+    display:none;
+    margin-top:10px;
+}
+
+.week-box img{
+    width:100%;
+    max-width:250px;
+    display:block;
+    margin:10px auto;
+    border-radius:8px;
+}
+
+.weeks-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.week-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(125,249,255,0.2);
+    padding:30px;
+    border-radius:12px;
+    cursor:pointer;
+    text-align:center;
+    transition:0.3s;
+}
+
+.week-box:hover{
+    transform:scale(1.05);
+}
+
+/* FULL SCREEN MODE */
+.week-full{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0b0f2a;
+    overflow:auto;
+    padding:40px;
+    z-index:1000;
+}
+
+.week-full img{
+    width:100%;
+    max-width:400px;
+    margin:10px;
+    border-radius:10px;
+}
+/* DAY BOX */
+.day-box{
+    margin-top:20px;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.day-box:hover{
+    transform:scale(1.01);
+}
+
+/* hidden content */
+.day-content{
+    display:none;
+    margin-top:15px;
+}
+
+/* images */
+.day-content img{
+    width:250px;
+    margin:10px;
+    border-radius:10px;
+}
+/* WEEK GRID */
+
+.weeks-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.week-box{
+    background:#111;
+    padding:40px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.4s;
+    text-align:center;
+    border:1px solid rgba(0,255,213,.3);
+}
+
+.week-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00ffd5;
+}
+
+/* FULL WEEK PAGE */
+
+.week-full{
+    display:none;
+    padding:40px;
+}
+
+/* BACK BUTTON */
+
+.back-btn{
+    background:transparent;
+    border:1px solid #00ffd5;
+    color:#00ffd5;
+    padding:10px 20px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+/* DAY BOX */
+
+.day-box{
+    background:#111;
+    padding:25px;
+    margin:30px auto;
+    border-radius:10px;
+    max-width:900px;
+}
+
+/* IMAGE GRID */
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.image-grid img{
+    width:100%;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.image-grid img:hover{
+    transform:scale(1.05);
+}
+/* WEEK GRID */
+.weeks-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.week-box{
+background:rgba(255,255,255,0.08);
+padding:40px;
+text-align:center;
+border-radius:15px;
+cursor:pointer;
+transition:0.3s;
+color:white;
+font-size:22px;
+backdrop-filter:blur(10px);
+}
+
+.week-box:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px cyan;
+}
+
+/* FULL WEEK VIEW */
+.week-full{
+display:none;
+padding:40px;
+color:white;
+}
+
+/* BACK BUTTON */
+.back-btn{
+padding:10px 20px;
+margin-bottom:20px;
+cursor:pointer;
+}
+
+/* DAY BUTTONS */
+.day-buttons button{
+margin:10px;
+padding:10px 20px;
+cursor:pointer;
+border:none;
+border-radius:8px;
+background:cyan;
+}
+
+/* DAY CONTENT */
+.day-content{
+display:none;
+margin-top:25px;
+}
+
+/* IMAGE GRID */
+.image-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.image-grid img{
+width:100%;
+border-radius:10px;
+} UPDATE THIS TOO

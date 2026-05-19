@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | Tinkerers Lab</title>
 
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
@@ -12,76 +15,118 @@
 
 <div class="stars"></div>
 
+<!-- MENU -->
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 <div id="sidebar" class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html">Absout</a>
-    <a href="project.html">Projects</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="project.html">Projects</a>
+<a href="gallary.html">Gallery</a>
+<a href="contact.html">Contact</a>
 </div>
 
-<section class="projects-section">
+<section class="project-section">
 
 <h1 class="page-title">Projects</h1>
 
-<div class="week-box" onclick="toggleWeek(this)">
-    <h1>Week 1</h1>
-    <div class="week-content">
-        <h2>DAY 1:</h2>
-        <h2>1]Installation and setup of VS Code</h2>
-        <p>Installation and setup of VS code environment.</p><br>
-        <img src="image/VSCODE1.jpeg"><br>
-        <img src="image/VSCODE2.png"><br>
-         <img src="image/VSCODE3.png"><br>
-         <p>Open folder</p>
-         <img src="image/VSCODE4.jpeg">
-         <p>Create a new file</p>
-            <img src="image/VSCODE5.jpeg"><br>
-        <h2>2]Installation and setup of Github  </h2>
-        <p>Installation and setup of Github environment.</p>
-        <img src="image/GITHUB2.jpeg"><br>
-        <img src="image/GITHUB1.jpeg"><br>
-        <p>Login page</p>
-        <img src="image/GITHUB3.jpeg">
-        <p>Repository page</p>
-        <img src="image/GITHUB4.jpeg"><br>
-        <img src="image/GITHUB5.jpeg"><br>
-        
-    </div>
+<!-- ================= WEEK GRID ================= -->
+
+<div class="weeks-container" id="weeksGrid">
+
+<div class="week-box" onclick="openWeek('week1')">Week 1</div>
+<div class="week-box" onclick="openWeek('week2')">Week 2</div>
+<div class="week-box" onclick="openWeek('week3')">Week 3</div>
+<div class="week-box" onclick="openWeek('week4')">Week 4</div>
+<div class="week-box" onclick="openWeek('week5')">Week 5</div>
+
 </div>
 
-<div class="week-box" onclick="toggleWeek(this)">
-    <h1>Week 2</h1>
-    <div class="week-content">
-        <p>CSS styling and UI design.</p>
-        <img src="image/week2.jpg">
-    </div>
+
+<!-- ================= WEEK 1 ================= -->
+
+<div id="week1" class="week-full">
+
+<button class="back-btn" onclick="closeWeek()">← Back</button>
+
+<h1>Week 1</h1>
+
+<!-- DAY GRID (Same as Week Boxes) -->
+<div class="weeks-container" id="dayGrid">
+
+<div class="week-box" onclick="openDay('day1')">Day 1</div>
+<div class="week-box" onclick="openDay('day2')">Day 2</div>
+
 </div>
 
-<div class="week-box" onclick="toggleWeek(this)">
-    <h1>Week 3</h1>
-    <div class="week-content">
-        <p>JavaScript fundamentals and DOM manipulation.</p>
-        <img src="image/week3.jpg">
-    </div>
+
+<!-- DAY 1 -->
+<div id="day1" class="day-full">
+
+<button class="back-btn" onclick="closeDay()">← Back to Days</button>
+
+<h2>Day 1 — VS Code & GitHub Setup</h2>
+
+<p>Installation and setup of VS Code environment.</p>
+
+<div class="image-grid">
+<img src="image/VSCODE1.jpeg">
+<img src="image/VSCODE2.png">
+<img src="image/VSCODE3.png">
+<img src="image/VSCODE4.jpeg">
+<img src="image/VSCODE5.jpeg">
 </div>
 
-<div class="week-box" onclick="toggleWeek(this)">
-    <h1>Week 4</h1>
-    <div class="week-content">
-        <p>CSS styling and UI design.</p>
-        <img src="image/week4.jpg">
-    </div>
+<h3>GitHub Setup</h3>
+
+<div class="image-grid">
+<img src="image/GITHUB1.jpeg">
+<img src="image/GITHUB2.jpeg">
+<img src="image/GITHUB3.jpeg">
+<img src="image/GITHUB4.jpeg">
+<img src="image/GITHUB5.jpeg">
 </div>
 
-<div class="week-box" onclick="toggleWeek(this)">
-    <h1>Week 5</h1>
-    <div class="week-content">
-        <p>Advanced JavaScript concepts and API integration.</p>
-        <img src="image/week5.jpg">
-    </div>
+</div>
+
+
+<!-- DAY 2 -->
+<div id="day2" class="day-full">
+
+<button class="back-btn" onclick="closeDay()">← Back to Days</button>
+
+<h2>Day 2</h2>
+<p>Work not completed yet 🚀</p>
+
+</div>
+
+</div>
+
+
+<!-- OTHER WEEKS -->
+
+<div id="week2" class="week-full">
+<button class="back-btn" onclick="closeWeek()">← Back</button>
+<h1>Week 2</h1>
+<p>Documentation coming soon.</p>
+</div>
+
+<div id="week3" class="week-full">
+<button class="back-btn" onclick="closeWeek()">← Back</button>
+<h1>Week 3</h1>
+<p>Documentation coming soon.</p>
+</div>
+
+<div id="week4" class="week-full">
+<button class="back-btn" onclick="closeWeek()">← Back</button>
+<h1>Week 4</h1>
+<p>Documentation coming soon.</p>
+</div>
+
+<div id="week5" class="week-full">
+<button class="back-btn" onclick="closeWeek()">← Back</button>
+<h1>Week 5</h1>
+<p>Documentation coming soon.</p>
 </div>
 
 </section>
