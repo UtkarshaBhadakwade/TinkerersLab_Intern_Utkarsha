@@ -228,6 +228,25 @@ body{
     padding:40px;
     z-index:1100;
 }
+#dayGrid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    padding:20px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px){
+    #dayGrid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px){
+    #dayGrid{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
 
 /* ===============================
    BACK BUTTON
