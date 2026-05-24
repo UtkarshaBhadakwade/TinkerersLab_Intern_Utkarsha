@@ -9,6 +9,117 @@
 
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+
+<style>
+
+/* ================= PAGE ================= */
+
+.project-section{
+    padding:80px 30px;
+    color:white;
+}
+
+.page-title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+/* ================= WEEK GRID ================= */
+
+.week-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* ================= WEEK CARD ================= */
+
+.week-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(125,249,255,0.2);
+    border-radius:15px;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+.week-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px cyan;
+}
+
+/* ================= WEEK BUTTON ================= */
+
+.week-btn{
+    width:100%;
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+    padding:20px;
+    cursor:pointer;
+    text-align:center;
+}
+
+/* ================= DAYS ================= */
+
+.days{
+    display:none;
+    padding:15px;
+}
+
+/* ================= DAY GRID ================= */
+
+.day-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+/* ================= DAY CARD ================= */
+
+.day-card{
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* ================= DAY BUTTON ================= */
+
+.day-btn{
+    width:100%;
+    background:none;
+    border:none;
+    color:#7df9ff;
+    padding:15px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* ================= LINKS ================= */
+
+.links{
+    display:none;
+    padding:10px 15px;
+}
+
+/* ================= LINK STYLE ================= */
+
+.links a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.links a:hover{
+    color:#7df9ff;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -16,286 +127,290 @@
 <div class="stars"></div>
 
 <!-- MENU -->
+
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
 <div id="sidebar" class="sidebar">
+
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="project.html">Projects</a>
 <a href="gallary.html">Gallery</a>
 <a href="contact.html">Contact</a>
+
 </div>
+
+<!-- ================= PROJECT SECTION ================= -->
 
 <section class="project-section">
 
 <h1 class="page-title">Projects</h1>
 
-<!-- ================= WEEK GRID ================= -->
-
-<div class="weeks-container" id="weeksGrid">
-
-<div class="week-box" onclick="openWeek('week1')">Week 1</div>
-<div class="week-box" onclick="openWeek('week2')">Week 2</div>
-<div class="week-box" onclick="openWeek('week3')">Week 3</div>
-<div class="week-box" onclick="openWeek('week4')">Week 4</div>
-<div class="week-box" onclick="openWeek('week5')">Week 5</div>
-
-</div>
+<div class="week-grid">
 
 <!-- ================= WEEK 1 ================= -->
 
-<div id="week1" class="week-full">
+<div class="week-card">
 
-<button class="back-btn" onclick="closeWeek()">← Back</button>
+<button class="week-btn" onclick="toggleWeek('week1')">
+Week 1
+</button>
 
-<h1>Week 1</h1>
+<div class="days" id="week1">
 
-<!-- DAY GRID -->
+<div class="day-grid">
 
-<div class="weeks-container day-grid" id="dayGrid">
+<!-- DAY 1 -->
 
-<div class="week-box" onclick="openDay('day1')">Day 1</div>
-<div class="week-box" onclick="openDay('day2')">Day 2</div>
-<div class="week-box" onclick="openDay('day3')">Day 3</div>
-<div class="week-box" onclick="openDay('day4')">Day 4</div>
-<div class="week-box" onclick="openDay('day5')">Day 5</div>
-<div class="week-box" onclick="openDay('day6')">Day 6</div>
+<div class="day-card">
 
-</div>
+<button class="day-btn" onclick="toggleDay('day1')">
+Day 1
+</button>
 
-<!-- ================= DAY 1 ================= -->
+<div class="links" id="day1">
 
-<div id="day1" class="day-full">
-
-<button class="back-btn" onclick="closeDay()">← Back to Days</button>
-
-<h2>Day 1 — VS Code & GitHub Setup</h2>
-
-<p>Installation and setup of VS Code development environment.</p>
-
-<!-- VS CODE -->
-
-<h3>VS Code Installation Steps</h3>
-
-<p>
-<strong>Step 1 — Download VS Code</strong><br>
-Open your browser and visit the official Visual Studio Code website.<br>
-Click <b>Download for Windows</b>.
-</p>
-
-<div class="image-grid">
-<img src="image/VSCODE1.jpeg">
-</div>
-
-<p>
-<strong>Step 2 — Run Installer</strong><br>
-Open the downloaded <code>.exe</code> file.<br>
-Click Next → Accept Agreement → Next.
-</p>
-
-<div class="image-grid">
-<img src="image/VSCODE2.png">
-</div>
-
-<p>
-<strong>Step 3 — Select Important Options</strong><br>
-During installation enable:<br>
-• Add to PATH<br>
-• Create Desktop Icon<br>
-• Open with Code option
-</p>
-
-<div class="image-grid">
-<img src="image/VSCODE3.png">
-</div>
-
-<p>
-<strong>Step 4 — Finish Installation</strong><br>
-Click Finish and launch VS Code successfully.
-</p>
-
-<p><b>Installation Complete!</b></p>
-
-<!-- FOLDER CREATION -->
-
-<h3>Folder and File Creation Steps</h3>
-
-<p>
-Create a project folder.<br>
-Open VS Code → File → Open Folder.<br>
-Create HTML, CSS and JS files for development.
-</p>
-
-<div class="image-grid">
-<img src="image/VSCODE4.jpeg">
-<img src="image/VSCODE5.jpeg">
-</div>
-
-<!-- GITHUB -->
-
-<h3>GitHub Setup</h3>
-
-<p>
-<strong>Step 1 — Create GitHub Account</strong><br>
-Go to GitHub website and sign up using your email ID.
-</p>
-
-<div class="image-grid">
-<img src="image/GITHUB1.jpeg">
-</div>
-
-<p>
-<strong>Step 2 — Create New Repository</strong><br>
-Click <b>New Repository</b>.<br>
-Enter repository name and click Create Repository.
-</p>
-
-<div class="image-grid">
-<img src="image/GITHUB2.jpeg">
-<img src="image/GITHUB3.jpeg">
-</div>
-
-<p>
-<strong>Step 3 — Connect VS Code with GitHub</strong><br>
-Initialize Git inside project folder.<br>
-Add files and commit changes.
-</p>
-
-<div class="image-grid">
-<img src="image/GITHUB4.jpeg">
-</div>
-
-<p>
-<strong>Step 4 — Push Project Online</strong><br>
-Link local repository with GitHub and push files using Git commands.
-</p>
-
-<div class="image-grid">
-<img src="image/GITHUB5.jpeg">
-</div>
-
-<p><b>GitHub Setup Completed!</b></p>
+<a href="https://docs.google.com/presentation/d/1gF_KP1RnZ2fsq96GuKUHeEEyNxjGh1VOXWsm-3EabJI/edit?usp=sharing" target="_blank">
+CLICK TO OPEN!
+</a>
 
 </div>
 
-<!-- ================= DAY 2 ================= -->
-
-<div id="day2" class="day-full">
-
-<button class="back-btn" onclick="closeDay()">← Back to Days</button>
-
-<h2>Day 2</h2>
-
-<!-- GIMP -->
-
-<h3>GIMP</h3>
-
-<p><strong>Step 1 — Download GIMP</strong></p>
-
-<div class="image-grid">
-<img src="image/Gimp1.jpeg">
 </div>
 
-<p><strong>Step 2 — Run Installer</strong></p>
+<!-- DAY 2 -->
 
-<div class="image-grid">
-<img src="image/Gimp2.jpeg">
+<div class="day-card">
+
+<button class="day-btn" onclick="toggleDay('day2')">
+Day 2
+</button>
+
+<div class="links" id="day2">
+
+<a href="https://docs.google.com/presentation/d/1HYxcUVRQB14VaAX7-VwR1pjuqrisP69gD7GR_vfqPik/edit?usp=sharing" target="_blank">
+CLICK TO OPEN!
+</a>
+
 </div>
 
-<p><strong>Step 3 — Finish Installation</strong></p>
-
-<div class="image-grid">
-<img src="image/Gimp3.jpeg">
 </div>
 
-<!-- OBS -->
+<!-- DAY 3 -->
 
-<h3>OBS Studio</h3>
+<div class="day-card">
 
-<p><strong>Step 1 — Download OBS Studio</strong></p>
+<button class="day-btn" onclick="toggleDay('day3')">
+Day 3
+</button>
 
-<div class="image-grid">
-<img src="image/obs1.jpeg">
-<img src="image/obs2.jpeg">
+<div class="links" id="day3">
+
+<a href="#">
+Coming Soon
+</a>
+
 </div>
 
-<p><strong>Step 2 — Run Installer</strong></p>
-
-<div class="image-grid">
-<img src="image/obs3.jpeg">
 </div>
 
-<p><strong>Step 3 — Finish Installation</strong></p>
+<!-- DAY 4 -->
 
-<div class="image-grid">
-<img src="image/obs4.jpeg">
+<div class="day-card">
+
+<button class="day-btn" onclick="toggleDay('day4')">
+Day 4
+</button>
+
+<div class="links" id="day4">
+
+<a href="#">
+Coming Soon
+</a>
+
 </div>
 
-<!-- AUTODESK -->
-
-<h3>Autodesk Fusion</h3>
-
-<p><strong>Step 1 — Download Autodesk Fusion</strong></p>
-
-<div class="image-grid">
-<img src="image/fusion1.jpeg">
 </div>
 
-<p><strong>Step 2 — Choose Version</strong></p>
+<!-- DAY 5 -->
 
-<div class="image-grid">
-<img src="image/fusion2.jpeg">
+<div class="day-card">
+
+<button class="day-btn" onclick="toggleDay('day5')">
+Day 5
+</button>
+
+<div class="links" id="day5">
+
+<a href="#">
+Coming Soon
+</a>
+
 </div>
 
-<p><strong>Step 3 — Choose Product</strong></p>
-
-<div class="image-grid">
-<img src="image/fusion3.jpeg">
 </div>
 
-<p><strong>Step 4 — Run Installer</strong></p>
+<!-- DAY 6 -->
 
-<div class="image-grid">
-<img src="image/fusion4.jpeg">
-</div>
+<div class="day-card">
 
-<p><strong>Step 5 — Finish Installation</strong></p>
+<button class="day-btn" onclick="toggleDay('day6')">
+Day 6
+</button>
 
-<div class="image-grid">
-<img src="image/fusion5.jpeg">
+<div class="links" id="day6">
+
+<a href="#">
+Coming Soon
+</a>
+
 </div>
 
 </div>
 
 </div>
 
-<!-- ================= OTHER WEEKS ================= -->
-
-<div id="week2" class="week-full">
-<button class="back-btn" onclick="closeWeek()">← Back</button>
-<h1>Week 2</h1>
-<p>Documentation coming soon.</p>
 </div>
 
-<div id="week3" class="week-full">
-<button class="back-btn" onclick="closeWeek()">← Back</button>
-<h1>Week 3</h1>
-<p>Documentation coming soon.</p>
 </div>
 
-<div id="week4" class="week-full">
-<button class="back-btn" onclick="closeWeek()">← Back</button>
-<h1>Week 4</h1>
-<p>Documentation coming soon.</p>
+<!-- ================= WEEK 2 ================= -->
+
+<div class="week-card">
+
+<button class="week-btn" onclick="toggleWeek('week2')">
+Week 2
+</button>
+
+<div class="days" id="week2">
+
+<div class="day-grid">
+
+<div class="day-card">
+<button class="day-btn">Coming Soon</button>
 </div>
 
-<div id="week5" class="week-full">
-<button class="back-btn" onclick="closeWeek()">← Back</button>
-<h1>Week 5</h1>
-<p>Documentation coming soon.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= WEEK 3 ================= -->
+
+<div class="week-card">
+
+<button class="week-btn" onclick="toggleWeek('week3')">
+Week 3
+</button>
+
+<div class="days" id="week3">
+
+<div class="day-grid">
+
+<div class="day-card">
+<button class="day-btn">Coming Soon</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= WEEK 4 ================= -->
+
+<div class="week-card">
+
+<button class="week-btn" onclick="toggleWeek('week4')">
+Week 4
+</button>
+
+<div class="days" id="week4">
+
+<div class="day-grid">
+
+<div class="day-card">
+<button class="day-btn">Coming Soon</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= WEEK 5 ================= -->
+
+<div class="week-card">
+
+<button class="week-btn" onclick="toggleWeek('week5')">
+Week 5
+</button>
+
+<div class="days" id="week5">
+
+<div class="day-grid">
+
+<div class="day-card">
+<button class="day-btn">Coming Soon</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
+
+<script>
+
+/* ================= SIDEBAR ================= */
+
+function toggleMenu(){
+
+    const sidebar = document.getElementById("sidebar");
+
+    if(sidebar.style.left === "0px"){
+        sidebar.style.left = "-250px";
+    }
+    else{
+        sidebar.style.left = "0px";
+    }
+}
+
+/* ================= WEEK TOGGLE ================= */
+
+function toggleWeek(id){
+
+    const week = document.getElementById(id);
+
+    if(week.style.display === "block"){
+        week.style.display = "none";
+    }
+    else{
+        week.style.display = "block";
+    }
+}
+
+/* ================= DAY TOGGLE ================= */
+
+function toggleDay(id){
+
+    const day = document.getElementById(id);
+
+    if(day.style.display === "block"){
+        day.style.display = "none";
+    }
+    else{
+        day.style.display = "block";
+    }
+}
+
+</script>
 
 </body>
 </html>

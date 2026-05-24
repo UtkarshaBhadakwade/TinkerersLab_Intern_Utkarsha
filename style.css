@@ -356,3 +356,16 @@ body{
     border:1px solid #00ffd5;
     color:white;
 }
+.slides-container{
+    margin-top:30px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.slides-container iframe{
+    width:90%;
+    max-width:1000px;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,255,213,0.3);
+}

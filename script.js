@@ -104,3 +104,40 @@ function closeDay() {
     document.querySelectorAll(".day-full")
         .forEach(day => day.style.display = "none");
 }
+function openWeek(id){
+    document.getElementById("weeksGrid").style.display = "none";
+
+    document.querySelectorAll(".week-full").forEach(week=>{
+        week.style.display = "none";
+    });
+
+    document.getElementById(id).style.display = "block";
+}
+
+function closeWeek(){
+    document.getElementById("weeksGrid").style.display = "grid";
+
+    document.querySelectorAll(".week-full").forEach(week=>{
+        week.style.display = "none";
+    });
+}
+
+function openDay(id){
+
+    document.getElementById("dayGrid").style.display = "none";
+
+    document.querySelectorAll(".day-full").forEach(day=>{
+        day.style.display = "none";
+    });
+
+    document.getElementById(id).style.display = "block";
+}
+
+function closeDay(){
+
+    document.getElementById("dayGrid").style.display = "grid";
+
+    document.querySelectorAll(".day-full").forEach(day=>{
+        day.style.display = "none";
+    });
+}
