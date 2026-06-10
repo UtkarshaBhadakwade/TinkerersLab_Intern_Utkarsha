@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Tinkerers Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="stars"></div>
+
+    <!-- MENU ICON -->
+    <button class="menu-icon" type="button" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
+
+    <!-- SIDEBAR -->
+    <nav id="sidebar" class="sidebar" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="technical-innovation.html">Technical & Innovation</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallary.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- PROJECTS PAGE -->
+    <div id="projectPage">
+        <section class="project-section">
+            <h1 class="page-title">Projects Showcase</h1>
+            <p style="text-align: center; color: #00ffd5; margin-bottom: 40px; font-size: 18px;">
+                Explore the innovative projects developed at Tinkerers Lab
+            </p>
+
+            <div class="week-grid">
+                <!-- PROJECT 1: 3D PRINTING -->
+                <div class="week-card">
+                    <button class="week-btn" onclick="toggleWeek('project1')">
+                        3D Printing & Design
+                    </button>
+                    <div class="days open" id="project1">
+                        <div class="day-grid">
+                            <a class="day-btn" href="#project1Page">
+                                Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: LASER CUTTING -->
+                <div class="week-card">
+                    <button class="week-btn" onclick="toggleWeek('project2')">
+                        Laser Cutting & Design
+                    </button>
+                    <div class="days" id="project2">
+                        <div class="day-grid">
+                            <a class="day-btn" href="#project2Page">
+                                Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: ARDUINO IoT -->
+                <div class="week-card">
+                    <button class="week-btn" onclick="toggleWeek('project3')">
+                        Arduino IoT & Firebase
+                    </button>
+                    <div class="days" id="project3">
+                        <div class="day-grid">
+                            <a class="day-btn" href="#project3Page">
+                                Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4: EMBEDDED SYSTEMS -->
+                <div class="week-card">
+                    <button class="week-btn" onclick="toggleWeek('project4')">
+                        Embedded Systems
+                    </button>
+                    <div class="days" id="project4">
+                        <div class="day-grid">
+                            <a class="day-btn" href="#project4Page">
+                                Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- PROJECT 1: 3D PRINTING DETAILS -->
+    <div id="project1Page" class="documentation-page">
+        <div class="doc-header-nav">
+            <h1 class="doc-title-main">Project: 3D Printing & Design</h1>
+            <button class="back-btn" onclick="closeDocumentation()" style="margin-bottom: 0;">&larr; Back</button>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Bambu Lab H2D Printer Setup & Calibration</h2>
+            <p>Comprehensive exploration of professional 3D printing technology, focusing on FDM mechanics, print quality optimization, and advanced slicing techniques.</p>
+            <div class="step-detailed-info">
+                <h3>Project Highlights</h3>
+                <ul>
+                    <li><strong>Hardware:</strong> Bambu Lab H2D CoreXY printer with 256x256x256mm build volume</li>
+                    <li><strong>Materials:</strong> PLA, PETG, TPU, and engineering-grade thermoplastics</li>
+                    <li><strong>Key Skills:</strong> Printer calibration, layer optimization, support generation, design-to-print workflow</li>
+                    <li><strong>Applications:</strong> Rapid prototyping, functional parts, aesthetic models</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Slicing & Print Optimization</h2>
+            <p>Mastered advanced slicing techniques using Bambu Studio to achieve optimal print quality, speed, and material efficiency.</p>
+            <div class="step-detailed-info">
+                <h3>Technical Achievements</h3>
+                <ul>
+                    <li>Configured layer heights from 0.08mm to 0.20mm for quality-to-speed balance</li>
+                    <li>Implemented tree supports to minimize material waste and post-processing time</li>
+                    <li>Optimized cooling profiles for different material types</li>
+                    <li>Achieved dimensional accuracy within ±0.5mm tolerance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 2: LASER CUTTING DETAILS -->
+    <div id="project2Page" class="documentation-page">
+        <div class="doc-header-nav">
+            <h1 class="doc-title-main">Project: Laser Cutting & Design</h1>
+            <button class="back-btn" onclick="closeDocumentation()" style="margin-bottom: 0;">&larr; Back</button>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>CO2 Laser Cutter Operation & Design</h2>
+            <p>Hands-on experience with CO2 laser cutting technology for precision cutting, engraving, and fabrication of various materials.</p>
+            <div class="step-detailed-info">
+                <h3>Project Scope</h3>
+                <ul>
+                    <li><strong>Equipment:</strong> 40W CO2 laser cutter with 600x400mm cutting area</li>
+                    <li><strong>Materials:</strong> Wood, acrylic, cardboard, leather, and fabric</li>
+                    <li><strong>Techniques:</strong> Vector cutting, raster engraving, 3D engraving</li>
+                    <li><strong>Software:</strong> CorelDRAW and LightBurn for design and control</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Design to Fabrication Workflow</h2>
+            <p>Complete understanding of converting digital designs into physical laser-cut and engraved products.</p>
+            <div class="step-detailed-info">
+                <h3>Workflow Steps</h3>
+                <ul>
+                    <li>Vector design preparation and optimization</li>
+                    <li>Material selection and thickness calibration</li>
+                    <li>Laser power and speed optimization for different materials</li>
+                    <li>Quality control and finishing techniques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 3: ARDUINO IoT DETAILS -->
+    <div id="project3Page" class="documentation-page">
+        <div class="doc-header-nav">
+            <h1 class="doc-title-main">Project: Arduino IoT & Firebase Integration</h1>
+            <button class="back-btn" onclick="closeDocumentation()" style="margin-bottom: 0;">&larr; Back</button>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>IoT Data Collection & Cloud Storage</h2>
+            <p>Development of IoT systems that collect real-time sensor data and store it in Firebase for remote monitoring and analysis.</p>
+            <div class="step-detailed-info">
+                <h3>Project Components</h3>
+                <ul>
+                    <li><strong>Microcontrollers:</strong> Arduino Uno, Nano, Mega, and ESP32</li>
+                    <li><strong>Sensors:</strong> Temperature, humidity, motion, light, and pressure sensors</li>
+                    <li><strong>Connectivity:</strong> Wi-Fi module (ESP32) for internet connectivity</li>
+                    <li><strong>Backend:</strong> Firebase Realtime Database for cloud storage</li>
+                    <li><strong>Frontend:</strong> Web dashboard for real-time data visualization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Remote Monitoring & Control</h2>
+            <p>Implemented two-way communication for real-time monitoring and remote device control through Firebase.</p>
+            <div class="step-detailed-info">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Real-time sensor data upload to Firebase</li>
+                    <li>Mobile/web dashboard for remote monitoring</li>
+                    <li>Remote control of connected devices</li>
+                    <li>Data logging and historical analysis</li>
+                    <li>Automated alerts and notifications</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 4: EMBEDDED SYSTEMS DETAILS -->
+    <div id="project4Page" class="documentation-page">
+        <div class="doc-header-nav">
+            <h1 class="doc-title-main">Project: Embedded Systems & Microcontrollers</h1>
+            <button class="back-btn" onclick="closeDocumentation()" style="margin-bottom: 0;">&larr; Back</button>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Microcontroller Programming & Hardware Integration</h2>
+            <p>Deep dive into embedded systems programming with multiple Arduino platforms, sensor interfacing, and real-world applications.</p>
+            <div class="step-detailed-info">
+                <h3>Platforms & Skills</h3>
+                <ul>
+                    <li><strong>Arduino Uno:</strong> Basic microcontroller with 14 digital and 6 analog pins</li>
+                    <li><strong>Arduino Mega:</strong> Advanced platform with 54 digital and 16 analog pins</li>
+                    <li><strong>Arduino Nano:</strong> Compact form factor for space-constrained applications</li>
+                    <li><strong>ESP32:</strong> Powerful Wi-Fi enabled microcontroller with dual-core processor</li>
+                    <li><strong>Programming Language:</strong> C++ Arduino IDE</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="doc-box has-img">
+            <h2>Sensor Integration & Data Processing</h2>
+            <p>Integration of various sensors and actuators for real-world embedded system applications.</p>
+            <div class="step-detailed-info">
+                <h3>Hardware Integration</h3>
+                <ul>
+                    <li>Analog sensor reading and calibration</li>
+                    <li>Digital communication protocols (I2C, SPI, UART)</li>
+                    <li>Motor control and PWM signals</li>
+                    <li>LED and display interfacing</li>
+                    <li>Power management and battery optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
