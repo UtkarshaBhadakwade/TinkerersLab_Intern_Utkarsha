@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Laser cutting reference</title>
+  <desc id="desc">Reference diagram for CO2 laser system, design software, and cut samples.</desc>
+  <rect width="1200" height="650" fill="#07131f"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">CO2 Laser Cutting Reference</text>
+  <g font-family="Arial">
+    <rect x="80" y="130" width="300" height="350" rx="20" fill="#10253a" stroke="#7df9ff" stroke-width="4"/>
+    <text x="230" y="190" text-anchor="middle" fill="#ffffff" font-size="30">Laser System</text>
+    <rect x="125" y="250" width="210" height="60" rx="18" fill="#39d3c7"/>
+    <line x1="335" y1="280" x2="335" y2="420" stroke="#ff7d6e" stroke-width="6"/>
+    <text x="230" y="535" text-anchor="middle" fill="#d8f7ff" font-size="24">Tube • mirrors • lens</text>
+    <rect x="450" y="130" width="300" height="350" rx="20" fill="#10253a" stroke="#39d3c7" stroke-width="4"/>
+    <text x="600" y="190" text-anchor="middle" fill="#ffffff" font-size="30">Design File</text>
+    <rect x="515" y="245" width="170" height="145" rx="12" fill="#07131f" stroke="#ffffff" stroke-width="3"/>
+    <path d="M545 350 L600 260 L655 350 Z" fill="none" stroke="#39d3c7" stroke-width="6"/>
+    <text x="600" y="535" text-anchor="middle" fill="#d8f7ff" font-size="24">Vector paths and settings</text>
+    <rect x="820" y="130" width="300" height="350" rx="20" fill="#10253a" stroke="#f5b84b" stroke-width="4"/>
+    <text x="970" y="190" text-anchor="middle" fill="#ffffff" font-size="30">Cut Sample</text>
+    <rect x="895" y="260" width="150" height="110" fill="#f5b84b" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="970" cy="315" r="35" fill="#07131f"/>
+    <text x="970" y="535" text-anchor="middle" fill="#ffe9bf" font-size="24">Acrylic • MDF • engraving</text>
+  </g>
+</svg>

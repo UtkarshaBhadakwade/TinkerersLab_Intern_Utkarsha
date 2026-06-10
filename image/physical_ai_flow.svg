@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Physical AI data flow</title>
+  <desc id="desc">Sensor data moves to a control system, then to an actuator.</desc>
+  <rect width="1200" height="520" fill="#07131f"/>
+  <rect x="70" y="135" width="260" height="190" rx="18" fill="#10253a" stroke="#39d3c7" stroke-width="4"/>
+  <rect x="470" y="135" width="260" height="190" rx="18" fill="#10253a" stroke="#7df9ff" stroke-width="4"/>
+  <rect x="870" y="135" width="260" height="190" rx="18" fill="#10253a" stroke="#f5b84b" stroke-width="4"/>
+  <text x="200" y="215" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Sensor</text>
+  <text x="200" y="265" text-anchor="middle" fill="#b8d8e6" font-size="26" font-family="Arial">Reads real world data</text>
+  <text x="600" y="205" text-anchor="middle" fill="#ffffff" font-size="38" font-family="Arial">Control System</text>
+  <text x="600" y="258" text-anchor="middle" fill="#b8d8e6" font-size="26" font-family="Arial">Arduino / ESP32</text>
+  <text x="1000" y="215" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Actuator</text>
+  <text x="1000" y="265" text-anchor="middle" fill="#b8d8e6" font-size="26" font-family="Arial">Creates an action</text>
+  <path d="M340 230 H455" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M455 230 l-28 -18 v36 z" fill="#ffffff"/>
+  <path d="M740 230 H855" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M855 230 l-28 -18 v36 z" fill="#ffffff"/>
+  <text x="600" y="430" text-anchor="middle" fill="#7df9ff" font-size="34" font-family="Arial">Input data -> decision -> output action</text>
+</svg>

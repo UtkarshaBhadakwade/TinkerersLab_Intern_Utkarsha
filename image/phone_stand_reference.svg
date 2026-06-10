@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Fusion phone stand reference</title>
+  <desc id="desc">Reference diagram for phone stand modeling steps in Autodesk Fusion.</desc>
+  <rect width="1200" height="650" fill="#07131f"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Phone Stand Modeling Reference</text>
+  <g font-family="Arial">
+    <rect x="90" y="150" width="250" height="330" rx="20" fill="#10253a" stroke="#7df9ff" stroke-width="4"/>
+    <text x="215" y="205" text-anchor="middle" fill="#ffffff" font-size="28">Base Sketch</text>
+    <rect x="145" y="355" width="140" height="45" fill="#7df9ff"/>
+    <rect x="395" y="150" width="250" height="330" rx="20" fill="#10253a" stroke="#39d3c7" stroke-width="4"/>
+    <text x="520" y="205" text-anchor="middle" fill="#ffffff" font-size="28">Support</text>
+    <path d="M455 400 L575 400 L535 260 L485 260 Z" fill="#39d3c7"/>
+    <rect x="700" y="150" width="250" height="330" rx="20" fill="#10253a" stroke="#f5b84b" stroke-width="4"/>
+    <text x="825" y="205" text-anchor="middle" fill="#ffffff" font-size="28">Lip + Text</text>
+    <rect x="755" y="380" width="140" height="35" fill="#f5b84b"/>
+    <rect x="765" y="330" width="120" height="38" fill="#f5b84b"/>
+    <text x="825" y="360" text-anchor="middle" fill="#07131f" font-size="24">NAME</text>
+    <text x="600" y="560" text-anchor="middle" fill="#d8f7ff" font-size="30">Create base -> Add holding lip -> Build back support -> Add text and fillets</text>
+  </g>
+</svg>

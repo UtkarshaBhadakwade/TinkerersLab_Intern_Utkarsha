@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 pinout</title>
+  <desc id="desc">ESP32 DevKit pin groups including GPIO, ADC, DAC, touch, I2C, SPI, UART, and power pins.</desc>
+  <rect width="1200" height="660" fill="#07131f"/>
+  <rect x="385" y="105" width="430" height="430" rx="34" fill="#164860" stroke="#f5b84b" stroke-width="5"/>
+  <text x="600" y="205" text-anchor="middle" fill="#ffffff" font-size="52" font-family="Arial">ESP32 DevKit</text>
+  <text x="600" y="265" text-anchor="middle" fill="#ffe9bf" font-size="28" font-family="Arial">3.3V • Wi-Fi • Bluetooth</text>
+  <g fill="#ffffff" font-family="Arial" font-size="23">
+    <text x="70" y="125">ADC1: GPIO32-36, 39</text>
+    <text x="70" y="180">Input only: GPIO34, 35, 36, 39</text>
+    <text x="70" y="235">DAC: GPIO25, GPIO26</text>
+    <text x="70" y="290">Touch: GPIO0, 2, 4, 12-15, 27, 32, 33</text>
+    <text x="835" y="125">I2C: GPIO21 SDA / GPIO22 SCL</text>
+    <text x="835" y="180">SPI: GPIO18, 19, 23, 5</text>
+    <text x="835" y="235">UART0: GPIO1 TX / GPIO3 RX</text>
+    <text x="835" y="290">UART2: GPIO17 TX / GPIO16 RX</text>
+    <text x="360" y="610">Boot sensitive: GPIO0, GPIO2, GPIO12, GPIO15 • Avoid GPIO6-GPIO11</text>
+  </g>
+  <g fill="#ffe9bf">
+    <rect x="350" y="125" width="24" height="390" rx="8"/>
+    <rect x="826" y="125" width="24" height="390" rx="8"/>
+  </g>
+</svg>

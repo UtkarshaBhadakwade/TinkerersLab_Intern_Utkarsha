@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Uno pinout</title>
+  <desc id="desc">Arduino Uno pin groups including digital, analog, power, PWM, UART, I2C, and SPI pins.</desc>
+  <rect width="1200" height="620" fill="#07131f"/>
+  <rect x="210" y="150" width="780" height="310" rx="34" fill="#0d5b78" stroke="#7df9ff" stroke-width="5"/>
+  <text x="600" y="215" text-anchor="middle" fill="#ffffff" font-size="48" font-family="Arial">Arduino Uno Pinout</text>
+  <text x="600" y="270" text-anchor="middle" fill="#d8f7ff" font-size="27" font-family="Arial">ATmega328P • 5V • 16 MHz</text>
+  <g fill="#ffffff" font-family="Arial" font-size="24">
+    <text x="110" y="120">Digital: D0-D13</text>
+    <text x="110" y="505">Analog: A0-A5</text>
+    <text x="835" y="120">PWM: D3 D5 D6 D9 D10 D11</text>
+    <text x="835" y="505">Power: VIN 5V 3.3V GND RESET</text>
+    <text x="420" y="548">UART: D0 RX / D1 TX • I2C: A4 SDA / A5 SCL • SPI: D10-D13</text>
+  </g>
+  <g fill="#d8f7ff">
+    <rect x="230" y="112" width="740" height="24" rx="8"/>
+    <rect x="230" y="474" width="520" height="24" rx="8"/>
+    <rect x="995" y="185" width="24" height="220" rx="8"/>
+  </g>
+</svg>

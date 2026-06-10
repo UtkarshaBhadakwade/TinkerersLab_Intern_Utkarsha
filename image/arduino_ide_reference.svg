@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino IDE setup reference</title>
+  <desc id="desc">Reference diagram for Arduino IDE download, installation, board selection, and Blink upload.</desc>
+  <rect width="1200" height="650" fill="#07131f"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Arduino IDE Setup Reference</text>
+  <g font-family="Arial">
+    <rect x="90" y="135" width="460" height="380" rx="22" fill="#10253a" stroke="#7df9ff" stroke-width="4"/>
+    <rect x="135" y="190" width="370" height="245" rx="12" fill="#07131f" stroke="#ffffff" stroke-width="3"/>
+    <text x="320" y="250" text-anchor="middle" fill="#7df9ff" font-size="30">Download + Install</text>
+    <text x="320" y="310" text-anchor="middle" fill="#ffffff" font-size="25">Arduino IDE</text>
+    <text x="320" y="370" text-anchor="middle" fill="#ffffff" font-size="25">Drivers and setup wizard</text>
+    <rect x="650" y="135" width="460" height="380" rx="22" fill="#10253a" stroke="#39d3c7" stroke-width="4"/>
+    <rect x="700" y="190" width="360" height="245" rx="12" fill="#07131f" stroke="#ffffff" stroke-width="3"/>
+    <text x="880" y="250" text-anchor="middle" fill="#39d3c7" font-size="30">Board + Port</text>
+    <text x="880" y="310" text-anchor="middle" fill="#ffffff" font-size="25">Select Arduino board</text>
+    <text x="880" y="370" text-anchor="middle" fill="#ffffff" font-size="25">Upload Blink example</text>
+    <text x="600" y="585" text-anchor="middle" fill="#d8f7ff" font-size="30">Download -> Install -> Select board and port -> Upload code</text>
+  </g>
+</svg>

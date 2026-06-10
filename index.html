@@ -2,56 +2,35 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Utkarsha Bhadakwade | Tinkerers Lab</title>
-
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utkarsha Bhadakwade | Tinkerers Lab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="stars"></div>
 
-<!-- BACKGROUND -->
-<div class="stars"></div>
+    <button class="menu-icon" type="button" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
 
-<!-- MENU ICON -->
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="sidebar" class="sidebar" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Technical & Innovation</a>
+        <a href="gallary.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-<!-- SIDEBAR -->
-<div id="sidebar" class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="project.html">Projects</a>
-    <a href="gallary.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-</div>
-
-<!-- HERO SECTION -->
-<section class="hero">
-
-<!-- Tinkerers Lab Logo -->
-<img src="image/logo.png" alt="Tinkerers Lab Logo" class="logo">
-
-<!-- YOUR NAME -->
-<h1 class="title">
-<strong>Utkarsha Bhadakwade</strong>
-</h1>
-
-<!-- SHORT INTRO -->
-<p class="subtitle">
-Student Innovator • Builder • Creator
-</p>
-
-
-
-</section>
-
-
-
-</section>
-
+    <main>
+        <section class="hero">
+            <div class="hero-card">
+                <img src="image/logo.png" alt="Tinkerers Lab Logo" class="logo">
+                <h1 class="title"><strong>Utkarsha Bhadakwade</strong></h1>
+                <p class="subtitle">Student Innovator &bull; Builder &bull; Creator</p>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

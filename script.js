@@ -1,143 +1,114 @@
 /* ===============================
-   SIDEBAR MENU
-=================================*/
+   TINKERERS LAB INTERACTIONS
+================================ */
+
+const sidebar = () => document.getElementById("sidebar");
+
 function toggleMenu() {
+    const panel = sidebar();
+    if (!panel) return;
 
-    const sidebar = document.getElementById("sidebar");
-
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px";
-    } else {
-        sidebar.style.left = "0px";
-    }
+    panel.classList.toggle("open");
 }
 
-
-/* ===============================
-   SCROLL FUNCTION (HOME PAGE)
-=================================*/
-function scrollDown() {
-
-    const section = document.getElementById("overview");
-
-    if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-    }
+function closeMenu() {
+    const panel = sidebar();
+    if (panel) panel.classList.remove("open");
 }
 
+function toggleWeek(id) {
+    const selectedWeek = document.getElementById(id);
+    if (!selectedWeek) return;
 
-/* ===============================
-   OPEN WEEK
-=================================*/
-function openWeek(weekId) {
+    const shouldOpen = !selectedWeek.classList.contains("open");
 
-    // Hide week grid
-    const weeksGrid = document.getElementById("weeksGrid");
-    if (weeksGrid) {
-        weeksGrid.style.display = "none";
-    }
-
-    // Hide all weeks
-    document.querySelectorAll(".week-full")
-        .forEach(week => week.style.display = "none");
-
-    // Show selected week
-    const selectedWeek = document.getElementById(weekId);
-    if (selectedWeek) {
-        selectedWeek.style.display = "block";
-    }
-}
-
-
-/* ===============================
-   CLOSE WEEK
-=================================*/
-function closeWeek() {
-
-    // Show week grid again (GRID, not FLEX)
-    const weeksGrid = document.getElementById("weeksGrid");
-    if (weeksGrid) {
-        weeksGrid.style.display = "grid";
-    }
-
-    // Hide all week pages
-    document.querySelectorAll(".week-full")
-        .forEach(week => week.style.display = "none");
-}
-
-
-/* ===============================
-   OPEN DAY
-=================================*/
-function openDay(dayId) {
-
-    // Hide day grid
-    const dayGrid = document.getElementById("dayGrid");
-    if (dayGrid) {
-        dayGrid.style.display = "none";
-    }
-
-    // Hide all day pages
-    document.querySelectorAll(".day-full")
-        .forEach(day => day.style.display = "none");
-
-    // Show selected day
-    const selectedDay = document.getElementById(dayId);
-    if (selectedDay) {
-        selectedDay.style.display = "block";
-    }
-}
-
-
-/* ===============================
-   CLOSE DAY
-=================================*/
-function closeDay() {
-
-    // Show day grid again (GRID, not FLEX)
-    const dayGrid = document.getElementById("dayGrid");
-    if (dayGrid) {
-        dayGrid.style.display = "grid";
-    }
-
-    // Hide all day pages
-    document.querySelectorAll(".day-full")
-        .forEach(day => day.style.display = "none");
-}
-function openWeek(id){
-    document.getElementById("weeksGrid").style.display = "none";
-
-    document.querySelectorAll(".week-full").forEach(week=>{
-        week.style.display = "none";
+    document.querySelectorAll(".days").forEach(week => {
+        week.classList.remove("open");
     });
 
-    document.getElementById(id).style.display = "block";
+    selectedWeek.classList.toggle("open", shouldOpen);
 }
 
-function closeWeek(){
-    document.getElementById("weeksGrid").style.display = "grid";
+function openDocumentation(pageId) {
+    const targetPage = document.getElementById(pageId);
+    if (!targetPage) return;
 
-    document.querySelectorAll(".week-full").forEach(week=>{
-        week.style.display = "none";
-    });
-}
-
-function openDay(id){
-
-    document.getElementById("dayGrid").style.display = "none";
-
-    document.querySelectorAll(".day-full").forEach(day=>{
-        day.style.display = "none";
+    document.querySelectorAll(".documentation-page").forEach(page => {
+        page.classList.remove("active");
     });
 
-    document.getElementById(id).style.display = "block";
+    document.body.classList.add("doc-open");
+    targetPage.classList.add("active");
+    targetPage.scrollTop = 0;
+    closeMenu();
 }
 
-function closeDay(){
-
-    document.getElementById("dayGrid").style.display = "grid";
-
-    document.querySelectorAll(".day-full").forEach(day=>{
-        day.style.display = "none";
+function closeDocumentation() {
+    document.querySelectorAll(".documentation-page").forEach(page => {
+        page.classList.remove("active");
     });
+
+    document.body.classList.remove("doc-open");
+
+    if (window.location.hash) {
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
 }
+
+function openHashDocumentation() {
+    const pageId = window.location.hash.replace("#", "");
+    if (!pageId) return;
+
+    const targetPage = document.getElementById(pageId);
+    if (targetPage && targetPage.classList.contains("documentation-page")) {
+        openDocumentation(pageId);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".day-btn[href^='#']").forEach(link => {
+        link.addEventListener("click", event => {
+            const pageId = link.getAttribute("href").slice(1);
+            const targetPage = document.getElementById(pageId);
+
+            if (targetPage && targetPage.classList.contains("documentation-page")) {
+                event.preventDefault();
+                history.pushState(null, "", `#${pageId}`);
+                openDocumentation(pageId);
+            }
+        });
+    });
+
+    document.querySelectorAll(".sidebar a").forEach(link => {
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        }
+
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", event => {
+        const panel = sidebar();
+        const menuButton = document.querySelector(".menu-icon");
+
+        if (!panel || !panel.classList.contains("open")) return;
+        if (panel.contains(event.target) || menuButton?.contains(event.target)) return;
+
+        closeMenu();
+    });
+
+    openHashDocumentation();
+});
+
+window.addEventListener("hashchange", openHashDocumentation);
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeMenu();
+
+        if (document.body.classList.contains("doc-open")) {
+            closeDocumentation();
+        }
+    }
+});

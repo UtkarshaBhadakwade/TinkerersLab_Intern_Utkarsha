@@ -1,0 +1,1 @@
+var RichAdsCarouselHoverEC;!function(RichAdsCarouselHoverEC){RichAdsCarouselHoverEC.IsHoverContentEmpty=function(element){return!element||!(element.children.length>1)&&(!!(0===element.children.length||1===element.children.length&&element.children[0].classList.contains("ra_mlink"))||void 0)}}(RichAdsCarouselHoverEC||(RichAdsCarouselHoverEC={}));

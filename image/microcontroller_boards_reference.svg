@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Microcontroller boards reference</title>
+  <desc id="desc">Reference image for Arduino Uno, Arduino Nano, Arduino Mega, and ESP32 boards.</desc>
+  <rect width="1200" height="680" fill="#07131f"/>
+  <text x="600" y="68" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Microcontroller Boards</text>
+  <g font-family="Arial" font-weight="700">
+    <rect x="80" y="130" width="460" height="210" rx="24" fill="#0d5b78" stroke="#7df9ff" stroke-width="4"/>
+    <text x="310" y="200" text-anchor="middle" fill="#ffffff" font-size="38">Arduino Uno</text>
+    <text x="310" y="252" text-anchor="middle" fill="#d8f7ff" font-size="24">14 digital pins • 6 analog pins</text>
+    <circle cx="150" cy="295" r="18" fill="#d8f7ff"/>
+    <circle cx="470" cy="295" r="18" fill="#d8f7ff"/>
+    <rect x="660" y="130" width="460" height="210" rx="24" fill="#0d5b78" stroke="#39d3c7" stroke-width="4"/>
+    <text x="890" y="200" text-anchor="middle" fill="#ffffff" font-size="38">Arduino Mega</text>
+    <text x="890" y="252" text-anchor="middle" fill="#d8f7ff" font-size="24">54 digital pins • 16 analog pins</text>
+    <circle cx="730" cy="295" r="18" fill="#d8f7ff"/>
+    <circle cx="1050" cy="295" r="18" fill="#d8f7ff"/>
+    <rect x="80" y="410" width="460" height="160" rx="24" fill="#164860" stroke="#7df9ff" stroke-width="4"/>
+    <text x="310" y="475" text-anchor="middle" fill="#ffffff" font-size="38">Arduino Nano</text>
+    <text x="310" y="525" text-anchor="middle" fill="#d8f7ff" font-size="24">Compact breadboard board</text>
+    <rect x="660" y="410" width="460" height="160" rx="24" fill="#164860" stroke="#f5b84b" stroke-width="4"/>
+    <text x="890" y="475" text-anchor="middle" fill="#ffffff" font-size="38">ESP32</text>
+    <text x="890" y="525" text-anchor="middle" fill="#ffe9bf" font-size="24">Wi-Fi • Bluetooth • IoT</text>
+  </g>
+</svg>

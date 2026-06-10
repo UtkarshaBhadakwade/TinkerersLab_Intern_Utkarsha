@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Nano pinout</title>
+  <desc id="desc">Arduino Nano pin groups including digital, PWM, analog, UART, I2C, SPI, and power pins.</desc>
+  <rect width="1200" height="620" fill="#07131f"/>
+  <rect x="420" y="105" width="360" height="410" rx="30" fill="#0d5b78" stroke="#7df9ff" stroke-width="5"/>
+  <text x="600" y="195" text-anchor="middle" fill="#ffffff" font-size="46" font-family="Arial">Arduino Nano</text>
+  <text x="600" y="248" text-anchor="middle" fill="#d8f7ff" font-size="26" font-family="Arial">ATmega328P • Compact Board</text>
+  <g fill="#ffffff" font-family="Arial" font-size="24">
+    <text x="90" y="155">Digital: D0-D13</text>
+    <text x="90" y="225">PWM: D3 D5 D6 D9 D10 D11</text>
+    <text x="90" y="295">UART: D0 RX / D1 TX</text>
+    <text x="815" y="155">Analog: A0-A7</text>
+    <text x="815" y="225">I2C: A4 SDA / A5 SCL</text>
+    <text x="815" y="295">SPI: D10-D13</text>
+    <text x="455" y="565">Power: VIN • 5V • 3.3V • GND • RESET</text>
+  </g>
+  <g fill="#d8f7ff">
+    <rect x="390" y="120" width="22" height="380" rx="8"/>
+    <rect x="790" y="120" width="22" height="380" rx="8"/>
+  </g>
+</svg>

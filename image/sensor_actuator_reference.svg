@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Sensors and actuators reference</title>
+  <desc id="desc">Reference diagram showing common sensors and actuators.</desc>
+  <rect width="1200" height="620" fill="#07131f"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">Sensors and Actuators</text>
+  <g font-family="Arial">
+    <rect x="70" y="130" width="480" height="400" rx="20" fill="#10253a" stroke="#39d3c7" stroke-width="4"/>
+    <text x="310" y="185" text-anchor="middle" fill="#7df9ff" font-size="36">Sensors</text>
+    <circle cx="180" cy="270" r="48" fill="#193a50" stroke="#ffffff" stroke-width="3"/>
+    <text x="180" y="278" text-anchor="middle" fill="#ffffff" font-size="22">LDR</text>
+    <rect x="290" y="225" width="120" height="90" rx="12" fill="#193a50" stroke="#ffffff" stroke-width="3"/>
+    <text x="350" y="278" text-anchor="middle" fill="#ffffff" font-size="22">PIR</text>
+    <rect x="145" y="365" width="125" height="90" rx="12" fill="#193a50" stroke="#ffffff" stroke-width="3"/>
+    <text x="207" y="418" text-anchor="middle" fill="#ffffff" font-size="22">DHT11</text>
+    <rect x="335" y="365" width="125" height="90" rx="12" fill="#193a50" stroke="#ffffff" stroke-width="3"/>
+    <text x="397" y="418" text-anchor="middle" fill="#ffffff" font-size="22">Gas</text>
+    <rect x="650" y="130" width="480" height="400" rx="20" fill="#10253a" stroke="#f5b84b" stroke-width="4"/>
+    <text x="890" y="185" text-anchor="middle" fill="#f5b84b" font-size="36">Actuators</text>
+    <circle cx="760" cy="270" r="50" fill="#3b2b15" stroke="#ffffff" stroke-width="3"/>
+    <text x="760" y="278" text-anchor="middle" fill="#ffffff" font-size="22">Motor</text>
+    <rect x="870" y="225" width="120" height="90" rx="12" fill="#3b2b15" stroke="#ffffff" stroke-width="3"/>
+    <text x="930" y="278" text-anchor="middle" fill="#ffffff" font-size="22">Servo</text>
+    <rect x="725" y="365" width="125" height="90" rx="12" fill="#3b2b15" stroke="#ffffff" stroke-width="3"/>
+    <text x="787" y="418" text-anchor="middle" fill="#ffffff" font-size="22">Relay</text>
+    <rect x="915" y="365" width="125" height="90" rx="12" fill="#3b2b15" stroke="#ffffff" stroke-width="3"/>
+    <text x="977" y="418" text-anchor="middle" fill="#ffffff" font-size="22">Buzzer</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Bambu Lab printer hardware reference</title>
+  <desc id="desc">Reference diagram for a 3D printer hardware setup and printed Benchy model.</desc>
+  <rect width="1200" height="650" fill="#07131f"/>
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-size="42" font-family="Arial">3D Printer Hardware Reference</text>
+  <rect x="160" y="125" width="520" height="400" rx="24" fill="#10253a" stroke="#7df9ff" stroke-width="5"/>
+  <rect x="230" y="180" width="380" height="285" rx="16" fill="#07131f" stroke="#d8f7ff" stroke-width="4"/>
+  <line x1="270" y1="230" x2="570" y2="230" stroke="#39d3c7" stroke-width="8"/>
+  <rect x="390" y="215" width="70" height="50" rx="8" fill="#f5b84b"/>
+  <line x1="425" y1="265" x2="425" y2="420" stroke="#ffffff" stroke-width="5"/>
+  <rect x="300" y="420" width="250" height="22" fill="#39d3c7"/>
+  <rect x="765" y="170" width="275" height="270" rx="24" fill="#10253a" stroke="#f5b84b" stroke-width="5"/>
+  <path d="M820 380 H995 L970 325 H930 L900 280 H855 L830 325 Z" fill="#f5b84b" stroke="#ffffff" stroke-width="4"/>
+  <circle cx="870" cy="390" r="20" fill="#07131f"/>
+  <circle cx="960" cy="390" r="20" fill="#07131f"/>
+  <text x="420" y="580" text-anchor="middle" fill="#d8f7ff" font-size="28" font-family="Arial">CoreXY printer frame, nozzle, bed</text>
+  <text x="902" y="500" text-anchor="middle" fill="#ffe9bf" font-size="28" font-family="Arial">Printed sample</text>
+</svg>
