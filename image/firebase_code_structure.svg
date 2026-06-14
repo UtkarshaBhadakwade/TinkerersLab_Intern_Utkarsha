@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino ESP32 Firebase Code Structure</title>
+  <desc id="desc">Visual diagram showing the structure of an Arduino IDE ESP32 sketch for Firebase connectivity: imports, config, setup, and loop routines.</desc>
+  <rect width="1200" height="650" rx="16" fill="#071014"/>
+  
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="650" fill="url(#grid)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" fill="#f6fbff" font-size="38" font-family="Arial, sans-serif" font-weight="bold">Arduino Sketch Code Structure</text>
+  <text x="600" y="105" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial, sans-serif">The five standard logical modules of a typical ESP32 Firebase IoT sketch</text>
+
+  <!-- Flowchart blocks -->
+  
+  <!-- 1. Libraries and Imports -->
+  <g transform="translate(60, 160)">
+    <rect width="300" height="130" rx="12" fill="#0d1b24" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="25" y="36" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">1. Libraries &amp; Imports</text>
+    <text x="25" y="58" fill="#ff6b6b" font-family="Arial, sans-serif" font-weight="bold" font-size="11">DEPENDENCIES</text>
+    <text x="25" y="86" fill="rgba(246, 251, 255, 0.8)" font-family="Consolas, monospace" font-size="12">
+      <tspan x="25" dy="0">#include &lt;WiFi.h&gt;</tspan>
+      <tspan x="25" dy="20">#include &lt;FirebaseESP32.h&gt;</tspan>
+    </text>
+    <text x="25" y="112" fill="rgba(246, 251, 255, 0.5)" font-family="Arial, sans-serif" font-size="11">Imports network and Firebase SDKs.</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 360 225 L 440 225" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+  <polygon points="432,220 440,225 432,230" fill="#ff6b6b"/>
+
+  <!-- 2. Connection Settings -->
+  <g transform="translate(450, 160)">
+    <rect width="300" height="130" rx="12" fill="#0d1b24" stroke="#ffd166" stroke-width="2"/>
+    <text x="25" y="36" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">2. Network Credentials</text>
+    <text x="25" y="58" fill="#ffd166" font-family="Arial, sans-serif" font-weight="bold" font-size="11">CONFIGURATION CONSTANTS</text>
+    <text x="25" y="86" fill="rgba(246, 251, 255, 0.8)" font-family="Consolas, monospace" font-size="12">
+      <tspan x="25" dy="0">#define WIFI_SSID "..."</tspan>
+      <tspan x="25" dy="20">#define FIREBASE_HOST "..."</tspan>
+    </text>
+    <text x="25" y="112" fill="rgba(246, 251, 255, 0.5)" font-family="Arial, sans-serif" font-size="11">Defines Wi-Fi details &amp; DB URL secrets.</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 750 225 L 830 225" stroke="#ffd166" stroke-width="3" fill="none"/>
+  <polygon points="822,220 830,225 822,230" fill="#ffd166"/>
+
+  <!-- 3. Setup Routine -->
+  <g transform="translate(840, 160)">
+    <rect width="300" height="130" rx="12" fill="#0d1b24" stroke="#20d6b5" stroke-width="2"/>
+    <rect width="300" height="130" rx="12" fill="none" stroke="#20d6b5" stroke-width="4" opacity="0.1" filter="url(#glow)"/>
+    <text x="25" y="36" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">3. Setup Routine</text>
+    <text x="25" y="58" fill="#20d6b5" font-family="Arial, sans-serif" font-weight="bold" font-size="11">VOID SETUP()</text>
+    <text x="25" y="86" fill="rgba(246, 251, 255, 0.8)" font-family="Consolas, monospace" font-size="12">
+      <tspan x="25" dy="0">WiFi.begin(SSID, PASS);</tspan>
+      <tspan x="25" dy="20">Firebase.begin(HOST, AUTH);</tspan>
+    </text>
+    <text x="25" y="112" fill="rgba(246, 251, 255, 0.5)" font-family="Arial, sans-serif" font-size="11">Runs once on boot. Opens serial &amp; connections.</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 990 290 V 360 H 210 V 420" stroke="#20d6b5" stroke-width="3" fill="none" stroke-dasharray="6,4"/>
+  <polygon points="205,412 210,420 215,412" fill="#20d6b5"/>
+
+  <!-- 4. Read Sensors (Loop Part 1) -->
+  <g transform="translate(60, 430)">
+    <rect width="300" height="130" rx="12" fill="#0d1b24" stroke="#4da3ff" stroke-width="2"/>
+    <text x="25" y="36" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">4. Telemetry Reading</text>
+    <text x="25" y="58" fill="#4da3ff" font-family="Arial, sans-serif" font-weight="bold" font-size="11">LOOP: HARDWARE POLLING</text>
+    <text x="25" y="86" fill="rgba(246, 251, 255, 0.8)" font-family="Consolas, monospace" font-size="12">
+      <tspan x="25" dy="0">int val = analogRead(34);</tspan>
+      <tspan x="25" dy="20">float temp = dht.read();</tspan>
+    </text>
+    <text x="25" y="112" fill="rgba(246, 251, 255, 0.5)" font-family="Arial, sans-serif" font-size="11">Reads voltage levels from microcontroller pins.</text>
+  </g>
+
+  <!-- Arrow 4 -> 5 -->
+  <path d="M 360 495 L 440 495" stroke="#4da3ff" stroke-width="3" fill="none"/>
+  <polygon points="432,490 440,495 432,500" fill="#4da3ff"/>
+
+  <!-- 5. Write to Firebase (Loop Part 2) -->
+  <g transform="translate(450, 430)">
+    <rect width="300" height="130" rx="12" fill="#0d1b24" stroke="#a166ff" stroke-width="2"/>
+    <rect width="300" height="130" rx="12" fill="none" stroke="#a166ff" stroke-width="4" opacity="0.1" filter="url(#glow)"/>
+    <text x="25" y="36" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">5. Database Upload</text>
+    <text x="25" y="58" fill="#a166ff" font-family="Arial, sans-serif" font-weight="bold" font-size="11">LOOP: DATA PUBLISHING</text>
+    <text x="25" y="86" fill="rgba(246, 251, 255, 0.8)" font-family="Consolas, monospace" font-size="12">
+      <tspan x="25" dy="0">Firebase.setInt(fbData,</tspan>
+      <tspan x="25" dy="20">   "/sensor/value", val);</tspan>
+    </text>
+    <text x="25" y="112" fill="rgba(246, 251, 255, 0.5)" font-family="Arial, sans-serif" font-size="11">Pushes variables to designated Firebase path keys.</text>
+  </g>
+
+  <!-- Loop Feedback Loop (Arrow 5 back to 4) -->
+  <path d="M 750 495 H 810 V 590 H 210 V 560" stroke="#a166ff" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  <polygon points="205,568 210,560 215,568" fill="#a166ff"/>
+  <text x="510" y="583" text-anchor="middle" fill="#a166ff" font-family="Arial, sans-serif" font-weight="bold" font-size="12">Repeats continuously after delay(1000)</text>
+
+</svg>

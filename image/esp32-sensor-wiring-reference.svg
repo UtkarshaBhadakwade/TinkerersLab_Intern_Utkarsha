@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 Sensor Wiring Reference</title>
+  <desc id="desc">Diagram showing sensor power, ground, and signal pins connected to an ESP32 development board.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="78" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Sensor Wiring with ESP32</text>
+  <text x="550" y="114" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Connect VCC, GND, and signal pins before sending readings to the cloud</text>
+
+  <g transform="translate(92 190)">
+    <rect width="260" height="220" rx="18" fill="#102b45" stroke="#ffd166" stroke-width="3"/>
+    <circle cx="72" cy="76" r="34" fill="#ef4444"/>
+    <rect x="135" y="50" width="62" height="110" rx="20" fill="#4da3ff"/>
+    <text x="130" y="188" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Sensor Module</text>
+    <text x="130" y="218" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">DHT / PIR / LDR / MQ</text>
+  </g>
+
+  <g transform="translate(720 155)">
+    <rect width="250" height="320" rx="22" fill="#111827" stroke="#2dd4bf" stroke-width="4"/>
+    <rect x="68" y="64" width="114" height="82" rx="8" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+    <text x="125" y="200" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="middle">ESP32</text>
+    <text x="125" y="238" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">Reads sensor data</text>
+    <circle cx="32" cy="70" r="7" fill="#ef4444"/>
+    <circle cx="32" cy="130" r="7" fill="#111827" stroke="#e5e7eb" stroke-width="3"/>
+    <circle cx="32" cy="190" r="7" fill="#ffd166"/>
+    <text x="58" y="76" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="16">3.3V</text>
+    <text x="58" y="136" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="16">GND</text>
+    <text x="58" y="196" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="16">GPIO</text>
+  </g>
+
+  <path d="M352 260 C470 210 595 210 720 225" fill="none" stroke="#ef4444" stroke-width="8" stroke-linecap="round"/>
+  <path d="M352 312 C485 305 590 300 720 285" fill="none" stroke="#e5e7eb" stroke-width="8" stroke-linecap="round"/>
+  <path d="M352 364 C480 410 590 395 720 345" fill="none" stroke="#ffd166" stroke-width="8" stroke-linecap="round"/>
+
+  <g transform="translate(420 452)">
+    <rect width="260" height="84" rx="18" fill="#102033" stroke="#4da3ff" stroke-width="3"/>
+    <text x="130" y="34" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Pin Mapping</text>
+    <text x="130" y="62" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle">VCC to 3.3V, GND to GND, Signal to GPIO</text>
+  </g>
+</svg>

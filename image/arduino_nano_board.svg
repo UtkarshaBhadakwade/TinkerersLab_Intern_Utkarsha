@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Nano Board</title>
+  <desc id="desc">Vector illustration of Arduino Nano microcontroller board.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#006468"/>
+        <stop offset="100%" stop-color="#004d50"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2a2a2a"/>
+        <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="80" text-anchor="middle" fill="#00ffd5" font-size="36" font-family="Arial" font-weight="bold">Arduino Nano Overview</text>
+  <text x="600" y="120" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial">A compact, breadboard-friendly microcontroller board based on the ATmega328P.</text>
+  
+  <!-- Draw Nano -->
+  
+    <g transform="translate(600, 370) scale(0.9)">
+        <!-- Board base -->
+        <rect x="-90" y="-225" width="180" height="450" rx="10" fill="url(#boardGrad)" stroke="#00979d" stroke-width="2"/>
+        
+        <!-- USB Mini Port -->
+        <rect x="-35" y="-235" width="70" height="40" rx="3" fill="#c0c0c0" stroke="#888" stroke-width="2"/>
+        <rect x="-25" y="-230" width="50" height="15" fill="#444" rx="2"/>
+        
+        <!-- Reset Button -->
+        <rect x="-15" y="-180" width="30" height="20" rx="2" fill="#dcdcdc" stroke="#999" stroke-width="1"/>
+        <circle cx="0" cy="-170" r="5" fill="#e74c3c"/>
+        
+        <!-- ICSP Header -->
+        <rect x="-15" y="160" width="30" height="45" fill="#222" rx="2"/>
+        <!-- 6 pins -->
+        <circle cx="-7" cy="167.5" r="3" fill="#ffd700"/><circle cx="7" cy="167.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="182.5" r="3" fill="#ffd700"/><circle cx="7" cy="182.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="197.5" r="3" fill="#ffd700"/><circle cx="7" cy="197.5" r="3" fill="#ffd700"/>
+
+        <!-- ATmega328P Chip -->
+        <rect x="-30" y="-40" width="60" height="60" rx="4" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        <!-- Chip pins -->
+        <rect x="-35" y="-30" width="5" height="40" fill="#bbb"/>
+        <rect x="30" y="-30" width="5" height="40" fill="#bbb"/>
+        <text x="0" y="-15" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">ATMEGA</text>
+        <text x="0" y="-5" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">328P-AU</text>
+        
+        <!-- CH340 / USB UART Chip -->
+        <rect x="-15" y="80" width="30" height="40" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+        
+        <!-- Side Pins (15 on each side) -->
+    <circle cx="-75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-200.0" r="2" fill="#222"/><circle cx="-75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-173.5" r="2" fill="#222"/><circle cx="-75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-147.0" r="2" fill="#222"/><circle cx="-75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-120.5" r="2" fill="#222"/><circle cx="-75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-94.0" r="2" fill="#222"/><circle cx="-75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-67.5" r="2" fill="#222"/><circle cx="-75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-41.0" r="2" fill="#222"/><circle cx="-75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-14.5" r="2" fill="#222"/><circle cx="-75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="12.0" r="2" fill="#222"/><circle cx="-75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="38.5" r="2" fill="#222"/><circle cx="-75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="65.0" r="2" fill="#222"/><circle cx="-75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="91.5" r="2" fill="#222"/><circle cx="-75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="118.0" r="2" fill="#222"/><circle cx="-75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="144.5" r="2" fill="#222"/><circle cx="-75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="171.0" r="2" fill="#222"/><circle cx="75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-200.0" r="2" fill="#222"/><circle cx="75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-173.5" r="2" fill="#222"/><circle cx="75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-147.0" r="2" fill="#222"/><circle cx="75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-120.5" r="2" fill="#222"/><circle cx="75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-94.0" r="2" fill="#222"/><circle cx="75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-67.5" r="2" fill="#222"/><circle cx="75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-41.0" r="2" fill="#222"/><circle cx="75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-14.5" r="2" fill="#222"/><circle cx="75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="12.0" r="2" fill="#222"/><circle cx="75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="38.5" r="2" fill="#222"/><circle cx="75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="65.0" r="2" fill="#222"/><circle cx="75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="91.5" r="2" fill="#222"/><circle cx="75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="118.0" r="2" fill="#222"/><circle cx="75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="144.5" r="2" fill="#222"/><circle cx="75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="171.0" r="2" fill="#222"/></g>
+
+  <!-- Callouts -->
+  <g font-family="Arial" font-size="16" fill="#f6fbff">
+    <path d="M 540 160 L 450 120 L 400 120" fill="none" stroke="#20d6b5" stroke-width="2"/>
+    <text x="390" y="125" text-anchor="end" fill="#20d6b5">Mini USB Port</text>
+    
+    <path d="M 540 360 L 450 360 L 400 360" fill="none" stroke="#20d6b5" stroke-width="2"/>
+    <text x="390" y="365" text-anchor="end" fill="#20d6b5">ATmega328P Microcontroller</text>
+    <text x="390" y="385" text-anchor="end" fill="rgba(255,255,255,0.5)" font-size="14">32 KB Flash, 2 KB SRAM</text>
+
+    <path d="M 540 200 L 450 240 L 400 240" fill="none" stroke="#20d6b5" stroke-width="2"/>
+    <text x="390" y="245" text-anchor="end" fill="#20d6b5">Reset Button</text>
+    
+    <path d="M 660 540 L 750 560 L 800 560" fill="none" stroke="#20d6b5" stroke-width="2"/>
+    <text x="810" y="565" text-anchor="start" fill="#20d6b5">ICSP Header</text>
+    
+    <path d="M 680 370 L 750 370 L 800 370" fill="none" stroke="#20d6b5" stroke-width="2"/>
+    <text x="810" y="375" text-anchor="start" fill="#20d6b5">30 Header Pins</text>
+    <text x="810" y="395" text-anchor="start" fill="rgba(255,255,255,0.5)" font-size="14">Analog, Digital, PWM &amp; Power</text>
+  </g>
+</svg>

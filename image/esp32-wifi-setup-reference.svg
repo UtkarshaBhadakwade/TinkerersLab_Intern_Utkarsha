@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 Wi-Fi Setup Reference</title>
+  <desc id="desc">Diagram showing Arduino IDE uploading Wi-Fi credentials to ESP32 and connecting to a router.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="78" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Connect ESP32 to Wi-Fi</text>
+  <text x="550" y="114" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Board package, COM port, SSID, password, upload, serial monitor</text>
+
+  <g transform="translate(70 185)">
+    <rect width="280" height="240" rx="18" fill="#102033" stroke="#4da3ff" stroke-width="3"/>
+    <rect x="35" y="38" width="210" height="128" rx="8" fill="#08131f" stroke="#6aa8ff" stroke-width="2"/>
+    <text x="140" y="78" fill="#ffd166" font-family="Consolas, monospace" font-size="20" text-anchor="middle">Arduino IDE</text>
+    <text x="55" y="116" fill="#e9fbff" font-family="Consolas, monospace" font-size="16">WiFi.begin(SSID, PASS);</text>
+    <text x="55" y="146" fill="#8ee8d0" font-family="Consolas, monospace" font-size="16">Serial.println("Connected");</text>
+    <text x="140" y="206" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Upload sketch</text>
+  </g>
+
+  <path d="M370 305h146" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M500 280l42 25-42 25z" fill="#2dd4bf"/>
+
+  <g transform="translate(555 178)">
+    <rect width="220" height="255" rx="20" fill="#111827" stroke="#2dd4bf" stroke-width="4"/>
+    <rect x="56" y="54" width="108" height="78" rx="8" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="82" cy="170" r="8" fill="#22c55e"/>
+    <circle cx="112" cy="170" r="8" fill="#ffd166"/>
+    <circle cx="142" cy="170" r="8" fill="#4da3ff"/>
+    <text x="110" y="220" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle">ESP32</text>
+  </g>
+
+  <path d="M785 305h92" stroke="#ffd166" stroke-width="8" stroke-linecap="round"/>
+  <path d="M860 280l42 25-42 25z" fill="#ffd166"/>
+
+  <g transform="translate(910 202)">
+    <rect x="28" y="120" width="110" height="54" rx="10" fill="#14324d" stroke="#4da3ff" stroke-width="3"/>
+    <circle cx="54" cy="146" r="7" fill="#22c55e"/>
+    <circle cx="82" cy="146" r="7" fill="#ffd166"/>
+    <circle cx="110" cy="146" r="7" fill="#ef4444"/>
+    <path d="M38 92c28-28 62-28 90 0M58 70c16-15 32-15 48 0M78 48c4-4 8-4 12 0" fill="none" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+    <text x="83" y="218" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Wi-Fi Router</text>
+  </g>
+
+  <g transform="translate(110 490)">
+    <rect width="880" height="56" rx="28" fill="#102b45" stroke="#2dd4bf" stroke-width="2"/>
+    <text x="440" y="36" fill="#e9fbff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle">After upload, verify connection status in Serial Monitor before sending cloud data</text>
+  </g>
+</svg>

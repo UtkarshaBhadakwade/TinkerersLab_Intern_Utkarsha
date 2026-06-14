@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Mega Pinout</title>
+  <desc id="desc">Pinout diagram for Arduino Mega showing power, analog, digital, PWM, and Serial pins.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#006468"/>
+        <stop offset="100%" stop-color="#004d50"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2a2a2a"/>
+        <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="60" text-anchor="middle" fill="#00ffd5" font-size="32" font-family="Arial" font-weight="bold">Arduino Mega Pinout Diagram</text>
+  
+  <!-- Legends -->
+  <g font-family="Arial" font-size="14" font-weight="bold">
+    <rect x="50" y="80" width="120" height="25" rx="4" fill="#e74c3c"/><text x="110" y="98" text-anchor="middle" fill="#fff">Power / GND</text>
+    <rect x="180" y="80" width="120" height="25" rx="4" fill="#2ecc71"/><text x="240" y="98" text-anchor="middle" fill="#fff">Analog Pins</text>
+    <rect x="310" y="80" width="120" height="25" rx="4" fill="#3498db"/><text x="370" y="98" text-anchor="middle" fill="#fff">Digital I/O</text>
+    <rect x="440" y="80" width="120" height="25" rx="4" fill="#9b59b6"/><text x="500" y="98" text-anchor="middle" fill="#fff">PWM (~)</text>
+    <rect x="570" y="80" width="120" height="25" rx="4" fill="#e67e22"/><text x="630" y="98" text-anchor="middle" fill="#fff">Hardware Serial</text>
+  </g>
+
+  <!-- Draw Mega Center -->
+  
+    <g transform="translate(600, 360) scale(1.15)">
+        <!-- Board base -->
+        <path d="M -180 -100 L 180 -100 C 190 -100, 200 -90, 200 -80 L 200 80 C 200 90, 190 100, 180 100 L -180 100 C -190 100, -200 90, -200 80 L -200 -80 C -200 -90, -190 -100, -180 -100 Z" fill="url(#boardGrad)" stroke="#00979d" stroke-width="2"/>
+        
+        <!-- USB Port (Type B) -->
+        <rect x="-210" y="-85" width="40" height="45" rx="3" fill="#c0c0c0" stroke="#888" stroke-width="2"/>
+        <rect x="-200" y="-75" width="20" height="25" fill="#e6e6e6" rx="2"/>
+        
+        <!-- Power Jack -->
+        <rect x="-215" y="45" width="45" height="35" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+        <circle cx="-190" cy="62.5" r="8" fill="#111"/>
+        
+        <!-- ATmega2560 Chip -->
+        <!-- Square flat package (TQFP 100) -->
+        <rect x="-20" y="-30" width="60" height="60" rx="3" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        <!-- Chip pins (simulated lines) -->
+        <rect x="-25" y="-20" width="5" height="40" fill="#bbb"/>
+        <rect x="40" y="-20" width="5" height="40" fill="#bbb"/>
+        <rect x="-10" y="-35" width="40" height="5" fill="#bbb"/>
+        <rect x="-10" y="30" width="40" height="5" fill="#bbb"/>
+        <text x="10" y="0" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">ATMEGA</text>
+        <text x="10" y="10" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">2560</text>
+        
+        <!-- ATmega16U2 (USB Chip) -->
+        <rect x="-130" y="-40" width="25" height="25" rx="2" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        
+        <!-- Reset Button -->
+        <rect x="80" y="-95" width="20" height="15" rx="2" fill="#dcdcdc" stroke="#999" stroke-width="1"/>
+        <circle cx="90" cy="-87.5" r="4" fill="#e74c3c"/>
+
+        <!-- Top Header Pins (Digital 0-13, AREF, GND, SDA, SCL) -->
+        <!-- Usually a long block from center to right edge -->
+        <rect x="-60" y="-95" width="240" height="12" fill="#222" rx="2"/>
+        <!-- Bottom Header Pins (Power & Analog 0-15) -->
+        <!-- Power & A0-A7 -->
+        <rect x="-110" y="83" width="180" height="12" fill="#222" rx="2"/>
+        
+        <!-- Double row header on the far right (Digital 22-53) -->
+        <rect x="175" y="-80" width="18" height="160" fill="#222" rx="2"/>
+        
+        <!-- ICSP Header -->
+        <rect x="-80" y="10" width="20" height="30" fill="#222" rx="2"/>
+    <circle cx="-55.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-45.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-36.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-26.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-17.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-7.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="2.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="11.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="21.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="30.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="40.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="49.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="59.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="68.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="78.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="87.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="97.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="106.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="116.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="125.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="135.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="144.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="154.0" cy="-89" r="2.5" fill="#ffd700"/><circle cx="163.5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-105.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-95.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-86.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-76.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-67.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-57.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-48.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-38.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-29.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-19.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-10.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-0.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="9.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="18.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="28.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="37.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="47.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="56.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="179" cy="-75" r="2.5" fill="#ffd700"/><circle cx="189" cy="-75" r="2.5" fill="#ffd700"/><circle cx="179" cy="-65" r="2.5" fill="#ffd700"/><circle cx="189" cy="-65" r="2.5" fill="#ffd700"/><circle cx="179" cy="-55" r="2.5" fill="#ffd700"/><circle cx="189" cy="-55" r="2.5" fill="#ffd700"/><circle cx="179" cy="-45" r="2.5" fill="#ffd700"/><circle cx="189" cy="-45" r="2.5" fill="#ffd700"/><circle cx="179" cy="-35" r="2.5" fill="#ffd700"/><circle cx="189" cy="-35" r="2.5" fill="#ffd700"/><circle cx="179" cy="-25" r="2.5" fill="#ffd700"/><circle cx="189" cy="-25" r="2.5" fill="#ffd700"/><circle cx="179" cy="-15" r="2.5" fill="#ffd700"/><circle cx="189" cy="-15" r="2.5" fill="#ffd700"/><circle cx="179" cy="-5" r="2.5" fill="#ffd700"/><circle cx="189" cy="-5" r="2.5" fill="#ffd700"/><circle cx="179" cy="5" r="2.5" fill="#ffd700"/><circle cx="189" cy="5" r="2.5" fill="#ffd700"/><circle cx="179" cy="15" r="2.5" fill="#ffd700"/><circle cx="189" cy="15" r="2.5" fill="#ffd700"/><circle cx="179" cy="25" r="2.5" fill="#ffd700"/><circle cx="189" cy="25" r="2.5" fill="#ffd700"/><circle cx="179" cy="35" r="2.5" fill="#ffd700"/><circle cx="189" cy="35" r="2.5" fill="#ffd700"/><circle cx="179" cy="45" r="2.5" fill="#ffd700"/><circle cx="189" cy="45" r="2.5" fill="#ffd700"/><circle cx="179" cy="55" r="2.5" fill="#ffd700"/><circle cx="189" cy="55" r="2.5" fill="#ffd700"/><circle cx="179" cy="65" r="2.5" fill="#ffd700"/><circle cx="189" cy="65" r="2.5" fill="#ffd700"/><circle cx="179" cy="75" r="2.5" fill="#ffd700"/><circle cx="189" cy="75" r="2.5" fill="#ffd700"/></g>
+  
+  <g font-family="Arial" font-size="14" font-weight="bold" fill="#fff">
+    <!-- Top Pins (Digital 0-13, I2C) -->
+    <!-- Just drawing group brackets to keep it clean instead of 54 individual labels -->
+    
+    <!-- Top left bracket for PWM / Digital (D0-D13) -->
+    <path d="M 520 240 L 520 220 L 720 220 L 720 240" fill="none" stroke="#9b59b6" stroke-width="2"/>
+    <rect x="560" y="190" width="120" height="24" rx="4" fill="#9b59b6"/>
+    <text x="620" y="207" text-anchor="middle">PWM (D2-D13)</text>
+    
+    <!-- I2C/SDA SCL Top right -->
+    <path d="M 730 240 L 730 220 L 760 220 L 760 240" fill="none" stroke="#f1c40f" stroke-width="2"/>
+    <rect x="780" y="190" width="80" height="24" rx="4" fill="#f1c40f"/>
+    <text x="820" y="207" text-anchor="middle" fill="#000">I2C (SDA/SCL)</text>
+
+    <!-- Right Side Double Header (D22 - D53) -->
+    <path d="M 820 260 L 840 260 L 840 450 L 820 450" fill="none" stroke="#3498db" stroke-width="2"/>
+    <rect x="860" y="340" width="140" height="24" rx="4" fill="#3498db"/>
+    <text x="930" y="357" text-anchor="middle">Digital I/O (D22-D53)</text>
+    
+    <!-- Serial Ports (TX0/RX0, TX1/RX1, TX2/RX2, TX3/RX3) -->
+    <!-- Highlight near bottom right of the double header or top right -->
+    <!-- Serial 1,2,3 are at D14-D19 on Mega -->
+    <path d="M 780 260 L 800 260 L 800 320 L 780 320" fill="none" stroke="#e67e22" stroke-width="2"/>
+    <rect x="860" y="280" width="140" height="24" rx="4" fill="#e67e22"/>
+    <text x="930" y="297" text-anchor="middle">Serial 1, 2, 3</text>
+
+    <!-- Bottom Left Power Pins -->
+    <path d="M 440 470 L 440 490 L 530 490 L 530 470" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <rect x="420" y="510" width="130" height="24" rx="4" fill="#e74c3c"/>
+    <text x="485" y="527" text-anchor="middle">Power (5V, 3V3, VIN)</text>
+
+    <!-- Bottom Right Analog Pins -->
+    <path d="M 540 470 L 540 490 L 740 490 L 740 470" fill="none" stroke="#2ecc71" stroke-width="2"/>
+    <rect x="580" y="510" width="130" height="24" rx="4" fill="#2ecc71"/>
+    <text x="645" y="527" text-anchor="middle">Analog (A0 - A15)</text>
+
+    <!-- Left side callouts for ICSP & USB -->
+    <rect x="200" y="240" width="100" height="24" rx="4" fill="#888"/>
+    <text x="250" y="257" text-anchor="middle">USB Type-B</text>
+    <line x1="300" y1="252" x2="360" y2="252" stroke="#888" stroke-width="2"/>
+  </g>
+</svg>

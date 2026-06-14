@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Step 4: Curved Support Columns Sketch</title>
+  <desc id="desc">Side profile sketch of the curved support columns showing spline curve, 75-degree angle, and thickness.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="70" text-anchor="middle" fill="#f6fbff" font-size="36" font-family="Arial" font-weight="bold">Step 4: Design the Curved Support Columns</text>
+  <text x="600" y="110" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial">Sketch organic support columns on vertical YZ plane using Fit Point Spline and extrude</text>
+
+  <!-- Side View Representation (YZ Plane Projection) -->
+  <!-- Base Plate Side Profile (75 mm depth x 5 mm thickness) -->
+  <!-- Scale: 1 mm = 6 pixels -->
+  <g transform="translate(180, 0)">
+    <!-- Grid ground axis line -->
+    <line x1="50" y1="480" x2="800" y2="480" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <text x="780" y="472" fill="rgba(255,255,255,0.4)" font-family="Arial" font-size="14">Y (Depth)</text>
+    <line x1="100" y1="130" x2="100" y2="520" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+    <text x="115" y="145" fill="rgba(255,255,255,0.4)" font-family="Arial" font-size="14">Z (Height)</text>
+
+    <!-- Base Plate -->
+    <!-- Front is to the right (y = 75mm * 6 = 450px from back, let back be at y = 200px. So front is at y = 650px) -->
+    <rect x="200" y="450" width="450" height="30" fill="#132b3f" stroke="#4da3ff" stroke-width="3" rx="2"/>
+    <text x="425" y="470" fill="#f6fbff" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Base Plate (Side Profile)</text>
+
+    <!-- Spline Curve Sketch (Support columns) -->
+    <!-- Back profile: starts at y = 240, z = 450 (bottom). Curves upward and backward (to the left) -->
+    <!-- Spline points: P1(240, 450), P2(220, 360), P3(190, 270), P4(175, 170) -->
+    <!-- Front profile offset by 6 mm * 6 = 36 px: Q1(276, 450), Q2(256, 360), Q3(226, 270), Q4(211, 170) -->
+    <!-- Closed sketch loop -->
+    <path d="M 240 450 C 240 370, 210 290, 175 170 L 211 170 C 246 290, 276 370, 276 450 Z" 
+          fill="rgba(32, 214, 181, 0.12)" stroke="#20d6b5" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Highlight Spline Control Points (Fit Points) -->
+    <circle cx="240" cy="450" r="5" fill="#ffd166" stroke="#071014" stroke-width="2"/>
+    <circle cx="222" cy="350" r="5" fill="#ffd166" stroke="#071014" stroke-width="2"/>
+    <circle cx="195" cy="250" r="5" fill="#ffd166" stroke="#071014" stroke-width="2"/>
+    <circle cx="175" cy="170" r="5" fill="#ffd166" stroke="#071014" stroke-width="2"/>
+
+    <!-- Dimension: Column Thickness 6 mm -->
+    <g fill="#ffd166" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">
+      <line x1="175" y1="150" x2="211" y2="150" stroke="#ffd166" stroke-width="1.5"/>
+      <line x1="175" y1="145" x2="175" y2="155" stroke="#ffd166" stroke-width="1.5"/>
+      <line x1="211" y1="145" x2="211" y2="155" stroke="#ffd166" stroke-width="1.5"/>
+      <text x="193" y="138">6 mm</text>
+    </g>
+
+    <!-- Angle Dimension: 75° Slant Angle -->
+    <!-- Angle line from back point to top point -->
+    <line x1="240" y1="450" x2="165" y2="170" stroke="rgba(255, 209, 102, 0.4)" stroke-dasharray="4,4" stroke-width="1.5"/>
+    <path d="M 320 450 A 80 80 0 0 0 300 376" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <text x="330" y="415" fill="#ffd166" font-family="Arial" font-size="15" font-weight="bold">~75° Slant</text>
+  </g>
+
+  <rect x="250" y="550" width="700" height="40" fill="rgba(32, 214, 181, 0.08)" rx="6" stroke="rgba(32, 214, 181, 0.2)" stroke-width="1"/>
+  <text x="600" y="575" text-anchor="middle" fill="#20d6b5" font-family="Arial" font-size="16" font-weight="bold">CAD Workflow: Sketch on YZ plane → Fit Point Spline → Offset 6mm → Extrude Symmetric</text>
+</svg>

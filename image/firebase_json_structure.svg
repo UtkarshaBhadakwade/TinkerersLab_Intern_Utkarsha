@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Firebase Realtime Database JSON Tree View</title>
+  <desc id="desc">Visual representation of how data is structured as a JSON tree in the Firebase console, showing database paths mapping to sensor values.</desc>
+  <rect width="1200" height="650" rx="16" fill="#071014"/>
+  
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="650" fill="url(#grid)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" fill="#f6fbff" font-size="38" font-family="Arial, sans-serif" font-weight="bold">Firebase JSON Tree Structure</text>
+  <text x="600" y="105" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial, sans-serif">How data is stored hierarchically in the Realtime Database and addressed using paths</text>
+
+  <!-- Firebase Console Mockup Window -->
+  <g transform="translate(80, 150)">
+    <!-- Browser/Console Frame -->
+    <rect width="700" height="440" rx="12" fill="#0c131a" stroke="#2a3b4c" stroke-width="3"/>
+    <!-- Browser Header -->
+    <path d="M 0 12 A 12 12 0 0 1 12 0 L 688 0 A 12 12 0 0 1 700 12 V 46 H 0 Z" fill="#131e29" stroke="#2a3b4c" stroke-width="1.5"/>
+    <!-- Window Control Dots -->
+    <circle cx="24" cy="23" r="7" fill="#ff5f56"/>
+    <circle cx="46" cy="23" r="7" fill="#ffbd2e"/>
+    <circle cx="68" cy="23" r="7" fill="#27c93f"/>
+    <!-- Address Tab/Bar -->
+    <rect x="110" y="10" width="550" height="26" rx="6" fill="#070b10"/>
+    <text x="385" y="27" text-anchor="middle" fill="#7d96a6" font-family="Consolas, monospace" font-size="13">https://tinkerers-lab-default-rtdb.firebaseio.com/</text>
+
+    <!-- Console Workspace Content -->
+    <g transform="translate(40, 90)" font-family="Consolas, monospace" font-size="18">
+      <!-- Database Root Node -->
+      <circle cx="10" cy="-6" r="6" fill="#22c55e"/>
+      <text x="26" y="0" fill="#f6fbff" font-weight="bold">tinkerers-lab-default-rtdb</text>
+
+      <!-- Level 1: control -->
+      <line x1="10" y1="5" x2="10" y2="100" stroke="#4a5d6e" stroke-width="2"/>
+      <line x1="10" y1="40" x2="30" y2="40" stroke="#4a5d6e" stroke-width="2"/>
+      <rect x="30" y="28" width="16" height="16" rx="3" fill="#ffcb2b" fill-opacity="0.2"/>
+      <text x="36" y="41" fill="#ffcb2b" font-weight="bold">-</text>
+      <text x="56" y="42" fill="#e2e8f0" font-weight="bold">control</text>
+
+      <!-- Level 2: relay -->
+      <line x1="40" y1="50" x2="40" y2="80" stroke="#4a5d6e" stroke-width="1.5"/>
+      <line x1="40" y1="75" x2="60" y2="75" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="80" fill="#4da3ff">"relay":</text>
+      <text x="170" y="80" fill="#ff6b6b" font-weight="bold" filter="url(#glow)">"ON"</text>
+
+      <!-- Level 1: sensor -->
+      <line x1="10" y1="135" x2="30" y2="135" stroke="#4a5d6e" stroke-width="2"/>
+      <rect x="30" y="123" width="16" height="16" rx="3" fill="#ffcb2b" fill-opacity="0.2"/>
+      <text x="36" y="136" fill="#ffcb2b" font-weight="bold">-</text>
+      <text x="56" y="137" fill="#e2e8f0" font-weight="bold">sensor</text>
+
+      <!-- Level 2: sensor nodes -->
+      <line x1="40" y1="145" x2="40" y2="310" stroke="#4a5d6e" stroke-width="1.5"/>
+      
+      <!-- sensor/distance -->
+      <line x1="40" y1="170" x2="60" y2="170" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="175" fill="#4da3ff">"distance":</text>
+      <text x="210" y="175" fill="#20d6b5" font-weight="bold">15.2</text>
+
+      <!-- sensor/gas -->
+      <line x1="40" y1="210" x2="60" y2="210" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="215" fill="#4da3ff">"gas":</text>
+      <text x="160" y="215" fill="#20d6b5" font-weight="bold">220</text>
+
+      <!-- sensor/humidity -->
+      <line x1="40" y1="250" x2="60" y2="250" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="255" fill="#4da3ff">"humidity":</text>
+      <text x="210" y="255" fill="#20d6b5" font-weight="bold">60.0</text>
+
+      <!-- sensor/light -->
+      <line x1="40" y1="290" x2="60" y2="290" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="295" fill="#4da3ff">"light":</text>
+      <text x="180" y="295" fill="#20d6b5" font-weight="bold">720</text>
+
+      <!-- sensor/temperature -->
+      <line x1="40" y1="330" x2="60" y2="330" stroke="#4a5d6e" stroke-width="1.5"/>
+      <text x="75" y="335" fill="#4da3ff">"temperature":</text>
+      <text x="240" y="335" fill="#20d6b5" font-weight="bold">24.5</text>
+    </g>
+  </g>
+
+  <!-- Right: Path Explanations -->
+  <g transform="translate(810, 150)">
+    <rect width="310" height="440" rx="12" fill="#0d1720" stroke="#1f2d3d" stroke-width="2"/>
+    <text x="155" y="38" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">Mapping API Paths</text>
+    <line x1="20" y1="56" x2="290" y2="56" stroke="rgba(255,255,255,0.1)"/>
+    
+    <!-- Path 1 -->
+    <g transform="translate(20, 80)">
+      <rect width="270" height="54" rx="6" fill="#132435" stroke="#4da3ff" stroke-width="1.5"/>
+      <text x="15" y="22" fill="#4da3ff" font-family="Consolas, monospace" font-size="14" font-weight="bold">/sensor/temperature</text>
+      <text x="15" y="42" fill="rgba(246, 251, 255, 0.75)" font-family="Arial, sans-serif" font-size="12">Returns temperature reading: 24.5</text>
+    </g>
+
+    <!-- Path 2 -->
+    <g transform="translate(20, 150)">
+      <rect width="270" height="54" rx="6" fill="#132435" stroke="#4da3ff" stroke-width="1.5"/>
+      <text x="15" y="22" fill="#4da3ff" font-family="Consolas, monospace" font-size="14" font-weight="bold">/sensor/humidity</text>
+      <text x="15" y="42" fill="rgba(246, 251, 255, 0.75)" font-family="Arial, sans-serif" font-size="12">Returns humidity percentage: 60.0</text>
+    </g>
+
+    <!-- Path 3 -->
+    <g transform="translate(20, 220)">
+      <rect width="270" height="54" rx="6" fill="#132435" stroke="#4da3ff" stroke-width="1.5"/>
+      <text x="15" y="22" fill="#4da3ff" font-family="Consolas, monospace" font-size="14" font-weight="bold">/sensor/light</text>
+      <text x="15" y="42" fill="rgba(246, 251, 255, 0.75)" font-family="Arial, sans-serif" font-size="12">Returns ambient light value: 720</text>
+    </g>
+
+    <!-- Path 4 -->
+    <g transform="translate(20, 290)">
+      <rect width="270" height="54" rx="6" fill="#132435" stroke="#a166ff" stroke-width="1.5"/>
+      <text x="15" y="22" fill="#a166ff" font-family="Consolas, monospace" font-size="14" font-weight="bold">/control/relay</text>
+      <text x="15" y="42" fill="rgba(246, 251, 255, 0.75)" font-family="Arial, sans-serif" font-size="12">Writes / reads device status: "ON"</text>
+    </g>
+
+    <!-- Educational Tip -->
+    <g transform="translate(20, 360)">
+      <rect width="270" height="60" rx="6" fill="rgba(32, 214, 181, 0.05)" stroke="rgba(32, 214, 181, 0.2)" stroke-width="1"/>
+      <text x="15" y="22" fill="#20d6b5" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DATABASE TIP</text>
+      <text x="15" y="40" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="11">Paths represent directories in the JSON</text>
+      <text x="15" y="52" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="11">tree structure, very similar to folders.</text>
+    </g>
+  </g>
+</svg>

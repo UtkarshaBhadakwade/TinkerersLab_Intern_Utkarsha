@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Nano Pinout</title>
+  <desc id="desc">Pinout diagram for Arduino Nano showing power, analog, digital, and PWM pins.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#006468"/>
+        <stop offset="100%" stop-color="#004d50"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2a2a2a"/>
+        <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="60" text-anchor="middle" fill="#00ffd5" font-size="32" font-family="Arial" font-weight="bold">Arduino Nano Pinout Diagram</text>
+  
+  <!-- Draw Nano Center -->
+  
+    <g transform="translate(600, 360) scale(0.95)">
+        <!-- Board base -->
+        <rect x="-90" y="-225" width="180" height="450" rx="10" fill="url(#boardGrad)" stroke="#00979d" stroke-width="2"/>
+        
+        <!-- USB Mini Port -->
+        <rect x="-35" y="-235" width="70" height="40" rx="3" fill="#c0c0c0" stroke="#888" stroke-width="2"/>
+        <rect x="-25" y="-230" width="50" height="15" fill="#444" rx="2"/>
+        
+        <!-- Reset Button -->
+        <rect x="-15" y="-180" width="30" height="20" rx="2" fill="#dcdcdc" stroke="#999" stroke-width="1"/>
+        <circle cx="0" cy="-170" r="5" fill="#e74c3c"/>
+        
+        <!-- ICSP Header -->
+        <rect x="-15" y="160" width="30" height="45" fill="#222" rx="2"/>
+        <!-- 6 pins -->
+        <circle cx="-7" cy="167.5" r="3" fill="#ffd700"/><circle cx="7" cy="167.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="182.5" r="3" fill="#ffd700"/><circle cx="7" cy="182.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="197.5" r="3" fill="#ffd700"/><circle cx="7" cy="197.5" r="3" fill="#ffd700"/>
+
+        <!-- ATmega328P Chip -->
+        <rect x="-30" y="-40" width="60" height="60" rx="4" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        <!-- Chip pins -->
+        <rect x="-35" y="-30" width="5" height="40" fill="#bbb"/>
+        <rect x="30" y="-30" width="5" height="40" fill="#bbb"/>
+        <text x="0" y="-15" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">ATMEGA</text>
+        <text x="0" y="-5" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">328P-AU</text>
+        
+        <!-- CH340 / USB UART Chip -->
+        <rect x="-15" y="80" width="30" height="40" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+        
+        <!-- Side Pins (15 on each side) -->
+    <circle cx="-75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-200.0" r="2" fill="#222"/><circle cx="-75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-173.5" r="2" fill="#222"/><circle cx="-75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-147.0" r="2" fill="#222"/><circle cx="-75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-120.5" r="2" fill="#222"/><circle cx="-75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-94.0" r="2" fill="#222"/><circle cx="-75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-67.5" r="2" fill="#222"/><circle cx="-75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-41.0" r="2" fill="#222"/><circle cx="-75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-14.5" r="2" fill="#222"/><circle cx="-75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="12.0" r="2" fill="#222"/><circle cx="-75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="38.5" r="2" fill="#222"/><circle cx="-75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="65.0" r="2" fill="#222"/><circle cx="-75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="91.5" r="2" fill="#222"/><circle cx="-75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="118.0" r="2" fill="#222"/><circle cx="-75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="144.5" r="2" fill="#222"/><circle cx="-75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="171.0" r="2" fill="#222"/><circle cx="75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-200.0" r="2" fill="#222"/><circle cx="75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-173.5" r="2" fill="#222"/><circle cx="75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-147.0" r="2" fill="#222"/><circle cx="75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-120.5" r="2" fill="#222"/><circle cx="75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-94.0" r="2" fill="#222"/><circle cx="75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-67.5" r="2" fill="#222"/><circle cx="75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-41.0" r="2" fill="#222"/><circle cx="75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-14.5" r="2" fill="#222"/><circle cx="75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="12.0" r="2" fill="#222"/><circle cx="75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="38.5" r="2" fill="#222"/><circle cx="75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="65.0" r="2" fill="#222"/><circle cx="75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="91.5" r="2" fill="#222"/><circle cx="75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="118.0" r="2" fill="#222"/><circle cx="75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="144.5" r="2" fill="#222"/><circle cx="75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="171.0" r="2" fill="#222"/></g>
+  
+  <!-- Legends -->
+  <g font-family="Arial" font-size="14" font-weight="bold">
+    <rect x="50" y="80" width="120" height="25" rx="4" fill="#e74c3c"/><text x="110" y="98" text-anchor="middle" fill="#fff">Power / GND</text>
+    <rect x="180" y="80" width="120" height="25" rx="4" fill="#2ecc71"/><text x="240" y="98" text-anchor="middle" fill="#fff">Analog Pins</text>
+    <rect x="310" y="80" width="120" height="25" rx="4" fill="#3498db"/><text x="370" y="98" text-anchor="middle" fill="#fff">Digital I/O</text>
+    <rect x="440" y="80" width="120" height="25" rx="4" fill="#9b59b6"/><text x="500" y="98" text-anchor="middle" fill="#fff">PWM (~)</text>
+    <rect x="570" y="80" width="120" height="25" rx="4" fill="#e67e22"/><text x="630" y="98" text-anchor="middle" fill="#fff">UART (TX/RX)</text>
+  </g>
+
+  <!-- Left Side Pins (from top to bottom D13 to TX1) -->
+  <g font-family="monospace" font-size="14" font-weight="bold" fill="#fff">
+    <!-- TX1/D1, RX0/D0, RST, GND, D2, D3~, D4, D5~, D6~, D7, D8, D9~, D10~, D11~, D12 (Actually standard Nano pinout from top left is D13, 3V3, REF, A0-A7, 5V, RST, GND, VIN, wait. Let me do a standard pinout text list) -->
+    <!-- Let's map them out explicitly for Arduino Nano:
+         Left side (top down, USB at top): TX1, RX0, RST, GND, D2, D3~, D4, D5~, D6~, D7, D8, D9~, D10~, D11~, D12
+         Wait, USB at top: Left side is actually TX1, RX0, RST, GND, D2... D12
+         Right side: D13, 3V3, AREF, A0, A1, A2, A3, A4, A5, A6, A7, 5V, RST, GND, VIN 
+    -->
+    <!-- Left pins: -->
+    <!-- D12 --> <rect x="380" y="160" width="120" height="20" rx="3" fill="#3498db"/><text x="440" y="175" text-anchor="middle">D12 / MISO</text> <line x1="500" y1="170" x2="525" y2="170" stroke="#3498db" stroke-width="2"/>
+    <!-- D11~ --> <rect x="380" y="185" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="200" text-anchor="middle">D11~ / MOSI</text> <line x1="500" y1="195" x2="525" y2="195" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D10~ --> <rect x="380" y="210" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="225" text-anchor="middle">D10~ / SS</text> <line x1="500" y1="220" x2="525" y2="220" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D9~ --> <rect x="380" y="235" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="250" text-anchor="middle">D9~</text> <line x1="500" y1="245" x2="525" y2="245" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D8 --> <rect x="380" y="260" width="120" height="20" rx="3" fill="#3498db"/><text x="440" y="275" text-anchor="middle">D8</text> <line x1="500" y1="270" x2="525" y2="270" stroke="#3498db" stroke-width="2"/>
+    <!-- D7 --> <rect x="380" y="285" width="120" height="20" rx="3" fill="#3498db"/><text x="440" y="300" text-anchor="middle">D7</text> <line x1="500" y1="295" x2="525" y2="295" stroke="#3498db" stroke-width="2"/>
+    <!-- D6~ --> <rect x="380" y="310" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="325" text-anchor="middle">D6~</text> <line x1="500" y1="320" x2="525" y2="320" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D5~ --> <rect x="380" y="335" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="350" text-anchor="middle">D5~</text> <line x1="500" y1="345" x2="525" y2="345" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D4 --> <rect x="380" y="360" width="120" height="20" rx="3" fill="#3498db"/><text x="440" y="375" text-anchor="middle">D4</text> <line x1="500" y1="370" x2="525" y2="370" stroke="#3498db" stroke-width="2"/>
+    <!-- D3~ --> <rect x="380" y="385" width="120" height="20" rx="3" fill="#9b59b6"/><text x="440" y="400" text-anchor="middle">D3~ / INT1</text> <line x1="500" y1="395" x2="525" y2="395" stroke="#9b59b6" stroke-width="2"/>
+    <!-- D2 --> <rect x="380" y="410" width="120" height="20" rx="3" fill="#3498db"/><text x="440" y="425" text-anchor="middle">D2 / INT0</text> <line x1="500" y1="420" x2="525" y2="420" stroke="#3498db" stroke-width="2"/>
+    <!-- GND --> <rect x="380" y="435" width="120" height="20" rx="3" fill="#2c3e50"/><text x="440" y="450" text-anchor="middle">GND</text> <line x1="500" y1="445" x2="525" y2="445" stroke="#2c3e50" stroke-width="2"/>
+    <!-- RST --> <rect x="380" y="460" width="120" height="20" rx="3" fill="#e74c3c"/><text x="440" y="475" text-anchor="middle">RST</text> <line x1="500" y1="470" x2="525" y2="470" stroke="#e74c3c" stroke-width="2"/>
+    <!-- RX0 --> <rect x="380" y="485" width="120" height="20" rx="3" fill="#e67e22"/><text x="440" y="500" text-anchor="middle">RX0 / D0</text> <line x1="500" y1="495" x2="525" y2="495" stroke="#e67e22" stroke-width="2"/>
+    <!-- TX1 --> <rect x="380" y="510" width="120" height="20" rx="3" fill="#e67e22"/><text x="440" y="525" text-anchor="middle">TX1 / D1</text> <line x1="500" y1="520" x2="525" y2="520" stroke="#e67e22" stroke-width="2"/>
+
+    <!-- Right pins: -->
+    <!-- D13 --> <rect x="700" y="160" width="120" height="20" rx="3" fill="#3498db"/><text x="760" y="175" text-anchor="middle">D13 / SCK</text> <line x1="675" y1="170" x2="700" y2="170" stroke="#3498db" stroke-width="2"/>
+    <!-- 3V3 --> <rect x="700" y="185" width="120" height="20" rx="3" fill="#e74c3c"/><text x="760" y="200" text-anchor="middle">3V3</text> <line x1="675" y1="195" x2="700" y2="195" stroke="#e74c3c" stroke-width="2"/>
+    <!-- REF --> <rect x="700" y="210" width="120" height="20" rx="3" fill="#f1c40f"/><text x="760" y="225" text-anchor="middle" fill="#000">AREF</text> <line x1="675" y1="220" x2="700" y2="220" stroke="#f1c40f" stroke-width="2"/>
+    <!-- A0 --> <rect x="700" y="235" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="250" text-anchor="middle">A0</text> <line x1="675" y1="245" x2="700" y2="245" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A1 --> <rect x="700" y="260" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="275" text-anchor="middle">A1</text> <line x1="675" y1="270" x2="700" y2="270" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A2 --> <rect x="700" y="285" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="300" text-anchor="middle">A2</text> <line x1="675" y1="295" x2="700" y2="295" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A3 --> <rect x="700" y="310" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="325" text-anchor="middle">A3</text> <line x1="675" y1="320" x2="700" y2="320" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A4 --> <rect x="700" y="335" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="350" text-anchor="middle">A4 / SDA</text> <line x1="675" y1="345" x2="700" y2="345" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A5 --> <rect x="700" y="360" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="375" text-anchor="middle">A5 / SCL</text> <line x1="675" y1="370" x2="700" y2="370" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A6 --> <rect x="700" y="385" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="400" text-anchor="middle">A6</text> <line x1="675" y1="395" x2="700" y2="395" stroke="#2ecc71" stroke-width="2"/>
+    <!-- A7 --> <rect x="700" y="410" width="120" height="20" rx="3" fill="#2ecc71"/><text x="760" y="425" text-anchor="middle">A7</text> <line x1="675" y1="420" x2="700" y2="420" stroke="#2ecc71" stroke-width="2"/>
+    <!-- 5V --> <rect x="700" y="435" width="120" height="20" rx="3" fill="#e74c3c"/><text x="760" y="450" text-anchor="middle">5V</text> <line x1="675" y1="445" x2="700" y2="445" stroke="#e74c3c" stroke-width="2"/>
+    <!-- RST --> <rect x="700" y="460" width="120" height="20" rx="3" fill="#e74c3c"/><text x="760" y="475" text-anchor="middle">RST</text> <line x1="675" y1="470" x2="700" y2="470" stroke="#e74c3c" stroke-width="2"/>
+    <!-- GND --> <rect x="700" y="485" width="120" height="20" rx="3" fill="#2c3e50"/><text x="760" y="500" text-anchor="middle">GND</text> <line x1="675" y1="495" x2="700" y2="495" stroke="#2c3e50" stroke-width="2"/>
+    <!-- VIN --> <rect x="700" y="510" width="120" height="20" rx="3" fill="#e74c3c"/><text x="760" y="525" text-anchor="middle">VIN</text> <line x1="675" y1="520" x2="700" y2="520" stroke="#e74c3c" stroke-width="2"/>
+  </g>
+</svg>

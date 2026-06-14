@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Nano on Breadboard</title>
+  <desc id="desc">Illustration showing an Arduino Nano plugged into a breadboard with a basic LED circuit.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#006468"/>
+        <stop offset="100%" stop-color="#004d50"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2a2a2a"/>
+        <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="70" text-anchor="middle" fill="#00ffd5" font-size="32" font-family="Arial" font-weight="bold">Breadboard Circuit Reference</text>
+  <text x="600" y="110" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial">Arduino Nano is perfectly sized to fit directly onto a standard breadboard.</text>
+
+  <!-- Breadboard -->
+  <g transform="translate(600, 360)">
+    <!-- Base -->
+    <rect x="-350" y="-220" width="700" height="440" rx="15" fill="#e6e6e6" stroke="#ccc" stroke-width="4"/>
+    <rect x="-345" y="-215" width="690" height="430" rx="12" fill="#fafafa"/>
+    
+    <!-- Center divider -->
+    <rect x="-320" y="-10" width="640" height="20" fill="#ddd" rx="4"/>
+    
+    <!-- Holes -->
+    <!-- Left Power Rail -->
+    <line x1="-320" y1="-200" x2="-320" y2="200" stroke="#e74c3c" stroke-width="2"/>
+    <line x1="-300" y1="-200" x2="-300" y2="200" stroke="#3498db" stroke-width="2"/>
+    
+    <!-- Right Power Rail -->
+    <line x1="300" y1="-200" x2="300" y2="200" stroke="#e74c3c" stroke-width="2"/>
+    <line x1="320" y1="-200" x2="320" y2="200" stroke="#3498db" stroke-width="2"/>
+    
+    <!-- Just draw an abstract matrix of holes for simplicity instead of individually grouping all -->
+    <g fill="#444">
+    <!-- Too many holes = big svg, we just draw lines of holes -->
+    </g>
+    <!-- Simplified breadboard hole matrix with paths -->
+  </g>
+  
+  <!-- Since generating 3000 dots makes the SVG huge, I will use a pattern for the breadboard holes -->
+  <defs>
+    <pattern id="bbHoles" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="3" fill="#444"/>
+    </pattern>
+  </defs>
+  
+  <!-- Apply holes to breadboard -->
+  <rect x="360" y="160" width="480" height="130" fill="url(#bbHoles)"/>
+  <rect x="360" y="370" width="480" height="130" fill="url(#bbHoles)"/>
+  
+  <rect x="260" y="160" width="40" height="400" fill="url(#bbHoles)"/>
+  <rect x="900" y="160" width="40" height="400" fill="url(#bbHoles)"/>
+
+  <!-- Draw Nano horizontally inserted across center divider -->
+  <g transform="translate(600, 360) rotate(-90)">
+    
+    <g transform="translate(0, 0) scale(0.85)">
+        <!-- Board base -->
+        <rect x="-90" y="-225" width="180" height="450" rx="10" fill="url(#boardGrad)" stroke="#00979d" stroke-width="2"/>
+        
+        <!-- USB Mini Port -->
+        <rect x="-35" y="-235" width="70" height="40" rx="3" fill="#c0c0c0" stroke="#888" stroke-width="2"/>
+        <rect x="-25" y="-230" width="50" height="15" fill="#444" rx="2"/>
+        
+        <!-- Reset Button -->
+        <rect x="-15" y="-180" width="30" height="20" rx="2" fill="#dcdcdc" stroke="#999" stroke-width="1"/>
+        <circle cx="0" cy="-170" r="5" fill="#e74c3c"/>
+        
+        <!-- ICSP Header -->
+        <rect x="-15" y="160" width="30" height="45" fill="#222" rx="2"/>
+        <!-- 6 pins -->
+        <circle cx="-7" cy="167.5" r="3" fill="#ffd700"/><circle cx="7" cy="167.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="182.5" r="3" fill="#ffd700"/><circle cx="7" cy="182.5" r="3" fill="#ffd700"/>
+        <circle cx="-7" cy="197.5" r="3" fill="#ffd700"/><circle cx="7" cy="197.5" r="3" fill="#ffd700"/>
+
+        <!-- ATmega328P Chip -->
+        <rect x="-30" y="-40" width="60" height="60" rx="4" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        <!-- Chip pins -->
+        <rect x="-35" y="-30" width="5" height="40" fill="#bbb"/>
+        <rect x="30" y="-30" width="5" height="40" fill="#bbb"/>
+        <text x="0" y="-15" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">ATMEGA</text>
+        <text x="0" y="-5" fill="#fff" font-family="monospace" font-size="6" text-anchor="middle" opacity="0.6">328P-AU</text>
+        
+        <!-- CH340 / USB UART Chip -->
+        <rect x="-15" y="80" width="30" height="40" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+        
+        <!-- Side Pins (15 on each side) -->
+    <circle cx="-75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-200.0" r="2" fill="#222"/><circle cx="-75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-173.5" r="2" fill="#222"/><circle cx="-75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-147.0" r="2" fill="#222"/><circle cx="-75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-120.5" r="2" fill="#222"/><circle cx="-75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-94.0" r="2" fill="#222"/><circle cx="-75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-67.5" r="2" fill="#222"/><circle cx="-75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-41.0" r="2" fill="#222"/><circle cx="-75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="-14.5" r="2" fill="#222"/><circle cx="-75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="12.0" r="2" fill="#222"/><circle cx="-75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="38.5" r="2" fill="#222"/><circle cx="-75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="65.0" r="2" fill="#222"/><circle cx="-75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="91.5" r="2" fill="#222"/><circle cx="-75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="118.0" r="2" fill="#222"/><circle cx="-75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="144.5" r="2" fill="#222"/><circle cx="-75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="-75" cy="171.0" r="2" fill="#222"/><circle cx="75" cy="-200.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-200.0" r="2" fill="#222"/><circle cx="75" cy="-173.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-173.5" r="2" fill="#222"/><circle cx="75" cy="-147.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-147.0" r="2" fill="#222"/><circle cx="75" cy="-120.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-120.5" r="2" fill="#222"/><circle cx="75" cy="-94.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-94.0" r="2" fill="#222"/><circle cx="75" cy="-67.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-67.5" r="2" fill="#222"/><circle cx="75" cy="-41.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-41.0" r="2" fill="#222"/><circle cx="75" cy="-14.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="-14.5" r="2" fill="#222"/><circle cx="75" cy="12.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="12.0" r="2" fill="#222"/><circle cx="75" cy="38.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="38.5" r="2" fill="#222"/><circle cx="75" cy="65.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="65.0" r="2" fill="#222"/><circle cx="75" cy="91.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="91.5" r="2" fill="#222"/><circle cx="75" cy="118.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="118.0" r="2" fill="#222"/><circle cx="75" cy="144.5" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="144.5" r="2" fill="#222"/><circle cx="75" cy="171.0" r="5" fill="#ffd700" stroke="#b8860b" stroke-width="1"/><circle cx="75" cy="171.0" r="2" fill="#222"/></g>
+  </g>
+
+  <!-- Wiring and LED to show it's a circuit -->
+  <!-- Red wire from D13 to LED -->
+  <path d="M 660 300 C 660 250, 750 250, 750 220" fill="none" stroke="#e74c3c" stroke-width="4"/>
+  <!-- Resistor from LED to GND -->
+  <path d="M 770 220 L 780 220 L 785 210 L 795 230 L 805 210 L 815 230 L 820 220 L 840 220" fill="none" stroke="#d35400" stroke-width="3"/>
+  <rect x="785" y="215" width="30" height="10" rx="3" fill="#e4c59b"/>
+  <!-- LED -->
+  <path d="M 740 210 Q 760 190 780 210 Z" fill="#ff4d4d"/>
+  <circle cx="760" cy="210" r="15" fill="#ff4d4d" opacity="0.8"/>
+  <rect x="750" y="210" width="20" height="10" fill="#cc0000"/>
+  
+  <!-- Black wire to GND rail -->
+  <path d="M 840 220 C 840 280, 890 280, 910 250" fill="none" stroke="#222" stroke-width="4"/>
+  
+  <!-- Annotation -->
+  <rect x="700" y="120" width="250" height="60" rx="6" fill="#132b3f" stroke="#4da3ff" stroke-width="1"/>
+  <text x="825" y="145" text-anchor="middle" fill="#f6fbff" font-family="Arial" font-size="14">Basic LED Circuit setup</text>
+  <text x="825" y="165" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Arial" font-size="12">Shows standard spacing usage</text>
+
+</svg>

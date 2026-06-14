@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">IoT Dashboard and Control Reference</title>
+  <desc id="desc">Diagram showing Firebase cloud data displayed on a dashboard and control commands sent back to ESP32 outputs.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="78" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Dashboard and Control Loop</text>
+  <text x="550" y="114" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Monitor sensor values and send commands back to the device</text>
+
+  <g transform="translate(70 190)">
+    <rect width="250" height="190" rx="18" fill="#102b45" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="125" y="52" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle">ESP32</text>
+    <text x="125" y="92" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle">Sensor readings</text>
+    <circle cx="85" cy="132" r="12" fill="#22c55e"/>
+    <circle cx="125" cy="132" r="12" fill="#ffd166"/>
+    <circle cx="165" cy="132" r="12" fill="#4da3ff"/>
+  </g>
+
+  <path d="M335 275h142" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M462 250l42 25-42 25z" fill="#2dd4bf"/>
+
+  <g transform="translate(520 175)">
+    <path d="M120 54c22-38 82-31 99 12 38 3 64 29 64 66 0 40-31 70-74 70H68c-44 0-76-30-76-72 0-38 28-65 67-70 10-18 28-32 61-6z" fill="#102033" stroke="#4da3ff" stroke-width="4"/>
+    <text x="120" y="136" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" text-anchor="middle">Firebase</text>
+  </g>
+
+  <path d="M800 275h92" stroke="#4da3ff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M875 250l42 25-42 25z" fill="#4da3ff"/>
+
+  <g transform="translate(920 190)">
+    <rect width="150" height="190" rx="18" fill="#102b45" stroke="#ffd166" stroke-width="3"/>
+    <rect x="25" y="35" width="100" height="72" rx="8" fill="#0f172a"/>
+    <polyline points="38,84 58,66 78,76 98,48 116,58" fill="none" stroke="#2dd4bf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="75" y="142" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Dashboard</text>
+    <text x="75" y="168" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="15" text-anchor="middle">Live values</text>
+  </g>
+
+  <path d="M970 405v72H288v-72" stroke="#ffd166" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M263 420l25-42 25 42z" fill="#ffd166"/>
+  <text x="629" y="510" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Control command returns to ESP32</text>
+
+  <g transform="translate(70 420)">
+    <rect width="180" height="94" rx="16" fill="#14324d" stroke="#ffd166" stroke-width="3"/>
+    <text x="90" y="38" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Output</text>
+    <text x="90" y="66" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle">LED / Relay / Motor</text>
+  </g>
+</svg>

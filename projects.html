@@ -22,6 +22,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="technical-innovation.html">Technical & Innovation</a>
+        <a href="sessions.html">Sessions</a>
         <a href="projects.html">Projects</a>
         <a href="gallary.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -29,14 +30,351 @@
 
     <!-- PROJECTS PAGE -->
     <div id="projectPage">
+    <style>
+    /* Internal CSS for the Presentation Deck */
+    .presentation-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .slide-card {
+        background: rgba(16, 37, 58, 0.6);
+        border: 1px solid rgba(0, 255, 213, 0.2);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .slide-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 255, 213, 0.6);
+    }
+    .slide-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 4px;
+        background: linear-gradient(90deg, #00ffd5, #b8d8e6);
+    }
+    .slide-header {
+        font-size: 1.5rem;
+        color: #00ffd5;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slide-header .slide-number {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.4);
+        font-weight: normal;
+    }
+    .slide-content {
+        color: #d8f7ff;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    .slide-content ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+    .slide-content li {
+        margin-bottom: 10px;
+    }
+    /* Specific Slide Styles */
+    .title-slide {
+        text-align: center;
+        padding: 60px 40px;
+        background: linear-gradient(135deg, rgba(16, 37, 58, 0.8), rgba(0, 255, 213, 0.1));
+    }
+    .title-slide h1 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-shadow: 0 0 15px rgba(0,255,213,0.5);
+    }
+    .title-slide h2 {
+        font-size: 1.4rem;
+        color: #00ffd5;
+        margin-bottom: 30px;
+        font-weight: normal;
+    }
+    .title-slide p {
+        color: rgba(255,255,255,0.7);
+        font-size: 1rem;
+    }
+    .disease-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .disease-tag {
+        background: rgba(0, 255, 213, 0.1);
+        border: 1px solid #00ffd5;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .flow-diagram {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .flow-step {
+        background: #164860;
+        padding: 15px 20px;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+    .flow-arrow {
+        color: #00ffd5;
+        font-size: 1.5rem;
+    }
+    .results-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .results-table th, .results-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .results-table th {
+        color: #00ffd5;
+        font-weight: bold;
+    }
+    .results-table tr:hover {
+        background: rgba(255,255,255,0.05);
+    }
+    .best-model {
+        background: rgba(0, 255, 213, 0.15);
+        border-left: 4px solid #00ffd5;
+    }
+    </style>
+
         <section class="project-section">
-            <h1 class="page-title">Projects Showcase</h1>
+            <h1 class="page-title">VisionAI Project</h1>
             <p style="text-align: center; color: #00ffd5; margin-bottom: 40px; font-size: 18px;">
-                Coming Soon - Innovative projects from Tinkerers Lab
+                AI-Based Eye Disease Detection Presentation
             </p>
 
-            <div class="week-grid">
-                <!-- Project content will be added here -->
+            <div class="presentation-container">
+                <!-- Slide 1 -->
+                <div class="slide-card title-slide">
+                    <h1>VisionAI: AI-Based Eye Disease Detection</h1>
+                    <h2>Using Deep Learning on Fundus Images</h2>
+                    <p>BTech Project | CSE | Sanjivani College of Engineering</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide-card">
+                    <div class="slide-header">Introduction <span class="slide-number">Slide 2</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Eye diseases are a leading cause of blindness worldwide</li>
+                            <li>Early detection is critical but requires specialist expertise</li>
+                            <li>Manual diagnosis is time-consuming and error-prone</li>
+                            <li>AI-based automation offers fast, accurate screening</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide-card">
+                    <div class="slide-header">Problem Statement <span class="slide-number">Slide 3</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Limited availability of ophthalmologists in rural areas</li>
+                            <li>Delayed diagnosis leads to irreversible vision loss</li>
+                            <li>Existing systems classify fewer disease categories</li>
+                            <li>Need for a multi-disease, accurate, and deployable solution</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide-card">
+                    <div class="slide-header">Objectives <span class="slide-number">Slide 4</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Classify fundus images into 6 disease classes</li>
+                            <li>Train and compare 5 deep learning architectures</li>
+                            <li>Build a desktop application (VisionAI) for real-time detection</li>
+                            <li>Identify best model for edge deployment (Raspberry Pi)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide-card">
+                    <div class="slide-header">Disease Classes <span class="slide-number">Slide 5</span></div>
+                    <div class="slide-content">
+                        <div class="disease-grid">
+                            <div class="disease-tag">AMD</div>
+                            <div class="disease-tag">Cataract</div>
+                            <div class="disease-tag">Dementia</div>
+                            <div class="disease-tag">Diabetes</div>
+                            <div class="disease-tag">Glaucoma</div>
+                            <div class="disease-tag">Normal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide-card">
+                    <div class="slide-header">System Overview <span class="slide-number">Slide 6</span></div>
+                    <div class="slide-content">
+                        <div class="flow-diagram">
+                            <div class="flow-step">Fundus Image</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">Preprocessing</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">Deep Learning Model</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">Disease Prediction</div>
+                            <div class="flow-arrow">➔</div>
+                            <div class="flow-step">VisionAI App</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="slide-card">
+                    <div class="slide-header">Dataset <span class="slide-number">Slide 7</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li><strong>Source:</strong> Kaggle fundus image dataset</li>
+                            <li><strong>Scope:</strong> 6 disease classes</li>
+                            <li><strong>Preprocessing:</strong> SSIM filtering, deduplication, augmentation</li>
+                            <li><strong>Split:</strong> 70% Train | 15% Validation | 15% Test</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="slide-card">
+                    <div class="slide-header">Models Used <span class="slide-number">Slide 8</span></div>
+                    <div class="slide-content">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Swin Transformer</td><td>Vision Transformer</td></tr>
+                                <tr><td>EfficientNetV2-S</td><td>CNN</td></tr>
+                                <tr><td>ResNeXt50</td><td>CNN</td></tr>
+                                <tr><td>FNet</td><td>Fourier Transformer</td></tr>
+                                <tr><td>Perceiver IO</td><td>General-purpose Transformer</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="slide-card">
+                    <div class="slide-header">Results <span class="slide-number">Slide 9</span></div>
+                    <div class="slide-content">
+                        <table class="results-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="best-model"><td><strong>EfficientNetV2-S</strong></td><td><strong>94.63%</strong></td></tr>
+                                <tr><td>Swin Transformer</td><td>93.96%</td></tr>
+                                <tr><td>Perceiver IO</td><td>91.28%</td></tr>
+                                <tr><td>FNet</td><td>88.59%</td></tr>
+                                <tr><td>ResNeXt50</td><td>87.92%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Slide 10 -->
+                <div class="slide-card">
+                    <div class="slide-header">Key Observation <span class="slide-number">Slide 10</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Diabetes and Normal classes were hardest to classify across all models</li>
+                            <li>EfficientNetV2-S gave best accuracy with stable training</li>
+                            <li>CNN models converged faster than Transformers</li>
+                            <li>FNet was fastest to train but least accurate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 11 -->
+                <div class="slide-card">
+                    <div class="slide-header">VisionAI Application <span class="slide-number">Slide 11</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Built using PyQt5</li>
+                            <li>Supports image upload, webcam, and video input</li>
+                            <li>Real-time inference using trained models</li>
+                            <li>Multi-threaded for smooth UI experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 12 -->
+                <div class="slide-card">
+                    <div class="slide-header">Design <span class="slide-number">Slide 12</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>3D model of optical lens designed in Fusion 360</li>
+                            <li>Represents hardware component for fundus capture</li>
+                            <li>App interface supports all 5 models</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 13 -->
+                <div class="slide-card">
+                    <div class="slide-header">Conclusion <span class="slide-number">Slide 13</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Successfully trained 5 models on 6-class fundus dataset</li>
+                            <li>EfficientNetV2-S identified as best performing model</li>
+                            <li>VisionAI app built for real-time disease detection</li>
+                            <li>System ready for future edge deployment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Slide 14 -->
+                <div class="slide-card">
+                    <div class="slide-header">Future Scope <span class="slide-number">Slide 14</span></div>
+                    <div class="slide-content">
+                        <ul>
+                            <li>Deploy on Raspberry Pi 5</li>
+                            <li>Add more disease classes</li>
+                            <li>Integrate with hospital systems</li>
+                            <li>Improve Diabetes class accuracy with targeted augmentation</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

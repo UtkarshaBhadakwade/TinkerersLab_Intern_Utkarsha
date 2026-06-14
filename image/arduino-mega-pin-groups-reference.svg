@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Mega Pin Groups Reference</title>
+  <desc id="desc">Diagram grouping Arduino Mega pins into digital, PWM, analog, serial, I2C, SPI, power, and interrupt pins.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="76" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Arduino Mega Pin Groups</text>
+  <text x="550" y="112" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Use the correct group for sensors, motors, displays, and communication modules</text>
+
+  <g transform="translate(80 160)">
+    <rect width="940" height="360" rx="22" fill="#102033" stroke="#4da3ff" stroke-width="3"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">
+      <rect x="42" y="48" width="250" height="72" rx="14" fill="#0f766e"/><text x="167" y="92" fill="#ecfeff" text-anchor="middle">Digital I/O: 0-53</text>
+      <rect x="345" y="48" width="250" height="72" rx="14" fill="#1d4ed8"/><text x="470" y="92" fill="#ecfeff" text-anchor="middle">PWM: 2-13, 44-46</text>
+      <rect x="648" y="48" width="250" height="72" rx="14" fill="#b45309"/><text x="773" y="92" fill="#fff7ed" text-anchor="middle">Analog: A0-A15</text>
+      <rect x="42" y="156" width="250" height="72" rx="14" fill="#7c3aed"/><text x="167" y="200" fill="#f5f3ff" text-anchor="middle">Serial: 0,1,2,3</text>
+      <rect x="345" y="156" width="250" height="72" rx="14" fill="#0891b2"/><text x="470" y="200" fill="#ecfeff" text-anchor="middle">I2C: SDA 20, SCL 21</text>
+      <rect x="648" y="156" width="250" height="72" rx="14" fill="#be123c"/><text x="773" y="200" fill="#fff1f2" text-anchor="middle">SPI: 50-53</text>
+      <rect x="42" y="264" width="250" height="72" rx="14" fill="#334155"/><text x="167" y="308" fill="#f8fafc" text-anchor="middle">Power: 5V, 3.3V, GND</text>
+      <rect x="345" y="264" width="250" height="72" rx="14" fill="#ca8a04"/><text x="470" y="308" fill="#fffbeb" text-anchor="middle">Interrupts: 2,3,18-21</text>
+      <rect x="648" y="264" width="250" height="72" rx="14" fill="#15803d"/><text x="773" y="308" fill="#f0fdf4" text-anchor="middle">Control: RESET, AREF</text>
+    </g>
+  </g>
+</svg>

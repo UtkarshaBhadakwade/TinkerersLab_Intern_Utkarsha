@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">IoT Cloud Data Flow Reference</title>
+  <desc id="desc">Diagram showing sensors sending data to ESP32, Firebase, dashboard, and control output.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="80" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Cloud Data Logging Workflow</text>
+  <text x="550" y="116" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">Sensor readings travel from hardware to database and dashboard</text>
+
+  <g transform="translate(60 220)">
+    <rect width="178" height="150" rx="18" fill="#102b45" stroke="#ffd166" stroke-width="3"/>
+    <circle cx="64" cy="70" r="26" fill="#ef4444"/>
+    <rect x="105" y="44" width="32" height="70" rx="16" fill="#4da3ff"/>
+    <text x="89" y="126" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Sensors</text>
+  </g>
+
+  <path d="M250 295h112" stroke="#2dd4bf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M346 270l42 25-42 25z" fill="#2dd4bf"/>
+
+  <g transform="translate(400 205)">
+    <rect width="205" height="180" rx="20" fill="#111827" stroke="#2dd4bf" stroke-width="4"/>
+    <rect x="52" y="42" width="102" height="62" rx="8" fill="#334155"/>
+    <path d="M158 48c22 18 34 41 34 70M172 78c9 10 14 23 14 40" fill="none" stroke="#ffd166" stroke-width="5" stroke-linecap="round"/>
+    <text x="102" y="142" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">ESP32</text>
+  </g>
+
+  <path d="M622 295h112" stroke="#4da3ff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M718 270l42 25-42 25z" fill="#4da3ff"/>
+
+  <g transform="translate(770 195)">
+    <path d="M92 54c19-34 74-28 88 10 35 2 58 25 58 58 0 36-28 62-66 62H64c-40 0-70-27-70-64 0-34 25-58 61-62 8-15 20-26 37-34z" fill="#102b45" stroke="#4da3ff" stroke-width="4"/>
+    <text x="92" y="132" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Firebase</text>
+  </g>
+
+  <path d="M870 390v70H575" stroke="#ffd166" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M592 435l-42 25 42 25z" fill="#ffd166"/>
+
+  <g transform="translate(365 440)">
+    <rect width="185" height="92" rx="15" fill="#14324d" stroke="#ffd166" stroke-width="3"/>
+    <text x="92" y="38" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Control</text>
+    <text x="92" y="66" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="17" text-anchor="middle">LED / Relay / Motor</text>
+  </g>
+
+  <g transform="translate(780 430)">
+    <rect width="220" height="98" rx="14" fill="#102b45" stroke="#2dd4bf" stroke-width="3"/>
+    <polyline points="28,68 70,48 112,58 154,30 194,40" fill="none" stroke="#2dd4bf" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="110" y="78" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Dashboard</text>
+  </g>
+</svg>

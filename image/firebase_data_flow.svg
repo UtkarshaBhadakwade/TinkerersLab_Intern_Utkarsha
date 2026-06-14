@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">IoT Firebase Data Flow Architecture</title>
+  <desc id="desc">Sleek visual representation of ESP32 sensor values sent to Firebase and then to a web app dashboard in real-time, plus control back-propagation.</desc>
+  <rect width="1200" height="650" rx="16" fill="#071014"/>
+  
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <!-- Glow Filters -->
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-orange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <!-- Marker Arrows -->
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#20d6b5"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f58220"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#4da3ff"/>
+    </marker>
+  </defs>
+  
+  <rect width="1200" height="650" fill="url(#grid)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" fill="#f6fbff" font-size="38" font-family="Arial, sans-serif" font-weight="bold">IoT Firebase Data Flow Pipeline</text>
+  <text x="600" y="105" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial, sans-serif">How sensor data goes to the cloud in real-time, and control commands return to the board</text>
+
+  <!-- PIPELINE CARDS -->
+
+  <!-- 1. Physical Environment & Sensors -->
+  <g transform="translate(40, 160)">
+    <rect width="180" height="300" rx="12" fill="#0d1b24" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="90" y="36" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">1. Sensors</text>
+    <!-- Sensors List -->
+    <g transform="translate(15, 60)" fill="rgba(246, 251, 255, 0.85)" font-family="Arial, sans-serif" font-size="14">
+      <rect x="0" y="10" width="150" height="34" rx="6" fill="#132435" stroke="rgba(255,107,107,0.3)"/>
+      <text x="75" y="32" text-anchor="middle" fill="#ff6b6b" font-weight="bold">DHT11 Temp</text>
+      
+      <rect x="0" y="58" width="150" height="34" rx="6" fill="#132435" stroke="rgba(255,107,107,0.3)"/>
+      <text x="75" y="80" text-anchor="middle" fill="#ff6b6b" font-weight="bold">LDR (Light)</text>
+
+      <rect x="0" y="106" width="150" height="34" rx="6" fill="#132435" stroke="rgba(255,107,107,0.3)"/>
+      <text x="75" y="128" text-anchor="middle" fill="#ff6b6b" font-weight="bold">PIR (Motion)</text>
+
+      <rect x="0" y="154" width="150" height="34" rx="6" fill="#132435" stroke="rgba(255,107,107,0.3)"/>
+      <text x="75" y="176" text-anchor="middle" fill="#ff6b6b" font-weight="bold">MQ Gas Sensor</text>
+    </g>
+    <text x="90" y="280" text-anchor="middle" fill="rgba(246, 251, 255, 0.6)" font-family="Arial, sans-serif" font-size="12">Measures analog/digital</text>
+  </g>
+
+  <!-- Connection: Sensors -> ESP32 -->
+  <path d="M 220 310 L 260 310" stroke="#ff6b6b" stroke-width="4" fill="none" marker-end="url(#arrow-teal)"/>
+  <text x="240" y="295" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-weight="bold" font-size="12">VCC/GND/GPIO</text>
+
+  <!-- 2. ESP32 NodeMCU Board -->
+  <g transform="translate(280, 160)">
+    <rect width="180" height="300" rx="12" fill="#0c1b24" stroke="#20d6b5" stroke-width="2"/>
+    <rect width="180" height="300" rx="12" fill="none" stroke="#20d6b5" stroke-width="4" opacity="0.1" filter="url(#glow-teal)"/>
+    <text x="90" y="36" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">2. ESP32</text>
+    
+    <!-- Drawing a simple board layout -->
+    <rect x="25" y="70" width="130" height="150" rx="6" fill="#111827" stroke="#2dd4bf" stroke-width="2"/>
+    <rect x="45" y="80" width="90" height="40" rx="4" fill="#374151"/>
+    <text x="90" y="105" text-anchor="middle" fill="#20d6b5" font-family="Arial, sans-serif" font-weight="bold" font-size="13">ESP-WROOM-32</text>
+    <!-- Wi-Fi Module -->
+    <path d="M 80 150 A 10 10 0 0 1 100 150" stroke="#ffd166" stroke-width="2" fill="none"/>
+    <path d="M 75 145 A 16 16 0 0 1 105 145" stroke="#ffd166" stroke-width="2" fill="none"/>
+    <text x="90" y="200" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-size="12">Built-in Wi-Fi Stack</text>
+    
+    <text x="90" y="252" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Reads Pins</text>
+    <text x="90" y="272" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Initiates TCP/IP</text>
+  </g>
+
+  <!-- Connection: ESP32 -> Router -->
+  <path d="M 460 310 L 500 310" stroke="#2dd4bf" stroke-width="4" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="480" y="295" text-anchor="middle" fill="#2dd4bf" font-family="Arial, sans-serif" font-weight="bold" font-size="12">Wi-Fi (SSID)</text>
+
+  <!-- 3. Local Router / Gateway -->
+  <g transform="translate(520, 190)">
+    <rect width="140" height="240" rx="12" fill="#0d1b24" stroke="#ffd166" stroke-width="2"/>
+    <text x="70" y="32" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="16">3. Router</text>
+    
+    <!-- Router Icon -->
+    <g transform="translate(45, 60)" fill="none" stroke="#ffd166" stroke-width="2.5">
+      <rect x="0" y="60" width="50" height="20" rx="4" fill="#ffd166" fill-opacity="0.1"/>
+      <line x1="25" y1="60" x2="25" y2="20"/>
+      <path d="M 15 25 A 10 10 0 0 1 35 25" stroke-dasharray="2,2"/>
+      <circle cx="12" cy="70" r="2" fill="#22c55e" stroke="none"/>
+      <circle cx="25" cy="70" r="2" fill="#22c55e" stroke="none"/>
+      <circle cx="38" cy="70" r="2" fill="#ef4444" stroke="none"/>
+    </g>
+    <text x="70" y="170" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13">Local Gateway</text>
+    <text x="70" y="190" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13">Bridges to WAN</text>
+  </g>
+
+  <!-- Connection: Router -> Firebase -->
+  <path d="M 660 310 L 720 310" stroke="#ffd166" stroke-width="4" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="690" y="295" text-anchor="middle" fill="#ffd166" font-family="Arial, sans-serif" font-weight="bold" font-size="12">Internet</text>
+
+  <!-- 4. Google Firebase Cloud (Realtime Database) -->
+  <g transform="translate(740, 160)">
+    <rect width="190" height="300" rx="12" fill="#0c1b24" stroke="#f58220" stroke-width="2"/>
+    <rect width="190" height="300" rx="12" fill="none" stroke="#f58220" stroke-width="4" opacity="0.1" filter="url(#glow-orange)"/>
+    <text x="95" y="36" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">4. Firebase</text>
+    
+    <!-- Cloud / DB Illustration -->
+    <path d="M 65 140 A 20 20 0 0 1 100 125 A 25 25 0 0 1 140 140 A 15 15 0 0 1 135 165 L 65 165 A 15 15 0 0 1 65 140 Z" fill="#ffd166" fill-opacity="0.15" stroke="#f58220" stroke-width="2.5"/>
+    <ellipse cx="95" cy="180" rx="28" ry="10" fill="none" stroke="#ffd166" stroke-width="2"/>
+    <path d="M 67 180 V 210 A 28 10 0 0 0 123 210 V 180" fill="none" stroke="#ffd166" stroke-width="2"/>
+    
+    <text x="95" y="248" text-anchor="middle" fill="#ffcb2b" font-family="Arial, sans-serif" font-weight="bold" font-size="14">Realtime Database</text>
+    <text x="95" y="270" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="12">WebSocket Stream</text>
+  </g>
+
+  <!-- Connection: Firebase -> Dashboard -->
+  <path d="M 930 310 L 970 310" stroke="#f58220" stroke-width="4" fill="none" marker-end="url(#arrow-blue)"/>
+  <text x="950" y="295" text-anchor="middle" fill="#f58220" font-family="Arial, sans-serif" font-weight="bold" font-size="12">Sync WSS</text>
+
+  <!-- 5. User Web App Dashboard -->
+  <g transform="translate(990, 160)">
+    <rect width="170" height="300" rx="12" fill="#0d1b24" stroke="#4da3ff" stroke-width="2"/>
+    <text x="85" y="36" text-anchor="middle" fill="#f6fbff" font-family="Arial, sans-serif" font-weight="bold" font-size="18">5. Dashboard</text>
+    
+    <!-- Monitor Outline -->
+    <rect x="25" y="70" width="120" height="85" rx="6" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+    <!-- Screen lines (Gauges/values) -->
+    <circle cx="55" cy="100" r="14" fill="none" stroke="#20d6b5" stroke-dasharray="60,30" stroke-width="3.5"/>
+    <text x="55" y="105" text-anchor="middle" fill="#20d6b5" font-family="Arial" font-size="10" font-weight="bold">24°C</text>
+    
+    <rect x="85" y="90" width="45" height="12" rx="3" fill="#ef4444"/>
+    <text x="107.5" y="99" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold">RELAY ON</text>
+    <line x1="25" y1="155" x2="145" y2="155" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M 70 155 L 60 185 H 110 L 100 155 Z" fill="#475569"/>
+
+    <text x="85" y="224" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13">View Telemetry</text>
+    <text x="85" y="244" text-anchor="middle" fill="rgba(246, 251, 255, 0.7)" font-family="Arial, sans-serif" font-size="13">Toggle Switch</text>
+  </g>
+
+  <!-- FEEDBACK CONTROL LOOP (Dashboard -> Firebase -> ESP32) -->
+  <!-- Line from Dashboard back to ESP32 representing control signals -->
+  <path d="M 1075 460 V 520 H 370 V 460" stroke="#a166ff" stroke-width="3.5" fill="none" stroke-dasharray="8,6" marker-end="url(#arrow-teal)"/>
+  <rect x="620" y="500" width="200" height="34" rx="6" fill="#071014" stroke="#a166ff" stroke-width="2"/>
+  <text x="720" y="522" text-anchor="middle" fill="#a166ff" font-family="Arial, sans-serif" font-weight="bold" font-size="13">6. Feed control signal (eg. Relay ON/OFF)</text>
+
+</svg>

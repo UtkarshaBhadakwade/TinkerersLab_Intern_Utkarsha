@@ -1,23 +1,417 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
-  <title id="title">ESP32 pinout</title>
-  <desc id="desc">ESP32 DevKit pin groups including GPIO, ADC, DAC, touch, I2C, SPI, UART, and power pins.</desc>
-  <rect width="1200" height="660" fill="#07131f"/>
-  <rect x="385" y="105" width="430" height="430" rx="34" fill="#164860" stroke="#f5b84b" stroke-width="5"/>
-  <text x="600" y="205" text-anchor="middle" fill="#ffffff" font-size="52" font-family="Arial">ESP32 DevKit</text>
-  <text x="600" y="265" text-anchor="middle" fill="#ffe9bf" font-size="28" font-family="Arial">3.3V • Wi-Fi • Bluetooth</text>
-  <g fill="#ffffff" font-family="Arial" font-size="23">
-    <text x="70" y="125">ADC1: GPIO32-36, 39</text>
-    <text x="70" y="180">Input only: GPIO34, 35, 36, 39</text>
-    <text x="70" y="235">DAC: GPIO25, GPIO26</text>
-    <text x="70" y="290">Touch: GPIO0, 2, 4, 12-15, 27, 32, 33</text>
-    <text x="835" y="125">I2C: GPIO21 SDA / GPIO22 SCL</text>
-    <text x="835" y="180">SPI: GPIO18, 19, 23, 5</text>
-    <text x="835" y="235">UART0: GPIO1 TX / GPIO3 RX</text>
-    <text x="835" y="290">UART2: GPIO17 TX / GPIO16 RX</text>
-    <text x="360" y="610">Boot sensitive: GPIO0, GPIO2, GPIO12, GPIO15 • Avoid GPIO6-GPIO11</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32 Pinout Diagram</title>
+  <desc id="desc">Detailed pinout diagram of ESP32 NodeMCU development board with GPIO, ADC, DAC, UART, I2C, SPI, and power pins labeled.</desc>
+  <rect width="1400" height="900" fill="#0b131a" rx="15"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.02)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1400" height="900" fill="url(#grid)" rx="15"/>
+  <text x="700" y="55" text-anchor="middle" fill="#ffffff" font-size="36" font-family="Arial" font-weight="bold">ESP32 NodeMCU DevKit V1 Pinout</text>
+  <text x="700" y="85" text-anchor="middle" fill="rgba(255, 255, 255, 0.6)" font-size="16" font-family="Arial">Dual-Core Tensilica LX6 • 3.3V Logic • Integrated Wi-Fi &amp; Bluetooth</text>
+  <!-- ESP32 Board PCB -->
+  <rect x="520" y="130" width="260" height="640" rx="18" fill="#152635" stroke="#2c3e50" stroke-width="4"/>
+  <rect x="535" y="145" width="230" height="610" rx="10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="2"/>
+  <line x1="650" y1="145" x2="650" y2="755" stroke="rgba(255,255,255,0.02)" stroke-width="2"/>
+  <!-- USB Connector -->
+  <rect x="610" y="740" width="80" height="50" rx="5" fill="#7f8c8d" stroke="#95a5a6" stroke-width="2"/>
+  <rect x="625" y="760" width="50" height="30" fill="#34495e"/>
+  <!-- Buttons -->
+  <rect x="545" y="705" width="35" height="30" rx="4" fill="#34495e" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="562.5" cy="720" r="8" fill="#e74c3c"/>
+  <text x="562.5" y="750" fill="rgba(255,255,255,0.7)" font-size="11" font-family="Arial" text-anchor="middle" font-weight="bold">EN</text>
+  <rect x="720" y="705" width="35" height="30" rx="4" fill="#34495e" stroke="#7f8c8d" stroke-width="2"/>
+  <circle cx="737.5" cy="720" r="8" fill="#7f8c8d"/>
+  <text x="737.5" y="750" fill="rgba(255,255,255,0.7)" font-size="11" font-family="Arial" text-anchor="middle" font-weight="bold">BOOT</text>
+  <!-- CP2102 USB-to-UART -->
+  <rect x="615" y="600" width="70" height="70" rx="4" fill="#1c1c1c" stroke="#333" stroke-width="2"/>
+  <text x="650" y="640" fill="rgba(255,255,255,0.4)" font-size="12" font-family="Arial" text-anchor="middle" font-weight="bold">SILABS</text>
+  <text x="650" y="655" fill="rgba(255,255,255,0.3)" font-size="10" font-family="Arial" text-anchor="middle">CP2102</text>
+  <!-- LED -->
+  <rect x="585" y="380" width="10" height="15" fill="#f1c40f"/>
+  <circle cx="590" cy="387.5" r="3" fill="#3498db" opacity="0.8"/>
+  <text x="590" y="410" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Arial" text-anchor="middle">LED</text>
+  <!-- ESP-WROOM-32 Shield -->
+  <rect x="550" y="160" width="200" height="200" rx="8" fill="#7f8c8d" stroke="#bdc3c7" stroke-width="3"/>
+  <rect x="550" y="160" width="200" height="50" fill="#1e1e1e" rx="4"/>
+  <path d="M 570 170 L 570 195 L 590 195 L 590 170 L 610 170 L 610 195 L 630 195 L 630 170 L 650 170 L 650 195 L 670 195 L 670 170 L 690 170 L 690 195 L 710 195 L 710 170" fill="none" stroke="#f1c40f" stroke-width="3"/>
+  <text x="650" y="250" fill="#ffffff" font-size="18" font-family="Arial" text-anchor="middle" font-weight="bold">ESP-WROOM-32</text>
+  <text x="650" y="280" fill="rgba(255,255,255,0.7)" font-size="12" font-family="Arial" text-anchor="middle">FCC ID: 2AC7Z-ESPWROOM32</text>
+  <circle cx="730" cy="330" r="10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <text x="730" y="334" fill="rgba(255,255,255,0.4)" font-size="11" font-family="Arial" text-anchor="middle" font-weight="bold">i</text>
+  <!-- Pin EN -->
+  <line x1="180" y1="240" x2="520" y2="240" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="240" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="240" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="244" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">EN</text>
+  <g transform="translate(180, 227)">
+    <rect x="230" y="0" width="10" height="26" fill="#7f8c8d" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#7f8c8d" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">EN</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">CHIP_PU / RESET</text>
   </g>
-  <g fill="#ffe9bf">
-    <rect x="350" y="125" width="24" height="390" rx="8"/>
-    <rect x="826" y="125" width="24" height="390" rx="8"/>
+  <!-- Pin GND -->
+  <line x1="780" y1="240" x2="1220" y2="240" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="240" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="240" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="244" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">GND</text>
+  <g transform="translate(800, 227)">
+    <rect x="80" y="0" width="10" height="26" fill="#95a5a6" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#95a5a6" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GND</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">GROUND</text>
+  </g>
+  <!-- Pin VP -->
+  <line x1="180" y1="272" x2="520" y2="272" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="272" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="272" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="276" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">VP</text>
+  <g transform="translate(180, 259)">
+    <rect x="230" y="0" width="10" height="26" fill="#2ecc71" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#2ecc71" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO36</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_0 | SEN_VP</text>
+  </g>
+  <!-- Pin D23 -->
+  <line x1="780" y1="272" x2="1220" y2="272" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="272" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="272" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="276" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D23</text>
+  <g transform="translate(800, 259)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO23</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">VSPI_MOSI</text>
+  </g>
+  <!-- Pin VN -->
+  <line x1="180" y1="304" x2="520" y2="304" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="304" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="304" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="308" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">VN</text>
+  <g transform="translate(180, 291)">
+    <rect x="230" y="0" width="10" height="26" fill="#2ecc7 green" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#2ecc7 green" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO39</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_3 | SEN_VN</text>
+  </g>
+  <!-- Pin D22 -->
+  <line x1="780" y1="304" x2="1220" y2="304" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="304" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="304" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="308" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D22</text>
+  <g transform="translate(800, 291)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO22</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">I2C_SCL</text>
+  </g>
+  <!-- Pin D34 -->
+  <line x1="180" y1="336" x2="520" y2="336" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="336" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="336" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="340" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D34</text>
+  <g transform="translate(180, 323)">
+    <rect x="230" y="0" width="10" height="26" fill="#27ae60" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#27ae60" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO34</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_6 | INPUT ONLY</text>
+  </g>
+  <!-- Pin TX -->
+  <line x1="780" y1="336" x2="1220" y2="336" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="336" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="336" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="340" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">TX</text>
+  <g transform="translate(800, 323)">
+    <rect x="80" y="0" width="10" height="26" fill="#f39c12" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f39c12" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO1</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">U0_TXD | TX0</text>
+  </g>
+  <!-- Pin D35 -->
+  <line x1="180" y1="368" x2="520" y2="368" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="368" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="368" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="372" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D35</text>
+  <g transform="translate(180, 355)">
+    <rect x="230" y="0" width="10" height="26" fill="#27ae60" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#27ae60" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO35</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_7 | INPUT ONLY</text>
+  </g>
+  <!-- Pin RX -->
+  <line x1="780" y1="368" x2="1220" y2="368" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="368" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="368" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="372" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">RX</text>
+  <g transform="translate(800, 355)">
+    <rect x="80" y="0" width="10" height="26" fill="#f39c12" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f39c12" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO3</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">U0_RXD | RX0</text>
+  </g>
+  <!-- Pin D32 -->
+  <line x1="180" y1="400" x2="520" y2="400" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="400" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="400" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="404" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D32</text>
+  <g transform="translate(180, 387)">
+    <rect x="230" y="0" width="10" height="26" fill="#1abc9c" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#1abc9c" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO32</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_4 | TOUCH9</text>
+  </g>
+  <!-- Pin D21 -->
+  <line x1="780" y1="400" x2="1220" y2="400" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="400" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="400" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="404" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D21</text>
+  <g transform="translate(800, 387)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO21</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">I2C_SDA</text>
+  </g>
+  <!-- Pin D33 -->
+  <line x1="180" y1="432" x2="520" y2="432" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="432" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="432" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="436" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D33</text>
+  <g transform="translate(180, 419)">
+    <rect x="230" y="0" width="10" height="26" fill="#1abc9c" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#1abc9c" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO33</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC1_5 | TOUCH8</text>
+  </g>
+  <!-- Pin D19 -->
+  <line x1="780" y1="432" x2="1220" y2="432" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="432" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="432" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="436" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D19</text>
+  <g transform="translate(800, 419)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO19</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">VSPI_MISO</text>
+  </g>
+  <!-- Pin D25 -->
+  <line x1="180" y1="464" x2="520" y2="464" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="464" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="464" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="468" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D25</text>
+  <g transform="translate(180, 451)">
+    <rect x="230" y="0" width="10" height="26" fill="#9b59b6" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#9b59b6" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO25</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">DAC1 | ADC2_8</text>
+  </g>
+  <!-- Pin D18 -->
+  <line x1="780" y1="464" x2="1220" y2="464" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="464" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="464" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="468" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D18</text>
+  <g transform="translate(800, 451)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO18</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">VSPI_SCK</text>
+  </g>
+  <!-- Pin D26 -->
+  <line x1="180" y1="496" x2="520" y2="496" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="496" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="496" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="500" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D26</text>
+  <g transform="translate(180, 483)">
+    <rect x="230" y="0" width="10" height="26" fill="#9b59b6" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#9b59b6" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO26</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">DAC2 | ADC2_9</text>
+  </g>
+  <!-- Pin D5 -->
+  <line x1="780" y1="496" x2="1220" y2="496" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="496" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="496" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="500" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D5</text>
+  <g transform="translate(800, 483)">
+    <rect x="80" y="0" width="10" height="26" fill="#e67e22" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#e67e22" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO5</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">VSPI_CS | BOOT</text>
+  </g>
+  <!-- Pin D27 -->
+  <line x1="180" y1="528" x2="520" y2="528" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="528" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="528" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="532" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D27</text>
+  <g transform="translate(180, 515)">
+    <rect x="230" y="0" width="10" height="26" fill="#1abc9c" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#1abc9c" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO27</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">TOUCH7 | ADC2_7</text>
+  </g>
+  <!-- Pin TX2 -->
+  <line x1="780" y1="528" x2="1220" y2="528" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="528" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="528" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="532" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">TX2</text>
+  <g transform="translate(800, 515)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO17</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">U2_TXD | TX2</text>
+  </g>
+  <!-- Pin D14 -->
+  <line x1="180" y1="560" x2="520" y2="560" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="560" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="560" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="564" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D14</text>
+  <g transform="translate(180, 547)">
+    <rect x="230" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO14</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">HSPI_CLK | ADC2_6</text>
+  </g>
+  <!-- Pin RX2 -->
+  <line x1="780" y1="560" x2="1220" y2="560" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="560" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="560" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="564" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">RX2</text>
+  <g transform="translate(800, 547)">
+    <rect x="80" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO16</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">U2_RXD | RX2</text>
+  </g>
+  <!-- Pin D12 -->
+  <line x1="180" y1="592" x2="520" y2="592" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="592" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="592" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="596" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D12</text>
+  <g transform="translate(180, 579)">
+    <rect x="230" y="0" width="10" height="26" fill="#e67e22" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#e67e22" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO12</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">HSPI_MISO | TOUCH5 | BOOT</text>
+  </g>
+  <!-- Pin D4 -->
+  <line x1="780" y1="592" x2="1220" y2="592" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="592" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="592" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="596" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D4</text>
+  <g transform="translate(800, 579)">
+    <rect x="80" y="0" width="10" height="26" fill="#1abc9c" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#1abc9c" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO4</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">ADC2_0 | TOUCH0</text>
+  </g>
+  <!-- Pin D13 -->
+  <line x1="180" y1="624" x2="520" y2="624" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="624" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="624" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="628" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">D13</text>
+  <g transform="translate(180, 611)">
+    <rect x="230" y="0" width="10" height="26" fill="#f1c40f" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#f1c40f" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO13</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">HSPI_MOSI | TOUCH4</text>
+  </g>
+  <!-- Pin D2 -->
+  <line x1="780" y1="624" x2="1220" y2="624" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="624" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="624" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="628" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D2</text>
+  <g transform="translate(800, 611)">
+    <rect x="80" y="0" width="10" height="26" fill="#3498db" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#3498db" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO2</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">TOUCH2 | LED / BOOT</text>
+  </g>
+  <!-- Pin GND -->
+  <line x1="180" y1="656" x2="520" y2="656" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="656" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="656" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="660" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">GND</text>
+  <g transform="translate(180, 643)">
+    <rect x="230" y="0" width="10" height="26" fill="#95a5a6" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#95a5a6" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GND</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">GROUND</text>
+  </g>
+  <!-- Pin D15 -->
+  <line x1="780" y1="656" x2="1220" y2="656" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="656" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="656" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="660" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">D15</text>
+  <g transform="translate(800, 643)">
+    <rect x="80" y="0" width="10" height="26" fill="#e67e22" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#e67e22" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">GPIO15</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">HSPI_CS | TOUCH3 | BOOT</text>
+  </g>
+  <!-- Pin 3V3 -->
+  <line x1="180" y1="688" x2="520" y2="688" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="525" cy="688" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="535" cy="688" r="3.5" fill="#7f8c8d"/>
+  <text x="550" y="692" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold">3V3</text>
+  <g transform="translate(180, 675)">
+    <rect x="230" y="0" width="10" height="26" fill="#e74c3c" rx="2"/>
+    <rect x="240" y="0" width="80" height="26" fill="#10253a" stroke="#e74c3c" stroke-width="1.5" rx="3"/>
+    <text x="280" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">3V3</text>
+    <rect x="0" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="110" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">3.3V POWER OUT</text>
+  </g>
+  <!-- Pin VIN -->
+  <line x1="780" y1="688" x2="1220" y2="688" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="775" cy="688" r="5" fill="#f1c40f" stroke="#0b131a" stroke-width="1.5"/>
+  <circle cx="765" cy="688" r="3.5" fill="#7f8c8d"/>
+  <text x="750" y="692" fill="rgba(255,255,255,0.6)" font-size="11" font-family="Arial" font-weight="bold" text-anchor="end">VIN</text>
+  <g transform="translate(800, 675)">
+    <rect x="80" y="0" width="10" height="26" fill="#e74c3c" rx="2"/>
+    <rect x="0" y="0" width="80" height="26" fill="#10253a" stroke="#e74c3c" stroke-width="1.5" rx="3"/>
+    <text x="40" y="18" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold" text-anchor="middle">VIN</text>
+    <rect x="100" y="0" width="220" height="26" fill="#1b1c1e" rx="3"/>
+    <text x="210" y="17" fill="rgba(255,255,255,0.8)" font-size="11" font-family="Arial" text-anchor="middle">5V POWER IN</text>
+  </g>
+  <!-- Legend -->
+  <g transform="translate(260, 795)" font-family="Arial" font-size="13" fill="#ffffff">
+    <rect x="0" y="0" width="800" height="50" fill="#10253a" rx="10" stroke="rgba(255,255,255,0.1)"/>
+    <rect x="30" y="15" width="20" height="20" fill="#e74c3c" rx="3"/>
+    <text x="60" y="30" fill="rgba(255,255,255,0.9)">Power (5V/3.3V)</text>
+    <rect x="200" y="15" width="20" height="20" fill="#95a5a6" rx="3"/>
+    <text x="230" y="30" fill="rgba(255,255,255,0.9)">Ground (GND)</text>
+    <rect x="360" y="15" width="20" height="20" fill="#2ecc71" rx="3"/>
+    <text x="390" y="30" fill="rgba(255,255,255,0.9)">Analog/ADC</text>
+    <rect x="500" y="15" width="20" height="20" fill="#1abc9c" rx="3"/>
+    <text x="530" y="30" fill="rgba(255,255,255,0.9)">Touch Pins</text>
+    <rect x="630" y="15" width="20" height="20" fill="#f1c40f" rx="3"/>
+    <text x="660" y="30" fill="rgba(255,255,255,0.9)">Serial/SPI/I2C</text>
   </g>
 </svg>

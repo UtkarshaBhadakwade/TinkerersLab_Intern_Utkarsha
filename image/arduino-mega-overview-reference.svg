@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Mega Overview Reference</title>
+  <desc id="desc">Overview diagram showing Arduino Mega as a larger microcontroller board with many digital, PWM, analog, and serial pins.</desc>
+  <rect width="1100" height="620" rx="28" fill="#071014"/>
+  <text x="550" y="78" fill="#f6fbff" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" text-anchor="middle">Arduino Mega Overview</text>
+  <text x="550" y="114" fill="#b6cedc" font-family="Arial, Helvetica, sans-serif" font-size="20" text-anchor="middle">ATmega2560 board for large projects with many input and output connections</text>
+
+  <g transform="translate(92 174)">
+    <rect width="470" height="300" rx="22" fill="#0b4f8a" stroke="#7dd3fc" stroke-width="4"/>
+    <rect x="48" y="70" width="90" height="62" rx="8" fill="#cbd5e1"/>
+    <rect x="180" y="90" width="116" height="92" rx="8" fill="#111827" stroke="#94a3b8" stroke-width="3"/>
+    <text x="238" y="142" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle">ATmega2560</text>
+    <rect x="345" y="82" width="62" height="38" rx="6" fill="#e5e7eb"/>
+    <circle cx="96" cy="220" r="16" fill="#22c55e"/>
+    <circle cx="148" cy="220" r="16" fill="#ffd166"/>
+    <circle cx="200" cy="220" r="16" fill="#ef4444"/>
+    <g fill="#111827">
+      <rect x="20" y="22" width="430" height="20" rx="4"/>
+      <rect x="20" y="258" width="430" height="20" rx="4"/>
+    </g>
+    <g fill="#f8fbff">
+      <circle cx="42" cy="32" r="4"/><circle cx="64" cy="32" r="4"/><circle cx="86" cy="32" r="4"/><circle cx="108" cy="32" r="4"/><circle cx="130" cy="32" r="4"/>
+      <circle cx="152" cy="32" r="4"/><circle cx="174" cy="32" r="4"/><circle cx="196" cy="32" r="4"/><circle cx="218" cy="32" r="4"/><circle cx="240" cy="32" r="4"/>
+      <circle cx="262" cy="32" r="4"/><circle cx="284" cy="32" r="4"/><circle cx="306" cy="32" r="4"/><circle cx="328" cy="32" r="4"/><circle cx="350" cy="32" r="4"/>
+      <circle cx="372" cy="32" r="4"/><circle cx="394" cy="32" r="4"/><circle cx="416" cy="32" r="4"/>
+    </g>
+    <text x="235" y="324" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Arduino Mega 2560</text>
+  </g>
+
+  <g transform="translate(630 176)">
+    <rect width="380" height="292" rx="22" fill="#102b45" stroke="#2dd4bf" stroke-width="3"/>
+    <text x="190" y="46" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle">Why Mega?</text>
+    <text x="50" y="96" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="21">54 Digital I/O pins</text>
+    <text x="50" y="136" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="21">15 PWM pins</text>
+    <text x="50" y="176" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="21">16 Analog inputs</text>
+    <text x="50" y="216" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="21">4 Hardware serial ports</text>
+    <text x="50" y="256" fill="#cfe7f5" font-family="Arial, Helvetica, sans-serif" font-size="21">256 KB flash memory</text>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Arduino Uno Complete Pinout</title>
+  <desc id="desc">Complete Uno pinout diagram</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#006468"/>
+        <stop offset="100%" stop-color="#004d50"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2a2a2a"/>
+        <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+</defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  <text x="600" y="80" text-anchor="middle" fill="#00ffd5" font-size="36" font-family="Arial" font-weight="bold">Arduino Uno Complete Pinout</text>
+  
+    <g transform="translate(600, 360) scale(1.4)">
+        <!-- Board base -->
+        <path d="M -135 -100 L 135 -100 C 145 -100, 155 -90, 155 -80 L 155 80 C 155 90, 145 100, 135 100 L -135 100 C -145 100, -155 90, -155 80 L -155 -80 C -155 -90, -145 -100, -135 -100 Z" fill="url(#boardGrad)" stroke="#00979d" stroke-width="2"/>
+        
+        <!-- USB Port (Type B) -->
+        <rect x="-165" y="-85" width="40" height="45" rx="3" fill="#c0c0c0" stroke="#888" stroke-width="2"/>
+        <rect x="-155" y="-75" width="20" height="25" fill="#e6e6e6" rx="2"/>
+        
+        <!-- Power Jack -->
+        <rect x="-170" y="45" width="45" height="35" rx="2" fill="#222" stroke="#111" stroke-width="1"/>
+        <circle cx="-145" cy="62.5" r="8" fill="#111"/>
+        
+        <!-- ATmega328P Chip (DIP) -->
+        <rect x="20" y="30" width="100" height="30" rx="3" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        <text x="70" y="48" fill="#fff" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.6">ATMEGA328P-PU</text>
+        <!-- DIP pins -->
+    <rect x="24" y="25" width="3" height="5" fill="#bbb"/><rect x="24" y="60" width="3" height="5" fill="#bbb"/><rect x="31" y="25" width="3" height="5" fill="#bbb"/><rect x="31" y="60" width="3" height="5" fill="#bbb"/><rect x="38" y="25" width="3" height="5" fill="#bbb"/><rect x="38" y="60" width="3" height="5" fill="#bbb"/><rect x="45" y="25" width="3" height="5" fill="#bbb"/><rect x="45" y="60" width="3" height="5" fill="#bbb"/><rect x="52" y="25" width="3" height="5" fill="#bbb"/><rect x="52" y="60" width="3" height="5" fill="#bbb"/><rect x="59" y="25" width="3" height="5" fill="#bbb"/><rect x="59" y="60" width="3" height="5" fill="#bbb"/><rect x="66" y="25" width="3" height="5" fill="#bbb"/><rect x="66" y="60" width="3" height="5" fill="#bbb"/><rect x="73" y="25" width="3" height="5" fill="#bbb"/><rect x="73" y="60" width="3" height="5" fill="#bbb"/><rect x="80" y="25" width="3" height="5" fill="#bbb"/><rect x="80" y="60" width="3" height="5" fill="#bbb"/><rect x="87" y="25" width="3" height="5" fill="#bbb"/><rect x="87" y="60" width="3" height="5" fill="#bbb"/><rect x="94" y="25" width="3" height="5" fill="#bbb"/><rect x="94" y="60" width="3" height="5" fill="#bbb"/><rect x="101" y="25" width="3" height="5" fill="#bbb"/><rect x="101" y="60" width="3" height="5" fill="#bbb"/><rect x="108" y="25" width="3" height="5" fill="#bbb"/><rect x="108" y="60" width="3" height="5" fill="#bbb"/><rect x="115" y="25" width="3" height="5" fill="#bbb"/><rect x="115" y="60" width="3" height="5" fill="#bbb"/>
+        <!-- ATmega16U2 (USB Chip) -->
+        <rect x="-80" y="-40" width="20" height="20" rx="2" fill="url(#chipGrad)" stroke="#444" stroke-width="1"/>
+        
+        <!-- Reset Button -->
+        <rect x="30" y="-95" width="20" height="15" rx="2" fill="#dcdcdc" stroke="#999" stroke-width="1"/>
+        <circle cx="40" cy="-87.5" r="4" fill="#e74c3c"/>
+
+        <!-- Top Header Pins (Digital 0-13, AREF, GND, SDA, SCL) -->
+        <rect x="-10" y="-95" width="150" height="12" fill="#222" rx="2"/>
+        <!-- Bottom Header Pins (Power & Analog) -->
+        <rect x="-60" y="83" width="70" height="12" fill="#222" rx="2"/>
+        <rect x="25" y="83" width="60" height="12" fill="#222" rx="2"/>
+        
+        <!-- ICSP Header -->
+        <rect x="130" y="10" width="20" height="30" fill="#222" rx="2"/>
+    <circle cx="-5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="5" cy="-89" r="2.5" fill="#ffd700"/><circle cx="15" cy="-89" r="2.5" fill="#ffd700"/><circle cx="25" cy="-89" r="2.5" fill="#ffd700"/><circle cx="35" cy="-89" r="2.5" fill="#ffd700"/><circle cx="45" cy="-89" r="2.5" fill="#ffd700"/><circle cx="55" cy="-89" r="2.5" fill="#ffd700"/><circle cx="65" cy="-89" r="2.5" fill="#ffd700"/><circle cx="75" cy="-89" r="2.5" fill="#ffd700"/><circle cx="85" cy="-89" r="2.5" fill="#ffd700"/><circle cx="95" cy="-89" r="2.5" fill="#ffd700"/><circle cx="105" cy="-89" r="2.5" fill="#ffd700"/><circle cx="115" cy="-89" r="2.5" fill="#ffd700"/><circle cx="125" cy="-89" r="2.5" fill="#ffd700"/><circle cx="135" cy="-89" r="2.5" fill="#ffd700"/><circle cx="145" cy="-89" r="2.5" fill="#ffd700"/><circle cx="155" cy="-89" r="2.5" fill="#ffd700"/><circle cx="165" cy="-89" r="2.5" fill="#ffd700"/><circle cx="-55.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-45.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-36.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-26.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="-17.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="-7.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="2.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="30.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="39.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="49.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="58.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="68.0" cy="89" r="2.5" fill="#ffd700"/><circle cx="77.5" cy="89" r="2.5" fill="#ffd700"/><circle cx="135" cy="15" r="2.5" fill="#ffd700"/><circle cx="135" cy="25" r="2.5" fill="#ffd700"/><circle cx="135" cy="35" r="2.5" fill="#ffd700"/><circle cx="145" cy="15" r="2.5" fill="#ffd700"/><circle cx="145" cy="25" r="2.5" fill="#ffd700"/><circle cx="145" cy="35" r="2.5" fill="#ffd700"/></g>
+  
+  <!-- Comprehensive Legends for Pinout -->
+  <g font-family="Arial" font-size="14" font-weight="bold">
+    <rect x="50" y="110" width="120" height="25" rx="4" fill="#e74c3c"/><text x="110" y="128" text-anchor="middle" fill="#fff">Power / GND</text>
+    <rect x="180" y="110" width="120" height="25" rx="4" fill="#2ecc71"/><text x="240" y="128" text-anchor="middle" fill="#fff">Analog Pins</text>
+    <rect x="310" y="110" width="120" height="25" rx="4" fill="#3498db"/><text x="370" y="128" text-anchor="middle" fill="#fff">Digital I/O</text>
+    <rect x="440" y="110" width="120" height="25" rx="4" fill="#9b59b6"/><text x="500" y="128" text-anchor="middle" fill="#fff">PWM (~)</text>
+    <rect x="570" y="110" width="120" height="25" rx="4" fill="#e67e22"/><text x="630" y="128" text-anchor="middle" fill="#fff">Hardware Serial</text>
+  </g>
+  <g font-family="Arial" font-size="14" fill="#f6fbff" font-weight="bold">
+    <!-- Some representative side labels to make it look like a complete pinout -->
+    <!-- D13 - D0 -->
+    <path d="M 520 230 L 520 200 L 720 200 L 720 230" fill="none" stroke="#3498db" stroke-width="2"/>
+    <text x="620" y="190" text-anchor="middle" fill="#3498db">D13 to D0 (Digital &amp; PWM)</text>
+
+    <!-- A0 - A5 -->
+    <path d="M 640 480 L 640 510 L 710 510 L 710 480" fill="none" stroke="#2ecc71" stroke-width="2"/>
+    <text x="675" y="530" text-anchor="middle" fill="#2ecc71">A0 to A5</text>
+
+    <!-- Power -->
+    <path d="M 520 480 L 520 510 L 600 510 L 600 480" fill="none" stroke="#e74c3c" stroke-width="2"/>
+    <text x="560" y="530" text-anchor="middle" fill="#e74c3c">Power Pins</text>
+  </g>
+
+</svg>

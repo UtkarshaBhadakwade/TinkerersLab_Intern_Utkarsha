@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Step 2: Base Plate Sketch and Extrusion</title>
+  <desc id="desc">Isometric diagram illustrating the ground plane rectangle sketch and extruded base plate in Autodesk Fusion.</desc>
+  <rect width="1200" height="650" fill="#071014" rx="12"/>
+  <!-- Decorative Grid Overlay -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="650" fill="url(#grid)" rx="12"/>
+  
+  <text x="600" y="70" text-anchor="middle" fill="#f6fbff" font-size="36" font-family="Arial" font-weight="bold">Step 2: Base Plate Sketch &amp; Extrusion</text>
+  <text x="600" y="110" text-anchor="middle" fill="rgba(246, 251, 255, 0.72)" font-size="18" font-family="Arial">Sketch center rectangle (120 x 75 mm) on XY plane and extrude 5 mm upward</text>
+
+  <!-- 3D Coordinate Axis Legend -->
+  <g transform="translate(100, 520)" stroke-width="2" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">
+    <line x1="0" y1="0" x2="60" y2="30" stroke="#4da3ff" /> <!-- X axis -->
+    <line x1="0" y1="0" x2="-60" y2="30" stroke="#ffffd1" /> <!-- Y axis -->
+    <line x1="0" y1="0" x2="0" y2="-70" stroke="#20d6b5" /> <!-- Z axis -->
+    <text x="70" y="40" fill="#4da3ff">X (Width)</text>
+    <text x="-75" y="40" fill="#ffffd1">Y (Depth)</text>
+    <text x="0" y="-80" fill="#20d6b5">Z (Height)</text>
+    <circle cx="0" cy="0" r="4" fill="#f6fbff"/>
+  </g>
+
+  <!-- Ground Plane (XY grid representation) -->
+  <path d="M 600 130 L 950 305 L 600 480 L 250 305 Z" fill="none" stroke="rgba(77, 163, 255, 0.1)" stroke-width="2"/>
+  <path d="M 600 130 L 600 480" fill="none" stroke="rgba(77, 163, 255, 0.05)" stroke-width="1"/>
+  <path d="M 250 305 L 950 305" fill="none" stroke="rgba(77, 163, 255, 0.05)" stroke-width="1"/>
+
+  <!-- Base Plate Geometry -->
+  <!-- Bottom Face -->
+  <polygon points="541.5,183.75 853.3,333.75 658.46,476.25 346.7,296.25" fill="#0f1f2d" opacity="0.6"/>
+  <!-- Extrusion Guide Lines -->
+  <line x1="541.5" y1="183.75" x2="541.5" y2="153.75" stroke="#20d6b5" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="853.3" y1="333.75" x2="853.3" y2="303.75" stroke="#20d6b5" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="346.7" y1="296.25" x2="346.7" y2="266.25" stroke="#20d6b5" stroke-dasharray="4,4" stroke-width="2"/>
+  <line x1="658.46" y1="476.25" x2="658.46" y2="446.25" stroke="#20d6b5" stroke-width="2"/>
+
+  <!-- Extrusion Direction Arrows -->
+  <g stroke="#20d6b5" stroke-width="3" fill="none">
+    <path d="M 400 380 L 400 320"/>
+    <path d="M 395 330 L 400 320 L 405 330"/>
+    <path d="M 800 410 L 800 350"/>
+    <path d="M 795 360 L 800 350 L 805 360"/>
+  </g>
+  <text x="420" y="355" fill="#20d6b5" font-family="Arial" font-size="16" font-weight="bold">Extrude (Z): 5 mm</text>
+
+  <!-- Top Face (Final Extruded Shape) -->
+  <polygon points="541.5,153.75 853.3,303.75 658.46,446.25 346.7,266.25" fill="#132b3f" stroke="#4da3ff" stroke-width="3"/>
+  
+  <!-- Left Side Face -->
+  <polygon points="346.7,266.25 658.46,446.25 658.46,476.25 346.7,296.25" fill="#0e2132" stroke="#4da3ff" stroke-width="2"/>
+  
+  <!-- Right Side Face -->
+  <polygon points="658.46,446.25 853.3,303.75 853.3,333.75 658.46,476.25" fill="#091825" stroke="#4da3ff" stroke-width="2"/>
+
+  <!-- Dimensions Annotations -->
+  <!-- Width: 120 mm -->
+  <g fill="#f6fbff" font-family="Arial" font-size="15" font-weight="bold">
+    <line x1="326.7" y1="286.25" x2="638.46" y2="466.25" stroke="#ffd166" stroke-width="2"/>
+    <line x1="326.7" y1="276.25" x2="326.7" y2="296.25" stroke="#ffd166" stroke-width="2"/>
+    <line x1="638.46" y1="456.25" x2="638.46" y2="476.25" stroke="#ffd166" stroke-width="2"/>
+    <rect x="440" y="355" width="80" height="26" fill="#071014" rx="4"/>
+    <text x="480" y="373" text-anchor="middle" fill="#ffd166">120 mm</text>
+  </g>
+
+  <!-- Depth: 75 mm -->
+  <g fill="#f6fbff" font-family="Arial" font-size="15" font-weight="bold">
+    <line x1="678.46" y1="466.25" x2="873.3" y2="323.75" stroke="#ffd166" stroke-width="2"/>
+    <line x1="678.46" y1="456.25" x2="678.46" y2="476.25" stroke="#ffd166" stroke-width="2"/>
+    <line x1="873.3" y1="313.75" x2="873.3" y2="333.75" stroke="#ffd166" stroke-width="2"/>
+    <rect x="745" y="375" width="70" height="26" fill="#071014" rx="4"/>
+    <text x="780" y="393" text-anchor="middle" fill="#ffd166">75 mm</text>
+  </g>
+
+  <!-- Thickness: 5 mm -->
+  <g fill="#f6fbff" font-family="Arial" font-size="14">
+    <line x1="883.3" y1="303.75" x2="883.3" y2="333.75" stroke="#ffd166" stroke-width="1.5"/>
+    <line x1="878.3" y1="303.75" x2="888.3" y2="303.75" stroke="#ffd166" stroke-width="1.5"/>
+    <line x1="878.3" y1="333.75" x2="888.3" y2="333.75" stroke="#ffd166" stroke-width="1.5"/>
+    <text x="900" y="323" fill="#ffd166" font-weight="bold">5 mm</text>
+  </g>
+
+  <rect x="250" y="550" width="700" height="40" fill="rgba(32, 214, 181, 0.08)" rx="6" stroke="rgba(32, 214, 181, 0.2)" stroke-width="1"/>
+  <text x="600" y="575" text-anchor="middle" fill="#20d6b5" font-family="Arial" font-size="16" font-weight="bold">CAD Workflow: Sketch Center Rectangle → Extrude 5mm → Define Base Body</text>
+</svg>

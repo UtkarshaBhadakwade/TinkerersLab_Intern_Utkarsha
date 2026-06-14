@@ -1,0 +1,263 @@
+﻿diff --git a/technical-innovation.html b/technical-innovation.html
+index 12db04a..8147916 100644
+--- a/technical-innovation.html
++++ b/technical-innovation.html
+@@ -120,6 +120,7 @@
+                             <a class="day-btn" href="#week4day1Page">
+                                 Day 1
+                             </a>
++                            <a class="day-btn" href="#week4day2Page">
+                             <a class="day-btn" href="#week4day3Page">
+                                 Day 3
+                             </a>
+@@ -904,11 +905,11 @@
+             <button class="back-btn" onclick="closeDocumentation()" style="margin-bottom: 0;">&larr; Back</button>
+         </div>
+ 
+-        <h2 style="color: #00ffd5; margin-bottom: 25px; font-size: 24px; border-bottom: 2px solid rgba(0,255,213,0.2); padding-bottom: 8px;">3D CAD Parametric Prototyping Workflow</h2>
++        <h2 style="color: #00ffd5; margin-bottom: 25px; font-size: 24px; border-bottom: 2px solid rgba(0,255,213,0.2); padding-bottom: 8px;">Customized Name Phone Stand Design</h2>
+ 
+         <div class="doc-box has-img">
+             <h2>Step 1: Setup a Workspace</h2>
+-            <p>Open Autodesk Fusion. To start fresh, select <strong>File > New Design</strong> to establish a clean coordinate workspace for your CAD model.</p>
++            <p>Open Autodesk Fusion and create a new design file, setting up the standard workspace and coordinate system for your custom model.</p>
+             <div class="step-detailed-info">
+                 <h3>Detailed Technical Information</h3>
+                 <p>Initializing a CAD design session sets up standard parametric environments. This creates an empty coordinate workspace referenced along the origin axes (X, Y, Z), allowing you to begin drawing with precise measurements.</p>
+@@ -919,11 +920,11 @@
+                     <li>Check that the workspace selector is set to <strong>Design</strong>.</li>
+                     <li>Select the <strong>Solid</strong> tab from the top toolbar.</li>
+                     <li>Click <strong>Document Settings</strong> in the Browser panel and confirm the units are set to millimeters.</li>
+-                    <li>Click <strong>File > Save</strong> and give the design a clear project name.</li>
++                    <li>Click <strong>File > Save</strong> and name your project <code>Utkarsha_Phone_Stand</code>.</li>
+                 </ol>
+                 <ul>
+                     <li><strong>Workspace Selection:</strong> Set units to metric system benchmarks (millimeters) for standard project documentation.</li>
+-                    <li><strong>Parametric History:</strong> Pay close attention to the bottom timeline panel; this records your entire modeling history, enabling you to modify dimensions retroactively at any point in the design process.</li>
++                    <li><strong>Parametric History:</strong> Ensure the timeline at the bottom is active to record all extrusion and sketching actions for easy modifications later.</li>
+                 </ul>
+             </div>
+             <div class="image-placeholder-container">
+@@ -933,144 +934,136 @@
+         </div>
+ 
+         <div class="doc-box has-img">
+-            <h2>Step 2: Start a Parametric Sketch</h2>
+-            <p>Every solid 3D entity begins as a flat 2D blueprint:</p>
++            <h2>Step 2: Sketch and Extrude the Base Plate</h2>
++            <p>Design a rectangular flat base plate that provides the physical foundation and stability for the phone stand.</p>
+             <div class="step-detailed-info">
+                 <h3>Detailed Technical Information</h3>
+-                <p>Solid modeling features originate from fully defined flat sketches. You must first project a drawing plane onto the active origin planes before using drawing tools to sketch your outlines.</p>
++                <p>The base plate serves as the center of gravity for the stand. The sketch is drawn on the ground plane and extruded vertically to create a strong, solid plate to hold the weight of a phone and the letters.</p>
+                 <h3>What to Click and Which Tool to Use</h3>
+                 <ol>
+                     <li>Click <strong>Create Sketch</strong> from the Solid toolbar.</li>
+-                    <li>Select a vertical plane such as the <strong>XZ plane</strong> or <strong>YZ plane</strong> for the vase side profile.</li>
+-                    <li>Use <strong>Create > Line</strong> to draw a straight vertical center axis.</li>
+-                    <li>Use <strong>Create > Line</strong>, <strong>Create > Arc</strong>, or <strong>Create > Fit Point Spline</strong> to begin the outer outline.</li>
+-                    <li>Use the <strong>Sketch Dimension</strong> tool to set important heights and widths.</li>
+-                    <li>Apply simple constraints such as vertical, horizontal, coincident, and tangent where needed.</li>
+-                    <li>Click <strong>Finish Sketch</strong> only after the profile is clean and closed.</li>
++                    <li>Select the horizontal <strong>XY plane</strong> as the sketch plane.</li>
++                    <li>Click <strong>Create > Rectangle > Center Rectangle</strong>.</li>
++                    <li>Click the origin point and draw a rectangle measuring <strong>120 mm</strong> in width and <strong>75 mm</strong> in depth.</li>
++                    <li>Click <strong>Finish Sketch</strong>.</li>
++                    <li>Select the rectangle profile, click <strong>Create > Extrude</strong>, set the distance to <strong>5 mm</strong>, and click <strong>OK</strong>.</li>
+                 </ol>
++                <ul>
++                    <li><strong>Center Rectangle:</strong> Starting at the origin ensures the model remains perfectly symmetrical, making it easier to position other features.</li>
++                </ul>
+             </div>
+             <div class="image-placeholder-container">
+-                <span class="placeholder-tag">Image File Reference: image/fusion_vase_reference.svg</span>
+-                <img src="image/fusion_vase_reference.svg" class="project-image" alt="Fusion parametric sketch grid interface reference">
++                <span class="placeholder-tag">Image File Reference: image/phone_stand_step2.svg</span>
++                <img src="image/phone_stand_step2.svg" class="project-image" alt="Ground plane rectangle sketch and extruded base plate reference">
+             </div>
+         </div>
+ 
+         <div class="doc-box has-img">
+-            <h2>Step 3: Draw the 2D Vase Profile</h2>
+-            <p>Designing revolving objects like vases requires sketching exactly half of the vertical outline:</p>
++            <h2>Step 3: Add Raised Base Text "BHADAKWADE"</h2>
++            <p>Personalize the front of the base plate by adding raised 3D text showing the surname.</p>
+             <div class="step-detailed-info">
+                 <h3>Detailed Technical Information</h3>
+-                <p>Generating circular geometries (like vases, cylinders, or pulleys) relies on Revolving a 2D sketch around a central axis of symmetry. Sketching the profile requires outlining precisely half of the target component's vertical cross-section.</p>
++                <p>Text sketch geometry must be created directly on the upper face of the base plate body and extruded upward. This ensures the text and base form a single solid body when exported for 3D printing.</p>
+                 <h3>What to Click and Which Tool to Use</h3>
+                 <ol>
+-                    <li>Use the <strong>Line</strong> tool to draw the base and center reference line.</li>
+-                    <li>Select <strong>Create > Fit Point Spline</strong> to draw the curved outer wall of the vase.</li>
+-                    <li>Use <strong>Create > Arc > 3-Point Arc</strong> if you want smoother rounded transitions.</li>
+-                    <li>Connect the upper rim, outer curve, base, and center axis so the sketch becomes a closed half-profile.</li>
+-                    <li>Use <strong>Sketch Dimension</strong> to control the height, neck width, and base width.</li>
+-                    <li>Use <strong>Trim</strong> to remove extra sketch lines.</li>
+-                    <li>Click <strong>Finish Sketch</strong> when Fusion highlights the profile region.</li>
++                    <li>Select the top face of the extruded base plate.</li>
++                    <li>Click <strong>Create Sketch</strong>.</li>
++                    <li>Click <strong>Create > Text</strong>.</li>
++                    <li>Draw a text box along the front margin of the base.</li>
++                    <li>In the Text dialog, type <strong>BHADAKWADE</strong>, select a bold font (such as Arial Black or Impact), set the height to <strong>8 mm</strong>, and center-align it.</li>
++                    <li>Click <strong>OK</strong> and then click <strong>Finish Sketch</strong>.</li>
++                    <li>Select the text profiles, click <strong>Extrude</strong>, set the distance to <strong>2.5 mm</strong>, and click <strong>OK</strong>.</li>
+                 </ol>
+             </div>
+             <div class="image-placeholder-container">
+-                <span class="placeholder-tag">Image File Reference: image/fusion_vase_reference.svg</span>
+-                <img src="image/fusion_vase_reference.svg" class="project-image" alt="Fusion vase outline spline drawing reference">
++                <span class="placeholder-tag">Image File Reference: image/phone_stand_step3.svg</span>
++                <img src="image/phone_stand_step3.svg" class="project-image" alt="Raised surname text sketched and extruded on the base plate">
+             </div>
+         </div>
+ 
+         <div class="doc-box has-img">
+-            <h2>Step 4: Revolve the Profile into a 3D Vase</h2>
+-            <p>The Revolve tool converts the half-profile sketch into a complete circular 3D object by rotating it around the center axis.</p>
++            <h2>Step 4: Design the Curved Support Columns</h2>
++            <p>Create the curved, wavy vertical support pillars that connect the base to the standing letters.</p>
+             <div class="step-detailed-info">
++                <h3>Detailed Technical Information</h3>
++                <p>To support the weight of the phone at a stable viewing angle, we draw a curved profile on a vertical plane. Using splines allows us to model the organic, wave-like pillars that rise from the back of the base plate.</p>
+                 <h3>What to Click and Which Tool to Use</h3>
+                 <ol>
+-                    <li>Click <strong>Create > Revolve</strong> from the Solid toolbar.</li>
+-                    <li>Select the closed half-profile as the <strong>Profile</strong>.</li>
+-                    <li>Click the straight center line as the <strong>Axis</strong>.</li>
+-                    <li>Set the angle to <strong>360 degrees</strong>.</li>
+-                    <li>Keep the operation as <strong>New Body</strong>.</li>
+-                    <li>Click <strong>OK</strong> to generate the full vase shape.</li>
+-                    <li>Orbit around the model to check that the body formed correctly.</li>
++                    <li>Click <strong>Create Sketch</strong> and select the vertical <strong>XZ plane</strong>.</li>
++                    <li>Use <strong>Create > Fit Point Spline</strong> to sketch a wavy leg profile starting from the back edge of the base, curving upwards and backwards at an angle of roughly 75 degrees.</li>
++                    <li>Offset or draw matching lines to define a column thickness of <strong>6 mm</strong>.</li>
++                    <li>Close the sketch profile by connecting the endpoints at the bottom and top.</li>
++                    <li>Click <strong>Finish Sketch</strong>.</li>
++                    <li>Select the profile, click <strong>Extrude</strong>, set the operation to <strong>New Body</strong>, and extrude it symmetrically across the width, or copy it to align with each letter's position.</li>
+                 </ol>
+             </div>
+             <div class="image-placeholder-container">
+-                <span class="placeholder-tag">Image File Reference: image/fusion_vase_reference.svg</span>
+-                <img src="image/fusion_vase_reference.svg" class="project-image" alt="Fusion revolve tool creating the 3D vase body reference">
++                <span class="placeholder-tag">Image File Reference: image/phone_stand_step4.svg</span>
++                <img src="image/phone_stand_step4.svg" class="project-image" alt="Wavy support spline profile and extruded pillar body reference">
+             </div>
+         </div>
+ 
+         <div class="doc-box has-img">
+-            <h2>Step 5: Hollow the Vase Using Shell</h2>
+-            <p>The Shell tool removes material from the inside of the solid body and creates a uniform wall thickness, turning the solid form into a usable container-like shape.</p>
++            <h2>Step 5: Sketch and Extrude "UTKARSHA" Letters</h2>
++            <p>Create the large standing letters "UTKARSHA" that form the back support rest of the phone stand.</p>
+             <div class="step-detailed-info">
++                <h3>Detailed Technical Information</h3>
++                <p>The letters must be created on a plane tilted parallel to the support columns. Extruding them connects them structurally with the wavy pillars, resulting in a single continuous model.</p>
+                 <h3>What to Click and Which Tool to Use</h3>
+                 <ol>
+-                    <li>Click <strong>Modify > Shell</strong>.</li>
+-                    <li>Select the top opening face of the vase.</li>
+-                    <li>Enter the required wall thickness, such as <strong>2 mm</strong> or <strong>3 mm</strong>.</li>
+-                    <li>Check the preview to make sure the interior is hollowing correctly.</li>
+-                    <li>Click <strong>OK</strong>.</li>
+-                    <li>Use <strong>Inspect > Section Analysis</strong> if you want to check the wall thickness from inside.</li>
++                    <li>Create an offset or construction plane aligned at the angle of the support pillars.</li>
++                    <li>Click <strong>Create Sketch</strong> on this angled plane.</li>
++                    <li>Select <strong>Create > Text</strong> and draw a large text box.</li>
++                    <li>Type <strong>UTKARSHA</strong> in capital letters, choose a thick font style, and set the text height to <strong>28 mm</strong>.</li>
++                    <li>Click <strong>OK</strong>, then click <strong>Finish Sketch</strong>.</li>
++                    <li>Select the letter profiles, click <strong>Extrude</strong>, and set the distance to <strong>10 mm</strong>, ensuring they overlap and join the support columns.</li>
+                 </ol>
+             </div>
+             <div class="image-placeholder-container">
+-                <span class="placeholder-tag">Image File Reference: image/fusion_vase_reference.svg</span>
+-                <img src="image/fusion_vase_reference.svg" class="project-image" alt="Fusion hollow vase after shell operation reference">
++                <span class="placeholder-tag">Image File Reference: image/phone_stand_step5.svg</span>
++                <img src="image/phone_stand_step5.svg" class="project-image" alt="Angled standing letters sketched and extruded to merge with support columns">
+             </div>
+         </div>
+ 
+         <div class="doc-box has-img">
+-            <h2>Step 6: Add Fillets, Appearance, and Save Output</h2>
+-            <p>Finishing tools improve the model's look, remove harsh edges, and prepare the design for presentation or later fabrication.</p>
++            <h2>Step 6: Apply Fillets, Appearance, and Export STL</h2>
++            <p>Smooth out the sharp edges of the 3D model for comfort, apply a custom purple appearance, and prepare the design file for slicing.</p>
+             <div class="step-detailed-info">
++                <h3>Detailed Technical Information</h3>
++                <p>Adding fillets reduces stress concentration areas at the intersections of the letters and base plate, significantly increasing the structural strength of the 3D print. The appearance tool allows you to visualize materials before exporting the design mesh.</p>
+                 <h3>What to Click and Which Tool to Use</h3>
+                 <ol>
+                     <li>Click <strong>Modify > Fillet</strong>.</li>
+-                    <li>Select the rim, base, or other sharp edges.</li>
+-                    <li>Enter a suitable fillet radius and click <strong>OK</strong>.</li>
+-                    <li>Click <strong>Modify > Appearance</strong> or press <strong>A</strong>.</li>
+-                    <li>Drag a material or color onto the vase body.</li>
+-                    <li>Use the view cube and orbit controls to inspect the final model from all sides.</li>
+-                    <li>Click <strong>File > Save</strong> to save the Fusion design.</li>
+-                    <li>For sharing or manufacturing, right-click the body and choose <strong>Save as Mesh</strong> if an STL file is required.</li>
++                    <li>Select the sharp intersections where the letters join the pillars and base plate, enter a radius of <strong>2 mm</strong>, and click <strong>OK</strong>.</li>
++                    <li>Press <strong>A</strong> on the keyboard to open the <strong>Appearance</strong> panel.</li>
++                    <li>Search for a glossy or matte plastic material, drag it onto the model, and double-click to customize the color to lavender/purple.</li>
++                    <li>Right-click the main model body in the Browser panel, select <strong>Save as Mesh</strong>, set the format to <strong>STL (Binary)</strong> or <strong>3MF</strong>, and save the print file.</li>
+                 </ol>
+             </div>
+             <div class="image-placeholder-container">
+-                <span class="placeholder-tag">Image File Reference: image/fusion_vase_reference.svg</span>
+-                <img src="image/fusion_vase_reference.svg" class="project-image" alt="Final Fusion vase with fillets and appearance reference">
++                <span class="placeholder-tag">Image File Reference: image/WhatsApp Image 2026-06-10 at 8.17.53 PM.jpeg</span>
++                <img src="image/WhatsApp Image 2026-06-10 at 8.17.53 PM.jpeg" class="project-image" alt="Final physical 3D-printed lavender phone stand displaying UTKARSHA standing letters and BHADAKWADE base text">
+             </div>
+         </div>
+ 
+         <div class="doc-box has-img">
+             <h2>Core Modeling Tools & Features Used</h2>
+-            <div class="step-detailed-info">
+-                <h3>Tool Order Used</h3>
+-                <ol>
+-                    <li><strong>Create Sketch:</strong> Begin the 2D profile on a selected plane.</li>
+-                    <li><strong>Line / Spline / Arc:</strong> Draw the half-outline of the vase.</li>
+-                    <li><strong>Sketch Dimension:</strong> Lock important measurements.</li>
+-                    <li><strong>Revolve:</strong> Rotate the profile around the center axis.</li>
+-                    <li><strong>Shell:</strong> Hollow the body and define wall thickness.</li>
+-                    <li><strong>Fillet:</strong> Smooth edges for a cleaner finished model.</li>
+-                    <li><strong>Appearance:</strong> Apply color/material for presentation.</li>
+-                </ol>
+-            </div>
+             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 15px;">
+                 <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; border: 1px solid rgba(125,249,255,0.1);">
+-                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">1. Extrude</h3>
+-                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Pushes or pulls a flat 2D closed boundary vertically or horizontally to generate a solid 3D shape.</p>
++                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">1. Spline Tool</h3>
++                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Used to sketch the organic, wavy vertical pillars supporting the standing text.</p>
+                 </div>
+                 <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; border: 1px solid rgba(125,249,255,0.1);">
+-                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">2. Revolve</h3>
+-                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Rotates a 2D drawing around a selected axis of symmetry, creating symmetric profiles (vases, cups, pistons).</p>
++                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">2. Construction Plane</h3>
++                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Created at an angle to allow sketching and extruding the standing text parallel to the support columns.</p>
+                 </div>
+                 <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; border: 1px solid rgba(125,249,255,0.1);">
+-                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">3. Fillet</h3>
+-                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Smooths down sharp corner intersections to produce elegant, structural, curved safety edges.</p>
++                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">3. Text Tool</h3>
++                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Allows adding exact alphanumeric profiles for custom labels, base engravings, or standing features.</p>
+                 </div>
+                 <div style="background: rgba(255,255,255,0.02); padding: 20px; border-radius: 10px; border: 1px solid rgba(125,249,255,0.1);">
+-                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">4. Shell</h3>
+-                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Hollows out the core interior of any solid 3D element, forming a thin-walled product casing with uniform walls.</p>
++                    <h3 style="color: #7df9ff; margin: 0 0 8px 0;">4. Fillet</h3>
++                    <p style="font-size: 14px; margin: 0; line-height: 1.5;">Smooths sharp intersections, strengthening critical stress joints between letters and plates.</p>
+                 </div>
+             </div>
+         </div>
+@@ -2500,6 +2493,10 @@
+                     <li>Firebase can also send control data back to ESP32, such as turning an LED, relay, motor, or buzzer ON/OFF.</li>
+                 </ol>
+             </div>
++            <div class="image-placeholder-container">
++                <span class="placeholder-tag">Image File Reference: image/firebase_data_flow.png</span>
++                <img src="image/firebase_data_flow.png" class="project-image" alt="Firebase data flow architecture with ESP32 and sensors">
++            </div>
+             <div class="image-placeholder-container">
+                 <span class="placeholder-tag">Image File Reference: image/firebase_iot_reference.svg</span>
+                 <img src="image/firebase_iot_reference.svg" class="project-image" alt="IoT Firebase data flow from sensor to ESP32 to Firebase to dashboard">
