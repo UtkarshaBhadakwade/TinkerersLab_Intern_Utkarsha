@@ -167,6 +167,43 @@
         background: rgba(0, 255, 213, 0.15);
         border-left: 4px solid #00ffd5;
     }
+    .featured-poster {
+        max-width: 900px;
+        margin: 0 auto 34px;
+        padding: 14px;
+        border: 1px solid rgba(0, 255, 213, 0.35);
+        border-radius: 16px;
+        background: rgba(16, 37, 58, 0.58);
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.38);
+    }
+    .featured-poster img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .project-demo-video {
+        max-width: 900px;
+        margin: 0 auto 40px;
+        padding: 14px;
+        border: 1px solid rgba(0, 255, 213, 0.35);
+        border-radius: 16px;
+        background: rgba(16, 37, 58, 0.58);
+        box-shadow: 0 16px 38px rgba(0, 0, 0, 0.38);
+    }
+    .project-demo-video video {
+        display: block;
+        width: 100%;
+        max-height: 520px;
+        border-radius: 10px;
+        background: #000;
+    }
+    .project-demo-video figcaption {
+        margin-top: 10px;
+        text-align: center;
+        color: #00ffd5;
+        font-size: 15px;
+    }
     </style>
 
         <section class="project-section">
@@ -174,6 +211,18 @@
             <p style="text-align: center; color: #00ffd5; margin-bottom: 40px; font-size: 18px;">
                 AI-Based Eye Disease Detection Presentation
             </p>
+
+            <figure class="featured-poster">
+                <img src="image/visionai-project-poster.png" alt="VisionAI AI-based eye disease detection project poster">
+            </figure>
+
+            <figure class="project-demo-video">
+                <video controls preload="metadata">
+                    <source src="video/visionai-project-demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>VisionAI Project Demo</figcaption>
+            </figure>
 
             <div class="presentation-container">
                 <!-- Slide 1 -->
